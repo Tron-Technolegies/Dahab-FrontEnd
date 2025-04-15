@@ -1,1 +1,13 @@
-/* /index.html 200
+# Force HTTPS
+http://*   https://:splat   301!
+
+# Redirect to root domain (remove www or subdomains)
+https://www.dahabminers.com/*    https://dahabminers.com/:splat   301!
+https://.dahabminers.com/      https://dahabminers.com/:splat   301!
+
+# History API fallback (for SPA routing like React)
+# This ensures all non-file, non-folder routes go to index.html
+/*    /index.html    200
+
+# Handle 403 errors by redirecting to index.html
+/403    /index.html   200

@@ -20,7 +20,7 @@ export default function BlogCard({
   return (
     <Link to={`/blogs/${id}`} className="max-w-96 p-2 rounded-lg ">
       <div className="rounded-lg overflow-hidden mb-5">
-        <img src={image} alt={alt} title={desc}></img>
+        <img src={image} alt={alt} title={desc} className="max-h-[300px]"></img>
       </div>
       <div className="flex flex-col gap-5 ">
         <p className="font-semibold text-base text-btnGreen">{date}</p>

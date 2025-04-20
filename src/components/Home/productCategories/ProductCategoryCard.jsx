@@ -29,7 +29,7 @@ export default function ProductCategoryCard({ img, title, content }) {
     >
       <img src={img} className="w-32" />
       <p>{title}</p>
-      <p className="text-xs text-center font-light">{content}</p>
+      <p className="text-xs leading-5 text-center font-light">{content}</p>
       <Link
         to={"/buy-bitcoin-miners-uae"}
         className="w-10 h-10 rounded-full bg-[#2c689d1a] flex justify-center items-center text-[#3DB2E8]"

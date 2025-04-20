@@ -3,6 +3,7 @@ import ProductCategoryCard from "./ProductCategoryCard";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { motion } from "framer-motion";
 
 export default function ProductCategorySection() {
   const data = [
@@ -59,9 +60,22 @@ export default function ProductCategorySection() {
       },
     ],
   };
-
+  const sectionVariants = {
+    hidden: { scale: 0.8, opacity: 0 },
+    visible: {
+      scale: 1,
+      opacity: 1,
+      transition: { duration: 0.5, ease: "easeOut" },
+    },
+  };
   return (
-    <div className="main-bg px-5 md:px-10 lg:px-[120px] xl:px-[180px] py-10 text-white flex flex-col gap-5 items-center">
+    <motion.section
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: false, amount: 0.3 }} // Triggers when 20% of the section is visible
+      variants={sectionVariants}
+      className="main-bg px-5 md:px-10 lg:px-[120px] xl:px-[180px] py-10 text-white flex flex-col gap-5 items-center"
+    >
       <div className="flex flex-col items-center max-w-[600px]">
         <h4 className="gradient-heading md:text-4xl text-3xl font-semibold py-5">
           Product Categories
@@ -85,6 +99,6 @@ export default function ProductCategorySection() {
           </div>
         ))}
       </Slider>
-    </div>
+    </motion.section>
   );
 }

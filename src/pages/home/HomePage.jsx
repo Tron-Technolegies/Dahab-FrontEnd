@@ -23,6 +23,8 @@ import { setBlockReward, setDifficulty } from "../../slices/userSlice";
 import MapComparison from "../../components/HostMining/MapComparison";
 import { useLocation } from "react-router-dom";
 import ProductCategorySection from "../../components/Home/productCategories/ProductCategorySection";
+import ServiceSection from "../../components/Home/servicesSection/ServiceSection";
+import FoundersSection from "../../components/Home/founders/FoundersSection";
 
 export default function HomePage() {
   const { loading, btcData } = useGetBitCoinData();
@@ -65,12 +67,14 @@ cost-effective crypto mining and hosting solutions for your miners in UAE."
       <MapComparison />
       <ThirdSection btcData={btcData} />
       <Calculator />
+      <ServiceSection />
       <MiningFacilitiesSection />
       <SecondSection />
 
       <HardwareReviewSection />
       <PerformanceMetrics />
       <WhyChooseUs />
+      <FoundersSection />
       <CryptoCurrencySection />
 
       {/* <ConsultationSection /> */}

@@ -17,7 +17,7 @@ export default function HomeLayout() {
         {/* <EnquireButton /> */}
       </div>
       <div className="overflow-x-hidden">
-        {/* <SplashCursor /> */}
+        <SplashCursor />
         <Outlet />
 
         <Footer />

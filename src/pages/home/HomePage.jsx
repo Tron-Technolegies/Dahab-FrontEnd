@@ -25,6 +25,7 @@ import { useLocation } from "react-router-dom";
 import ProductCategorySection from "../../components/Home/productCategories/ProductCategorySection";
 import ServiceSection from "../../components/Home/servicesSection/ServiceSection";
 import FoundersSection from "../../components/Home/founders/FoundersSection";
+import EventSection from "../../components/Home/eventsSection/EventSection";
 
 export default function HomePage() {
   const { loading, btcData } = useGetBitCoinData();
@@ -74,8 +75,9 @@ cost-effective crypto mining and hosting solutions for your miners in UAE."
       <HardwareReviewSection />
       <PerformanceMetrics />
       <WhyChooseUs />
-      <FoundersSection />
+      {/* <FoundersSection /> */}
       <CryptoCurrencySection />
+      {/* <EventSection /> */}
 
       {/* <ConsultationSection /> */}
       {/* <BlogSection /> */}

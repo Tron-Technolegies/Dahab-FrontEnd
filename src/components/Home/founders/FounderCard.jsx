@@ -3,7 +3,15 @@ import React from "react";
 import FooterLinks from "../../FooterLinks";
 import { FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa";
 
-export default function FounderCard() {
+export default function FounderCard({
+  img,
+  fb,
+  inst,
+  link,
+  name,
+  role,
+  about,
+}) {
   return (
     <motion.div
       className="p-3 py-5 bg-[#000618] text-white rounded-lg flex flex-col gap-5 justify-between items-center max-w-[260px]"
@@ -27,26 +35,20 @@ export default function FounderCard() {
         borderStyle: "solid",
       }}
     >
-      <div>
-        <img />
-        <div>
-          <p></p>
-          <p></p>
+      <div className="flex flex-col gap-5 items-center">
+        <img
+          src={img}
+          className="rounded-full object-cover border-2 border-[#4D8390]"
+        />
+        <div className="flex flex-col items-center">
+          <p className="font-semibold">{name}</p>
+          <p className="text-sm">{role}</p>
         </div>
-        <p></p>
+        <p className="text-center text-sm">{about}</p>
         <div className="flex gap-5 text-base font-normal text-white">
-          <FooterLinks
-            link={"https://www.instagram.com/dahabminersuae/"}
-            icon={<FaInstagram />}
-          />
-          <FooterLinks
-            link={"https://www.facebook.com/dahabminers"}
-            icon={<FaFacebookF />}
-          />
-          <FooterLinks
-            link={"https://www.linkedin.com/company/thedahab-miners"}
-            icon={<FaLinkedinIn />}
-          />
+          <FooterLinks link={inst} icon={<FaInstagram />} />
+          <FooterLinks link={fb} icon={<FaFacebookF />} />
+          <FooterLinks link={link} icon={<FaLinkedinIn />} />
         </div>
       </div>
     </motion.div>

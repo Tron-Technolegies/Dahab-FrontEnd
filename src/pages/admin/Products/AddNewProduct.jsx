@@ -24,6 +24,10 @@ export default function AddNewProduct() {
   const [featuredImage, setFeaturedImage] = useState("");
   const [featuredImagePublicId, setFeaturedImagePublicId] = useState("");
   const [description, setDescription] = useState("");
+  const [slug, setSlug] = useState("");
+  const [metaTitle, setMetaTitle] = useState("");
+  const [metaDescription, setMetaDescription] = useState("");
+  const [metaKeywords, setMetaKeywords] = useState("");
 
   const {
     loading: featuredLoading,
@@ -196,6 +200,38 @@ export default function AddNewProduct() {
             ></textarea>
           </div>
         </div>
+        <FormInput
+          type={"text"}
+          title={"Product Slug"}
+          admin
+          value={slug}
+          onchange={(e) => setSlug(e.target.value)}
+          placeholder={"Enter Product slug"}
+        />
+        <FormInput
+          type={"text"}
+          admin
+          title={"Product Meta Title"}
+          value={metaTitle}
+          onchange={(e) => setMetaTitle(e.target.value)}
+          placeholder={"Enter Product Meta Title"}
+        />
+        <FormInput
+          type={"text"}
+          admin
+          value={metaDescription}
+          onchange={(e) => setMetaDescription(e.target.value)}
+          title={"Product Meta Description"}
+          placeholder={"Enter Product Meta description"}
+        />
+        <FormInput
+          type={"text"}
+          admin
+          value={metaKeywords}
+          onchange={(e) => setMetaKeywords(e.target.value)}
+          title={"Product Meta Keywords"}
+          placeholder={"Enter Product Meta keywords"}
+        />
         <button
           onClick={() =>
             addProduct({
@@ -211,6 +247,10 @@ export default function AddNewProduct() {
               featuredImage,
               featuredImagePublicId,
               description,
+              slug,
+              metaDescription,
+              metaKeywords,
+              metaTitle,
             })
           }
           className="bg-homeBg p-2 rounded-lg text-white hover:bg-blue-500 nav-link"

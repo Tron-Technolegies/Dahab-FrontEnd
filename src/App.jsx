@@ -38,6 +38,8 @@ import RemoveMiners from "./pages/admin/repair/RemoveMiners";
 import AddInventoryItem from "./pages/admin/inventory/AddInventoryItem";
 import SingleInventoryItem from "./pages/admin/inventory/SingleInventoryItem";
 import AlertPage from "./pages/admin/inventory/AlertPage";
+import EventsPage from "./pages/eventsPage/EventsPage";
+import SingleMinerPage from "./pages/BuyMiners/SingleMinerPage";
 
 function App() {
   const router = createBrowserRouter([
@@ -53,6 +55,10 @@ function App() {
         {
           path: "buy-bitcoin-miners-uae",
           element: <BuyMinersPage />,
+        },
+        {
+          path: "buy-bitcoin-miners-uae/:id",
+          element: <SingleMinerPage />,
         },
         {
           path: "host-miners",
@@ -81,6 +87,10 @@ function App() {
         {
           path: "about-us",
           element: <AboutUsPage />,
+        },
+        {
+          path: "events/:id",
+          element: <EventsPage />,
         },
       ],
     },

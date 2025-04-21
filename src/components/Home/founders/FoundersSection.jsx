@@ -1,5 +1,42 @@
 import { motion } from "framer-motion";
 import React from "react";
+import FounderCard from "./FounderCard";
+
+const data = [
+  {
+    id: 1,
+    img: "/home/review-1.png",
+    name: "Name",
+    role: "Founder & CEO",
+    about:
+      "Mohamed is the visionary behind Dahab Miners. With a pioneering spirit and a strong foundation in blockchain technology, he founded the company to empower miners with scalable, secure, and future-ready crypto mining solutions.",
+    fb: "#",
+    inst: "#",
+    link: "#",
+  },
+  {
+    id: 2,
+    img: "/home/review-2.png",
+    name: "Name",
+    role: "Founder & CEO",
+    about:
+      "Mohamed is the visionary behind Dahab Miners. With a pioneering spirit and a strong foundation in blockchain technology, he founded the company to empower miners with scalable, secure, and future-ready crypto mining solutions.",
+    fb: "#",
+    inst: "#",
+    link: "#",
+  },
+  {
+    id: 3,
+    img: "/home/review-3.png",
+    name: "Name",
+    role: "Founder & CEO",
+    about:
+      "Mohamed is the visionary behind Dahab Miners. With a pioneering spirit and a strong foundation in blockchain technology, he founded the company to empower miners with scalable, secure, and future-ready crypto mining solutions.",
+    fb: "#",
+    inst: "#",
+    link: "#",
+  },
+];
 
 export default function FoundersSection() {
   const sectionVariants = {
@@ -21,11 +58,24 @@ export default function FoundersSection() {
       <h4 className="gradient-heading md:text-4xl text-3xl font-semibold pb-5">
         Meet our Founders
       </h4>
-      <p className="text-sm">
+      <p className="text-sm text-center">
         The visionaries behind Dahab Miners driving innovation and Excellence in
         the Crypto mining industry
       </p>
-      <div></div>
+      <div className="grid md:grid-cols-3 gap-9 my-5">
+        {data.map((item) => (
+          <FounderCard
+            key={item.id}
+            name={item.name}
+            img={item.img}
+            role={item.role}
+            about={item.about}
+            fb={item.fb}
+            inst={item.inst}
+            link={item.link}
+          />
+        ))}
+      </div>
     </motion.section>
   );
 }

@@ -22,7 +22,7 @@ export default function MiningFacilitiesSection() {
           variants={sectionVariants}
           className="flex flex-col gap-3 items-center"
         >
-          <h4 className="md:text-4xl text-3xl font-semibold gradient-heading text-center">
+          <h4 className="md:text-4xl text-3xl font-semibold gradient-heading text-center pb-5">
             Effortless Hosting. Reliable Repairs
           </h4>
           <p className="text-white text-sm max-w-[550px] text-center">

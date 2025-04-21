@@ -22,6 +22,10 @@ const useAddProduct = () => {
     featuredImage,
     featuredImagePublicId,
     description,
+    slug,
+    metaTitle,
+    metaDescription,
+    metaKeywords,
   }) => {
     setLoading(true);
     try {
@@ -40,6 +44,10 @@ const useAddProduct = () => {
           featuredImage,
           featuredImagePublicId,
           description,
+          slug,
+          metaDescription,
+          metaKeywords,
+          metaTitle,
         },
         {
           withCredentials: true,

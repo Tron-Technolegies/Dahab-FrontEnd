@@ -5,7 +5,7 @@ import MiningFacilitiesSection from "../../components/Home/MiningFacilities/Mini
 import HardwareReviewSection from "../../components/Home/HardwareReviews/HardwareReviewSection";
 import PerformanceMetrics from "../../components/Home/performanceMetrics/PerformanceMetrics";
 // import ConsultationSection from "../../components/Home/consultation/ConsultationSection";
-// import BlogSection from "../../components/Home/blog/BlogSection";
+import BlogSection from "../../components/Home/blog/BlogSection";
 import Testimonials from "../../components/Home/Testimonials/Testimonials";
 import CryptoCurrencySection from "../../components/Home/Cryptocurrency/CryptoCurrencySection";
 // import ContactForm from "../../components/Home/contactform/ContactForm";
@@ -22,6 +22,10 @@ import { useDispatch } from "react-redux";
 import { setBlockReward, setDifficulty } from "../../slices/userSlice";
 import MapComparison from "../../components/HostMining/MapComparison";
 import { useLocation } from "react-router-dom";
+import ProductCategorySection from "../../components/Home/productCategories/ProductCategorySection";
+import ServiceSection from "../../components/Home/servicesSection/ServiceSection";
+import FoundersSection from "../../components/Home/founders/FoundersSection";
+import EventSection from "../../components/Home/eventsSection/EventSection";
 
 export default function HomePage() {
   const { loading, btcData } = useGetBitCoinData();
@@ -58,18 +62,22 @@ cost-effective crypto mining and hosting solutions for your miners in UAE."
       </Helmet>
       <LandingSection />
       <Miners />
+      <ProductCategorySection />
       {/* <ProfitSection /> */}
       {/* <MapSection /> */}
       <MapComparison />
       <ThirdSection btcData={btcData} />
       <Calculator />
+      <ServiceSection />
       <MiningFacilitiesSection />
       <SecondSection />
 
       <HardwareReviewSection />
       <PerformanceMetrics />
       <WhyChooseUs />
+      {/* <FoundersSection /> */}
       <CryptoCurrencySection />
+      {/* <EventSection /> */}
 
       {/* <ConsultationSection /> */}
       {/* <BlogSection /> */}

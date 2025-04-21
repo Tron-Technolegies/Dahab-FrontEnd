@@ -6,6 +6,8 @@ import { motion } from "framer-motion";
 
 export default function BlogSection() {
   const { loading, blogs } = useGetUserBlogs();
+  console.log(blogs);
+
   const sectionVariants = {
     hidden: { scale: 0.8, opacity: 0 },
     visible: {
@@ -42,7 +44,7 @@ export default function BlogSection() {
                   date={x.createdAt.toString().slice(0, 10)}
                   title={x.title}
                   content={x.content}
-                  id={x._id}
+                  id={x.slug}
                 />
               ))}
         </div>

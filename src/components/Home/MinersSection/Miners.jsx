@@ -24,27 +24,28 @@ export default function Miners() {
         <p className="text-base font-semibold text-btnGreen py-5 z-[5]">
           Miners
         </p>
-        <h1 className="text-[38px] font-semibold gradient-heading z-[5]">
-        Start Mining Cryto Currency in UAE & Ethiopia with Dahab Miners
-
+        <h1 className="md:text-[38px] text-3xl font-semibold gradient-heading z-[5]">
+          Start Mining Cryto Currency in UAE & Ethiopia with Dahab Miners
         </h1>
         <h2 className="mt-5 mb-7 max-w-[500px] mx-auto">
           {/* <a href="https://www.dahabminers.com/buy-bitcoin-miners-uae">Buy Bitcoin Machines in Dubai.</a>{" "} */}
-          Get ready to mine into the fortune of crypto coins with the best crypto mining hardware from Dahab Miners.
-
+          Get ready to mine into the fortune of crypto coins with the best
+          crypto mining hardware from Dahab Miners.
         </h2>
-        <Link
-          to={"/buy-bitcoin-miners-uae"}
-          className="px-3 py-2 my-5 rounded-lg text-base text-white font-semibold border border-[#1ECBAF] nav-link hover:shadow-lg hover:shadow-[#1ECBAF]"
-        >
-          Buy a Mining Machine
-        </Link>
-        <Link
-          to={"/buy-bitcoin-miners-uae"}
-          className="px-3 py-2 my-5 rounded-lg text-base m-2 text-white font-semibold border border-[#1ECBAF] nav-link hover:shadow-lg hover:shadow-[#1ECBAF]"
-        >
-          Free consultation
-        </Link>
+        <div className="flex justify-center items-center md:flex-row flex-col">
+          <Link
+            to={"/buy-bitcoin-miners-uae"}
+            className="px-3 py-2 md:my-5 rounded-lg text-base text-white font-semibold border border-[#1ECBAF] nav-link hover:shadow-lg hover:shadow-[#1ECBAF] z-[5]"
+          >
+            Buy a Mining Machine
+          </Link>
+          <Link
+            to={"/buy-bitcoin-miners-uae"}
+            className="px-3 py-2 md:my-5 rounded-lg text-base m-2 text-white font-semibold border border-[#1ECBAF] nav-link hover:shadow-lg hover:shadow-[#1ECBAF]"
+          >
+            Free consultation
+          </Link>
+        </div>
       </motion.div>
       <FeaturedCarousel />
       <div className="flex justify-around">

@@ -285,3 +285,21 @@ input:disabled {
   box-shadow: 0 0 3px #26ddff, 0 0 3px #26ddff, 0 0 3px #26ddff;
   transform: scale(1);
 }
+
+.img-tile {
+  @apply rounded-xl shadow-xl object-cover w-full h-auto transition-transform duration-300;
+  transform: skewY(-2deg) rotate(-1deg);
+}
+
+.img-tile:hover {
+  transform: skewY(0deg) rotate(0deg) scale(1.05);
+}
+
+.div-tile {
+  @apply rounded-xl shadow-xl object-cover transition-transform duration-300 bg-white;
+  transform: skewY(-2deg) rotate(-1deg);
+}
+
+.div-tile:hover {
+  transform: skewY(0deg) rotate(0deg) scale(1.05);
+}

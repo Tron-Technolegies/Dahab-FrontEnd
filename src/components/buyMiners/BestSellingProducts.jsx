@@ -17,7 +17,7 @@ export default function BestSellingProducts({ products }) {
               img={x.productImage}
               name={x.productName}
               price={x.price}
-              
+              id={x._id}
             />
           ))}
       </div>

@@ -29,7 +29,7 @@ import DataPage from "./pages/admin/datas/DataPage";
 import AddNewDataPage from "./pages/admin/datas/AddNewDataPage";
 import EditDataPage from "./pages/admin/datas/EditDataPage";
 import TermsAndConditions from "./pages/TermsAndConditions";
-// import PrivacyPolicy from "./pages/PrivacyPolicy";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
 import AdminRepairPage from "./pages/admin/repair/AdminRepairPage";
 import AdminInventoryPage from "./pages/admin/inventory/AdminInventoryPage";
 import AddRepairMiner from "./pages/admin/repair/AddRepairMiner";
@@ -38,6 +38,8 @@ import RemoveMiners from "./pages/admin/repair/RemoveMiners";
 import AddInventoryItem from "./pages/admin/inventory/AddInventoryItem";
 import SingleInventoryItem from "./pages/admin/inventory/SingleInventoryItem";
 import AlertPage from "./pages/admin/inventory/AlertPage";
+import EventsPage from "./pages/eventsPage/EventsPage";
+import SingleMinerPage from "./pages/BuyMiners/SingleMinerPage";
 
 function App() {
   const router = createBrowserRouter([
@@ -53,6 +55,10 @@ function App() {
         {
           path: "buy-bitcoin-miners-uae",
           element: <BuyMinersPage />,
+        },
+        {
+          path: "buy-bitcoin-miners-uae/:id",
+          element: <SingleMinerPage />,
         },
         {
           path: "host-miners",
@@ -82,16 +88,20 @@ function App() {
           path: "about-us",
           element: <AboutUsPage />,
         },
+        {
+          path: "events/:id",
+          element: <EventsPage />,
+        },
       ],
     },
     {
       path: "/terms_and_conditions",
       element: <TermsAndConditions />,
     },
-    // {
-    //   path: "/privacy_policy",
-    //   element: <PrivacyPolicy />,
-    // },
+    {
+      path: "/privacy_policy",
+      element: <PrivacyPolicy />,
+    },
     {
       path: "/admin",
       element: <AdminLayout />,

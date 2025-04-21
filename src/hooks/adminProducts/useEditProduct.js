@@ -21,6 +21,10 @@ const useEditProduct = () => {
     featuredImage,
     featuredImagePublicId,
     description,
+    slug,
+    metaDescription,
+    metaKeywords,
+    metaTitle,
   }) => {
     setLoading(true);
     try {
@@ -39,6 +43,10 @@ const useEditProduct = () => {
           featuredImage,
           featuredImagePublicId,
           description,
+          slug,
+          metaDescription,
+          metaKeywords,
+          metaTitle,
         },
         {
           withCredentials: true,

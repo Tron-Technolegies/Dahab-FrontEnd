@@ -13,12 +13,13 @@ const useFailTesting = () => {
     logImageUrl,
     logImagePublicId,
     remarks,
+    testTechnician,
   }) => {
     setLoading(true);
     try {
       const response = await axios.patch(
         `${BASE_URL}/admin/repair/test-fail/${id}`,
-        { logImagePublicId, logImageUrl, remarks },
+        { logImagePublicId, logImageUrl, remarks, testTechnician },
         {
           withCredentials: true,
         }

@@ -6,7 +6,14 @@ import useAddIssue from "../../../../hooks/adminRepair/useAddIssue";
 import { useParams } from "react-router-dom";
 import { useSelector } from "react-redux";
 
-export default function Section1Content({ miner, loading }) {
+export default function Section1Content({
+  miner,
+  loading,
+  componentLoading,
+  components,
+  refetch,
+  partQty,
+}) {
   const { id } = useParams();
   const { loading: addLoading, addIssue } = useAddIssue();
   const { user } = useSelector((state) => state.user);
@@ -80,6 +87,10 @@ export default function Section1Content({ miner, loading }) {
           handleChange={handleChange}
           miner={miner}
           handleRemove={removeForm}
+          loading={componentLoading}
+          components={components}
+          refetch={refetch}
+          qty={partQty}
         />
       ))}
 

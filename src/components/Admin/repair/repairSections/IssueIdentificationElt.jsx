@@ -13,10 +13,14 @@ export default function IssueIdentificationElt({
   handleChange,
   handleRemove,
   miner,
+  loading,
+  components,
+  refetch,
+  qty,
 }) {
   const { user } = useSelector((state) => state.user);
-  const { loading, components } = useGetAvailableParts();
-  const { refetch, qty } = useGetAvailableQuantity();
+  // const { loading, components } = useGetAvailableParts();
+  // const { refetch, qty } = useGetAvailableQuantity();
 
   return loading ? (
     <Loading />
@@ -173,9 +177,9 @@ export default function IssueIdentificationElt({
         miner?.status === "Need Testing" ||
         miner?.status === "Ready To Connect") && (
         <p className="mb-2">{`last updated : ${issueDetail?.issueUpdatedOn
-          .toString()
+          ?.toString()
           .slice(0, 10)} at ${issueDetail?.issueUpdatedOn
-          .toString()
+          ?.toString()
           .slice(14, 19)}`}</p>
       )}
       {index > 0 && (

@@ -5,12 +5,27 @@ import { toast } from "react-toastify";
 
 const useUpdateOneRepairStatus = () => {
   const [loading, setLoading] = useState(false);
-  const updateStatus = async ({ id, problemId, repairStatus }) => {
+  const updateStatus = async ({
+    id,
+    problemId,
+    repairStatus,
+    extraComponent,
+    extraQty,
+    repairTechnician,
+    repairRemark,
+  }) => {
     setLoading(true);
     try {
       const response = await axios.patch(
         `${BASE_URL}/admin/repair/updateStatus/${id}`,
-        { problemId, repairStatus },
+        {
+          problemId,
+          repairStatus,
+          extraComponent,
+          extraQty,
+          repairTechnician,
+          repairRemark,
+        },
         {
           withCredentials: true,
         }

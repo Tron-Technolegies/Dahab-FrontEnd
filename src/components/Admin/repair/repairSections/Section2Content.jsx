@@ -5,7 +5,7 @@ import useUpdateRepairProcess from "../../../../hooks/adminRepair/useUpdateRepai
 import Loading from "../../../Loading";
 import { useSelector } from "react-redux";
 
-export default function Section2Content({ miner }) {
+export default function Section2Content({ miner, components, refetch, qty }) {
   const { loading, updateProcess } = useUpdateRepairProcess();
   const { user } = useSelector((state) => state.user);
   function handleUpdate() {
@@ -28,6 +28,9 @@ export default function Section2Content({ miner }) {
             item={x}
             minerId={miner._id}
             minerStatus={miner.status}
+            components={components}
+            refetch={refetch}
+            qty={qty}
           />
         ))}
       <div className="flex justify-end">

@@ -13,12 +13,13 @@ const usePassTesting = () => {
     logImageUrl,
     logImagePublicId,
     remarks,
+    testTechnician,
   }) => {
     setLoading(true);
     try {
       const response = await axios.patch(
         `${BASE_URL}/admin/repair/test-pass/${id}`,
-        { logImagePublicId, logImageUrl, remarks },
+        { logImagePublicId, logImageUrl, remarks, testTechnician },
         { withCredentials: true }
       );
       const data = response.data;

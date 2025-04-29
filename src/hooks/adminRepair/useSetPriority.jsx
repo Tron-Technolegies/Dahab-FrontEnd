@@ -1,33 +1,23 @@
 import axios from "axios";
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
 import { BASE_URL } from "../../utils/constants";
 import { toast } from "react-toastify";
 
-const useAddIssue = () => {
+const useSetPriority = () => {
   const [loading, setLoading] = useState(false);
-  const navigate = useNavigate();
-
-  const addIssue = async ({ id, issues }) => {
+  const setPriority = async ({ id, priority }) => {
     setLoading(true);
-
     try {
       const response = await axios.patch(
-        `${BASE_URL}/admin/repair/issues/${id}`,
-        {
-          issues,
-        },
+        `${BASE_URL}/admin/repair/set-priority/${id}`,
+        { priority },
         { withCredentials: true }
       );
       const data = response.data;
       if (data.msg === "success") {
-        toast.success("Successfully added");
-        navigate("/admin/repair");
+        toast.success("priority successfully setup");
       }
     } catch (err) {
-      console.log(
-        err?.response?.data?.msg || err?.error || "something went wrong"
-      );
       toast.error(
         err?.response?.data?.msg || err?.error || "something went wrong"
       );
@@ -36,7 +26,7 @@ const useAddIssue = () => {
     }
   };
 
-  return { loading, addIssue };
+  return { loading, setPriority };
 };
 
-export default useAddIssue;
+export default useSetPriority;

@@ -7,6 +7,8 @@ import Section2Content from "../../../components/Admin/repair/repairSections/Sec
 import { useSelector } from "react-redux";
 import Section3Content from "../../../components/Admin/repair/repairSections/Section3Content";
 import HistoryElement from "../../../components/Admin/repair/repairSections/HistoryElement";
+import useGetAvailableParts from "../../../hooks/adminRepair/useGetAvailableParts";
+import useGetAvailableQuantity from "../../../hooks/adminRepair/useGetAvailableQuantity";
 
 export default function RepairSectionsPage() {
   const [active1, setActive1] = useState(true);
@@ -15,6 +17,8 @@ export default function RepairSectionsPage() {
   const { id } = useParams();
   const { loading, miner, refetch } = useGetSingleMiner({ id });
   const { refetchTrigger } = useSelector((state) => state.admin);
+  const { loading: componentLoading, components } = useGetAvailableParts();
+  const { refetch: partRefetch, qty } = useGetAvailableQuantity();
 
   useEffect(() => {
     refetch();
@@ -34,14 +38,23 @@ export default function RepairSectionsPage() {
           <h2 className="text-2xl font-semibold">History</h2>
         )}
         {miner?.failHistory &&
-          miner?.report.map((x) => <HistoryElement key={x._id} report={x} />)}
+          miner?.report.map((x) => (
+            <HistoryElement key={x._id} report={x} miner={miner} />
+          ))}
 
         <SectionHeadings
           name={"Section 1"}
           active={active1}
           setActive={setActive1}
         />
-        <Section1Content miner={miner} loading={loading} />
+        <Section1Content
+          miner={miner}
+          loading={loading}
+          componentLoading={componentLoading}
+          components={components}
+          refetch={partRefetch}
+          partQty={qty}
+        />
         <SectionHeadings
           name={"Section 2"}
           active={active2}
@@ -50,7 +63,12 @@ export default function RepairSectionsPage() {
         {(miner?.status === "Need Repair" ||
           miner?.status === "Need Testing" ||
           miner?.status === "Ready To Connect") && (
-          <Section2Content miner={miner} />
+          <Section2Content
+            miner={miner}
+            components={components}
+            refetch={partRefetch}
+            qty={qty}
+          />
         )}
         <SectionHeadings
           name={"Section 3"}

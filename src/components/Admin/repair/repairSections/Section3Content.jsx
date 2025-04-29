@@ -7,6 +7,7 @@ import Loading from "../../../Loading";
 import { toast } from "react-toastify";
 import { useSelector } from "react-redux";
 import useFailTesting from "../../../../hooks/adminRepair/useFailTesting";
+import FormSelect from "../../../FormSelect";
 
 const options = ["To Be Tested", "Test Passed", "Test Failed"];
 
@@ -14,6 +15,7 @@ export default function Section3Content({ miner }) {
   const [testStatus, setTestStatus] = useState("To Be Tested");
   const [logImageUrl, setLogImageUrl] = useState("");
   const [logImagePublicId, setLogImagePublicId] = useState("");
+  const [testTechnician, setTestTechnician] = useState("Technician-1");
   const [remarks, setRemarks] = useState("");
   const { user } = useSelector((state) => state.user);
 
@@ -30,9 +32,16 @@ export default function Section3Content({ miner }) {
         logImagePublicId,
         logImageUrl,
         remarks,
+        testTechnician,
       });
     } else {
-      failTesting({ id: miner?._id, logImagePublicId, logImageUrl, remarks });
+      failTesting({
+        id: miner?._id,
+        logImagePublicId,
+        logImageUrl,
+        remarks,
+        testTechnician,
+      });
     }
   }
 
@@ -45,6 +54,9 @@ export default function Section3Content({ miner }) {
     }
     if (miner && miner.remarks) {
       setRemarks(miner.remarks);
+    }
+    if (miner && miner.testTechnician) {
+      setTestTechnician(miner.testTechnician);
     }
   }, [miner]);
 
@@ -92,7 +104,16 @@ export default function Section3Content({ miner }) {
             ))}
         </div>
         {loading && <Loading />}
-
+        <FormSelect
+          title={"Technician"}
+          list={["Technician-1", "Technician-2", "Technician-3"]}
+          disabled={
+            miner?.status === "Ready To Connect" && user.role === "admin"
+          }
+          value={testTechnician}
+          onchange={(e) => setTestTechnician(e.target.value)}
+          issue
+        />
         <FormInput
           type={"text"}
           title={"Remarks"}

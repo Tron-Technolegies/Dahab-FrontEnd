@@ -8,9 +8,12 @@ import {
   setSearch,
   setSortData,
 } from "../../../slices/adminSlice";
+import useDownloadCSV from "../../../hooks/adminDatas/useDownloadCSV";
+import Loading from "../../Loading";
 
 export default function DataPageHeader() {
   const { search, farm } = useSelector((state) => state.admin);
+  const { loading, downloadCSV } = useDownloadCSV();
   const dispatch = useDispatch();
   return (
     <div>
@@ -87,6 +90,13 @@ export default function DataPageHeader() {
           </button>
         </div>
       </div>
+      <button
+        className="bg-homeBg text-white px-5 py-2 rounded-lg hover:bg-homeBgGradient nav-link mb-5"
+        onClick={() => downloadCSV()}
+      >
+        Download CSV
+      </button>
+      {loading && <Loading />}
     </div>
   );
 }

@@ -49,7 +49,7 @@ export default function DataPageHeader() {
               "ALL",
               "SHAKABOUT",
               "AL FALAH",
-              "MBZ",
+              "MBZ 1",
               "MBZ 2",
               "BAHYA",
               "ADLA",

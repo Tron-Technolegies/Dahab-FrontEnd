@@ -8,6 +8,8 @@ export default function FormInput({
   onchange,
   admin,
   disabled,
+  notRequired,
+  defaultValue,
 }) {
   return (
     <div className="form-row">
@@ -19,8 +21,9 @@ export default function FormInput({
           placeholder={placeholder}
           value={value}
           onChange={onchange}
-          required
+          required={notRequired ? false : true}
           disabled={disabled ? true : false}
+          defaultValue={defaultValue}
         />
       </div>
     </div>

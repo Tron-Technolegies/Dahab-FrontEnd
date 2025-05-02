@@ -6,6 +6,7 @@ import useGetAvailableParts from "../../../../hooks/adminRepair/useGetAvailableP
 import Loading from "../../../Loading";
 import FormInput from "../../../FormInput";
 import useGetAvailableQuantity from "../../../../hooks/adminRepair/useGetAvailableQuantity";
+import { RepairIssues, repairTechnicians } from "../../../../utils/repairdata";
 
 export default function IssueIdentificationElt({
   issueDetail,
@@ -28,7 +29,7 @@ export default function IssueIdentificationElt({
     <div className="bg-gray-200 p-5 rounded-lg my-5">
       <FormSelect
         title={"Problem Identified"}
-        list={["Problem-1", "Problem-2", "Problem-3", "Problem-4", "Problem-5"]}
+        list={RepairIssues}
         value={issueDetail?.problem}
         disabled={
           (miner?.status === "Need Repair" ||
@@ -147,7 +148,7 @@ export default function IssueIdentificationElt({
       /> */}
       <FormSelect
         title={"Technician"}
-        list={["Technician-1", "Technician-2", "Technician-3"]}
+        list={repairTechnicians}
         disabled={
           (miner?.status === "Need Repair" ||
             miner?.status === "Need Testing" ||

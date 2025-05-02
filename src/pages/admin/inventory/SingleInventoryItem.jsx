@@ -13,8 +13,9 @@ export default function SingleInventoryItem() {
   const [name, setName] = useState("");
   const [category, setCategory] = useState("Repair Components");
   const [quantity, setQuantity] = useState(0);
-  const [threshold, setThreshold] = useState(0);
+  const [threshold, setThreshold] = useState(1);
   const [location, setLocation] = useState("");
+  const [remark, setRemark] = useState("");
   const { loading: updateLoading, updateItem } = useUpdateInventory();
   const { user } = useSelector((state) => state.user);
 
@@ -25,6 +26,7 @@ export default function SingleInventoryItem() {
       setQuantity(item.quantity);
       setThreshold(item.threshold);
       setLocation(item.location);
+      setRemark(item.remark);
     }
   }, [item, loading]);
   return loading ? (
@@ -73,6 +75,7 @@ export default function SingleInventoryItem() {
           placeholder={"Enter minimum quantity"}
           disabled={user?.role === "admin"}
           admin
+          defaultValue={1}
           value={threshold}
           onchange={(e) => setThreshold(e.target.value)}
         />
@@ -83,14 +86,33 @@ export default function SingleInventoryItem() {
           disabled={user?.role === "admin"}
           admin
           value={location}
+          notRequired
           onchange={(e) => setLocation(e.target.value)}
+        />
+        <FormInput
+          title={"Remark"}
+          type={"text"}
+          placeholder={"Enter Remark"}
+          disabled={user?.role === "admin"}
+          admin
+          notRequired
+          value={remark}
+          onchange={(e) => setRemark(e.target.value)}
         />
         <div className="flex justify-end">
           <button
             className="px-4 py-2 rounded-md bg-homeBg hover:bg-homeBgGradient text-white disabled:cursor-not-allowed disabled:bg-gray-200"
             disabled={user?.role === "admin"}
             onClick={() =>
-              updateItem({ id, name, category, quantity, threshold, location })
+              updateItem({
+                id,
+                name,
+                category,
+                quantity,
+                threshold,
+                location,
+                remark,
+              })
             }
           >
             Update

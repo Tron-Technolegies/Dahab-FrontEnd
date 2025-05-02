@@ -15,6 +15,7 @@ const useUpdateInventory = () => {
     quantity,
     threshold,
     location,
+    remark,
   }) => {
     setLoading(true);
     try {
@@ -26,6 +27,7 @@ const useUpdateInventory = () => {
           location,
           quantity,
           threshold,
+          remark,
         },
         { withCredentials: true }
       );

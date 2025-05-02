@@ -19,10 +19,10 @@ export default function Section1Content({
   const { user } = useSelector((state) => state.user);
   const [issueDetail, setIssueDetail] = useState([
     {
-      problem: "Problem-1",
+      problem: "CHAIN: 0",
       component: "No Components needed",
       qty: 0,
-      identifyTechnician: "Technician-1",
+      identifyTechnician: "Mehraj",
       issueRemark: "",
     },
   ]);
@@ -40,10 +40,10 @@ export default function Section1Content({
     setIssueDetail([
       ...issueDetail,
       {
-        problem: "Problem-1",
+        problem: "CHAIN: 0",
         component: "No Components needed",
         qty: 0,
-        identifyTechnician: "Technician-1",
+        identifyTechnician: "Mehraj",
         issueRemark: "",
       },
     ]);

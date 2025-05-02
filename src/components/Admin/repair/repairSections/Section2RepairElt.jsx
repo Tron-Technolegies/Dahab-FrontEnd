@@ -6,6 +6,7 @@ import Loading from "../../../Loading";
 import useGetAvailableParts from "../../../../hooks/adminRepair/useGetAvailableParts";
 import FormSelect from "../../../FormSelect";
 import FormInput from "../../../FormInput";
+import { repairTechnicians } from "../../../../utils/repairdata";
 
 const options = ["Pending", "Repair Done", "Component Needed"];
 
@@ -20,7 +21,7 @@ export default function Section2RepairElt({
   const [repairStatus, setRepairStatus] = useState("Pending");
   const [extraComponent, setExtraComponent] = useState("No Components needed");
   const [extraQty, setExtraQty] = useState(0);
-  const [repairTechnician, setRepairTechnician] = useState("Technician-1");
+  const [repairTechnician, setRepairTechnician] = useState("Mehraj");
   const [repairRemark, setRepairRemark] = useState("");
   const { user } = useSelector((state) => state.user);
   const { loading, updateStatus } = useUpdateOneRepairStatus();
@@ -165,7 +166,7 @@ export default function Section2RepairElt({
         </select>
         <FormSelect
           title={"Technician"}
-          list={["Technician-1", "Technician-2", "Technician-3"]}
+          list={repairTechnicians}
           disabled={
             (minerStatus === "Need Testing" ||
               minerStatus === "Ready To Connect") &&

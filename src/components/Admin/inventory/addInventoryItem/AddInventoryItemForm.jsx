@@ -9,8 +9,9 @@ export default function AddInventoryItemForm() {
   const [name, setName] = useState("");
   const [category, setCategory] = useState("Repair Components");
   const [quantity, setQuantity] = useState(0);
-  const [threshold, setThreshold] = useState(0);
+  const [threshold, setThreshold] = useState(1);
   const [location, setLocation] = useState("");
+  const [remark, setRemark] = useState("");
 
   const { user } = useSelector((state) => state.user);
   const { loading, addItem } = useAddInventoryItem();
@@ -47,6 +48,7 @@ export default function AddInventoryItemForm() {
         type={"number"}
         placeholder={"Enter minimum quantity"}
         admin
+        defaultValue={1}
         disabled={user?.role === "admin"}
         value={threshold}
         onchange={(e) => setThreshold(e.target.value)}
@@ -55,16 +57,27 @@ export default function AddInventoryItemForm() {
         title={"Location"}
         type={"text"}
         placeholder={"Enter location"}
+        notRequired
         admin
         disabled={user?.role === "admin"}
         value={location}
         onchange={(e) => setLocation(e.target.value)}
       />
+      <FormInput
+        title={"Remark"}
+        type={"text"}
+        placeholder={"Enter Remark"}
+        admin
+        notRequired
+        disabled={user?.role === "admin"}
+        value={remark}
+        onchange={(e) => setRemark(e.target.value)}
+      />
       <div className="flex justify-end">
         <button
           className="px-4 py-2 rounded-md bg-homeBg hover:bg-homeBgGradient text-white disabled:cursor-not-allowed disabled:bg-gray-200"
           onClick={() =>
-            addItem({ name, category, quantity, threshold, location })
+            addItem({ name, category, quantity, threshold, location, remark })
           }
           disabled={user?.role === "admin"}
         >

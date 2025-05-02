@@ -8,6 +8,7 @@ import { toast } from "react-toastify";
 import { useSelector } from "react-redux";
 import useFailTesting from "../../../../hooks/adminRepair/useFailTesting";
 import FormSelect from "../../../FormSelect";
+import { repairTechnicians } from "../../../../utils/repairdata";
 
 const options = ["To Be Tested", "Test Passed", "Test Failed"];
 
@@ -15,7 +16,7 @@ export default function Section3Content({ miner }) {
   const [testStatus, setTestStatus] = useState("To Be Tested");
   const [logImageUrl, setLogImageUrl] = useState("");
   const [logImagePublicId, setLogImagePublicId] = useState("");
-  const [testTechnician, setTestTechnician] = useState("Technician-1");
+  const [testTechnician, setTestTechnician] = useState("Mehraj");
   const [remarks, setRemarks] = useState("");
   const { user } = useSelector((state) => state.user);
 
@@ -106,7 +107,7 @@ export default function Section3Content({ miner }) {
         {loading && <Loading />}
         <FormSelect
           title={"Technician"}
-          list={["Technician-1", "Technician-2", "Technician-3"]}
+          list={repairTechnicians}
           disabled={
             miner?.status === "Ready To Connect" && user.role === "admin"
           }

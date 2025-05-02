@@ -8,7 +8,14 @@ const useAddInventoryItem = () => {
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
 
-  const addItem = async ({ name, category, quantity, threshold, location }) => {
+  const addItem = async ({
+    name,
+    category,
+    quantity,
+    threshold,
+    location,
+    remark,
+  }) => {
     setLoading(true);
     try {
       const response = await axios.post(
@@ -19,6 +26,7 @@ const useAddInventoryItem = () => {
           quantity,
           threshold,
           location,
+          remark,
         },
         { withCredentials: true }
       );

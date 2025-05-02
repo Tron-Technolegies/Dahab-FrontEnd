@@ -44,3 +44,29 @@ export const antminerPSUReplacementData = [
 export const iceriverPSUReplacementData = [
   { id: 1, item: "All models", price: "400 AED" },
 ];
+
+export const repairTechnicians = [
+  "Mehraj",
+  "Umer",
+  "Roshan",
+  "Sreeraj",
+  "Sheikh",
+  "Thaha",
+  "Adhan",
+  "Shalu",
+];
+
+export const RepairIssues = [
+  "CHAIN: 0",
+  "CHAIN: 1",
+  "CHAIN: 2",
+  "IP NOT SHOWING",
+  "FIRMWARE ISSUE",
+  "FAN SENSOR ABNORMAL",
+  "POOL ISSUE",
+  "PSU SENSOR ABNORMAL",
+  "MINER FAN ISSUE",
+  "PSU FAN ISSUE",
+  "PSU SCRAPPED",
+  "PSU FAULTY",
+];

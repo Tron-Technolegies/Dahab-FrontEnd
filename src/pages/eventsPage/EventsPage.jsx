@@ -49,6 +49,7 @@ export default function EventsPage() {
         <p>{event?.p3}</p>
         <p>{event?.p4}</p>
         <p>{event?.p5}</p>
+        <p>{event?.p6}</p>
       </section>
       <EventImages images={event?.images} />
     </div>

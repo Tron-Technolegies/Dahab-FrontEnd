@@ -6,36 +6,36 @@ const data = [
   {
     id: 1,
     img: "/home/review-1.png",
-    name: "Name",
-    role: "Founder & CEO",
+    name: "Rizwan Kamarudheen",
+    role: "Co-Founder & Chief Executive Officer",
     about:
-      "Mohamed is the visionary behind Dahab Miners. With a pioneering spirit and a strong foundation in blockchain technology, he founded the company to empower miners with scalable, secure, and future-ready crypto mining solutions.",
+      "Born and raised in the UAE, Rizwan has been a pioneer in the region’s crypto mining space since 2020—well before founding Dahab Miners. With a deep understanding of the challenges miners face in the UAE, he has developed strategic, streamlined solutions tailored to the local environment. Prior to Dahab, Rizwan held leadership roles at renowned industry firms such as GreenGate and Tron Digital. His background as a technical lead in energy-focused projects, especially in the EV sector at GreenGate, has played a vital role in shaping Dahab’s success and sustainability-driven operations.",
     fb: "#",
     inst: "#",
     link: "#",
   },
   {
     id: 2,
-    img: "/home/review-2.png",
-    name: "Name",
-    role: "Founder & CEO",
+    img: "/home/review-4.png",
+    name: "Ahmed Rameez",
+    role: "Co-Founder & Executive Director",
     about:
-      "Mohamed is the visionary behind Dahab Miners. With a pioneering spirit and a strong foundation in blockchain technology, he founded the company to empower miners with scalable, secure, and future-ready crypto mining solutions.",
+      "Also born and raised in the UAE, Ahmed has been actively involved in the crypto mining scene alongside Rizwan since 2020. Coming from a family with deep business roots, he has always had a keen entrepreneurial spirit. In addition to co-founding Dahab Miners, Ahmed leads several successful ventures across industries including F&B, FMCG, and Real Estate. Hisdiverse business experience brings a valuable strategic perspective to Dahab’s leadership. ",
     fb: "#",
     inst: "#",
     link: "#",
   },
-  {
-    id: 3,
-    img: "/home/review-3.png",
-    name: "Name",
-    role: "Founder & CEO",
-    about:
-      "Mohamed is the visionary behind Dahab Miners. With a pioneering spirit and a strong foundation in blockchain technology, he founded the company to empower miners with scalable, secure, and future-ready crypto mining solutions.",
-    fb: "#",
-    inst: "#",
-    link: "#",
-  },
+  // {
+  //   id: 3,
+  //   img: "/home/review-3.png",
+  //   name: "Name",
+  //   role: "Founder & CEO",
+  //   about:
+  //     "Mohamed is the visionary behind Dahab Miners. With a pioneering spirit and a strong foundation in blockchain technology, he founded the company to empower miners with scalable, secure, and future-ready crypto mining solutions.",
+  //   fb: "#",
+  //   inst: "#",
+  //   link: "#",
+  // },
 ];
 
 export default function FoundersSection() {
@@ -62,7 +62,7 @@ export default function FoundersSection() {
         The visionaries behind Dahab Miners driving innovation and Excellence in
         the Crypto mining industry
       </p>
-      <div className="grid md:grid-cols-3 gap-9 my-5">
+      <div className="grid md:grid-cols-2 gap-9 my-5">
         {data.map((item) => (
           <FounderCard
             key={item.id}

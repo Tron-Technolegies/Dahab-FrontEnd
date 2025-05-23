@@ -2,10 +2,17 @@ import { motion } from "framer-motion";
 import React from "react";
 import { handleChatClick } from "../../../utils/whatsapp";
 
-export default function ServicesCard({ img, title, content, list }) {
+export default function ServicesCard({
+  icon,
+  title,
+  content,
+  list,
+  content2,
+  content3,
+}) {
   return (
     <motion.div
-      className="p-3 py-5 bg-[#000618] text-white rounded-lg flex flex-col gap-5 justify-between items-center max-w-[280px]"
+      className="px-5 py-5 bg-[#000618] text-white rounded-lg flex flex-col gap-5 justify-between items-center max-w-[400px]"
       initial={{
         borderImageSource:
           "linear-gradient(to bottom right, #004DF480 0%, transparent 50%, transparent 50%, #0194FE80 100%)",
@@ -27,7 +34,7 @@ export default function ServicesCard({ img, title, content, list }) {
       }}
     >
       <div className="flex flex-col gap-5 items-center">
-        <img src={img} className="w-10" />
+        <p className="text-4xl text-[#0194FE]">{icon}</p>
         <p className="text-[#0194FE] text-center">{title.toUpperCase()}</p>
       </div>
       <div>
@@ -39,6 +46,8 @@ export default function ServicesCard({ img, title, content, list }) {
             ))}
           </ul>
         )}
+        {content2 && <p className="text-sm leading-6">{content2}</p>}
+        {content3 && <p className="text-sm leading-6">{content3}</p>}
       </div>
       <motion.button
         initial={{ scale: 1 }}

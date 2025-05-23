@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 export default function ProductCategoryCard({ img, title, content }) {
   return (
     <motion.div
-      className="p-3 py-5 bg-[#000618] text-white rounded-lg flex flex-col gap-5 items-center max-w-[250px] h-[390px]"
+      className="p-3 py-5 bg-[#000618] text-white rounded-lg flex flex-col gap-2 items-center max-w-[380px] h-[450px]"
       initial={{
         borderImageSource:
           "linear-gradient(to bottom right, #004DF480 0%, transparent 50%, transparent 50%, #0194FE80 100%)",

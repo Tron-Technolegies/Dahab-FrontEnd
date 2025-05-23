@@ -1,32 +1,69 @@
 import React from "react";
 import ServicesCard from "./ServicesCard";
 import { motion } from "framer-motion";
+import { IoHardwareChipOutline, IoServerOutline } from "react-icons/io5";
+import { BsTools } from "react-icons/bs";
+import { BiSupport } from "react-icons/bi";
 
 const data = [
   {
     id: 1,
-    img: "/home/service-1.png",
+    img: <IoHardwareChipOutline />,
     title: "Mining Hardware Sales",
     content:
-      "We offer a curated selection of high-performance Bitcoin mining machines, including top-tier models like the Bitmain Antminer AL1 Pro, IceRiver AL3, DragonBall Miner A11, and A40. Each unit is sourced for optimal efficiency and profitability, ensuring our clients have access to the best tools in the industry.",
+      "At Dahab Miners, we offer a comprehensive range of Bitcoin mining machines from the industry’s most trusted and emerging brands. Whether you’re scaling a large mining operation or just starting out, our inventory includes top-tier models like the Bitmain Antminer S21, WhatsMiner M60 series, and ofcourse the L9’s, alongside specialized units such as the IceRiver KS7, DragonBall Miner A11 etc.",
+    content2:
+      "From single units to bulk orders of thousands, we tailor every sale to meet your needs — with full support for pre-orders, large-scale procurement, and global logistics to ensure your operation runs without interruption.",
+    content3:
+      "Scalable solutions for every miner — from boutique setups to enterprise-scale deployments.",
   },
   {
     id: 2,
-    img: "/home/service-2.png",
-    title: "Hosting & Services",
+    img: <IoServerOutline />,
+    title: "Hosting Solutions",
     content:
-      "At Dahab Miners, we specialize in quick and efficient repairs to minimize downtime and keep your mining rigs running smoothly. From diagnostics and chip-level fixes to full component replacements, our expert technicians use quality parts and tools to restore peak performance. We also offer preventive ......",
+      "At Dahab Miners, we offer versatile and scalable hosting solutions designed to meet the needs of miners of every scale — whether operating on air-cooled, immersion, or hydro setups. Our advanced hosting sites in the UAE and Ethiopia are engineered for efficiency and reliability, ensuring your miners operate at peak performance with:",
+    list: [
+      "Professional installation and setup",
+      "24/7 monitoring and performance management",
+      "Preventive maintenance and rapid response support",
+      "Uptime guarantees backed by strong SLAs",
+    ],
+    content2:
+      "Whether you’re deploying a hydro container, running immersion tanks, or managing traditional air-cooled units, our infrastructure and team are ready to handle it all seamlessly",
+
+    content3:
+      "Hydro, Immersion, or Air — hosted to perfection, powered by Dahab.",
   },
   {
     id: 3,
-    img: "/home/service-3.png",
+    img: <BsTools />,
+    title: "Repair and Maintenance",
+    content:
+      "Keeping miners running efficiently requires expert care — and that’s where Dahab Miners delivers. Our skilled technicians offer chip-level repairs and full component replacements, using high-quality parts and precision diagnostics. Whether you’re hosting with us or need independent repair support, we welcome all miners for: ",
+    list: [
+      "Board and chip-level diagnostics",
+      "Component replacements and performance tuning",
+      "Preventive and corrective maintenance",
+    ],
+    content2:
+      "Your trusted partner for reliable and efficient miner repairs — anytime you need.",
+  },
+  {
+    id: 4,
+    img: <BiSupport />,
     title: "Consultation & Support",
     content:
-      "Navigating the crypto mining landscape can be complex. Our team of experts offers personalized consultations to guide you through",
+      "Navigating the fast-moving world of Bitcoin mining can be complex. At Dahab Miners, we make it simple. Our expert team offers personalized consulting for miners, investors, and newcomers alike, covering every stage of the mining journey:",
     list: [
-      "Selecting the right mining hardware tailored to your needs.",
-      "Setting up and optimizing your mining operations...",
+      "Mining hardware selection and sourcing",
+      "Mining farm design and site acquisition",
+      "Operational optimization and scaling strategies",
+      "Technical support and troubleshooting",
     ],
+    content2:
+      "Whether you’re building your first mining rig or planning a multi-megawatt facility, we’re here to guide you every step of the way.",
+    content3: "From concept to hash — your mining success, powered by Dahab.",
   },
 ];
 const sectionVariants = {
@@ -51,14 +88,16 @@ export default function ServiceSection() {
       <h4 className="gradient-heading md:text-4xl text-3xl font-semibold pb-5">
         Unlock Our Mining Solutions
       </h4>
-      <div className="grid md:grid-cols-3 gap-7">
+      <div className="grid md:grid-cols-2 gap-7">
         {data.map((item) => (
           <ServicesCard
             key={item.id}
-            img={item.img}
+            icon={item.img}
             title={item.title}
             content={item.content}
             list={item.list}
+            content2={item.content2}
+            content3={item.content3}
           />
         ))}
       </div>

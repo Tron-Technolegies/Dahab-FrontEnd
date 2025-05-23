@@ -12,35 +12,35 @@ export default function ProductCategorySection() {
       img: "/buycarousel.webp",
       title: "Air Cooled",
       content:
-        "Take your mining to the next level with our state-of-the-art Air-Cooled Crypto Mining Machine—engineered for high performance and long-term stability, even under intensive workloads.",
+        "Explore our selection of air-cooled mining machines, designed for efficient performance in well-ventilated environments. This range includes top models from industry leaders like Antminer (Bitmain), WhatsMiner, and more—perfect for mining Bitcoin, Litecoin, and Kaspa using algorithms such as SHA-256, Scrypt, and kHeavyHash. Ideal for both personal and professional mining setups across the UAE and Ethiopia, these machines offer reliable output with simplified cooling requirements",
     },
     {
       id: 2,
       img: "/buycarousel.webp",
       title: "Immersion",
       content:
-        "Step into the future of mining with our Immersion-Cooled Crypto Mining Machine—a next-gen solution designed for maximum efficiency, thermal stability, and serious profitability.",
+        "Take your mining to the next level with our immersion cooling-compatible miners, built for maximum thermal performance and hardware longevity.Discover high-efficiency immersion-ready mining machines, engineered to deliver consistent hashrates in liquid-cooled environments. This range includes models from trusted names like IceRiver, Antminer, and Jasminer, supporting algorithms such as SHA-256, kHeavyHash, and Etchash. Immersion cooling enables optimized performance and extended hardware life—ideal for enterprise-scale crypto mining operations",
     },
     {
       id: 3,
       img: "/buycarousel.webp",
       title: "Hydro",
       content:
-        "Designed for peak efficiency and industrial-scale operations, our Hydro-Cooled Mining Machines use water-based liquid cooling to deliver unmatched stability, quieter operation, and boosted performance—even in the harshest environments.",
+        "Our collection of hydro-cooled miners offers high-performance solutions for miners looking to reduce heat and noise while maximizing uptime. Featuring advanced models from Antminer Hydro and WhatsMiner Hydro, these machines are optimized for SHA-256 algorithm mining, making them an excellent choice for large-scale Bitcoin mining. Built for durability and consistent output, hydro miners are perfect for high-density hosting environents. Widely used in both the UAE and Ethiopian sites, these systems are suited for scalable mining farms requiring reliable uptime and noise control.",
     },
     {
       id: 4,
       img: "/buycarousel.webp",
       title: "Home Miner",
       content:
-        "Get started with crypto mining from the comfort of your home with our specially designed Home Miner Machines—easy to use, energy-efficient, and optimized for residential environments.",
+        "Browse compact, efficient home crypto mining machines from trusted brands like Elphapex, Goldshell, iPollo, and IceRiver—designed for hobbyists and small-scale investors. Ideal for Scrypt, Blake2s, and kHeavyHash algorithms, these units support coins like Litecoin, Dogecoin, and Kaspa while offering low-noise and plug-and-play usability. Whether you're mining at home or starting small, Dahab Miners provides mining machines in UAE and Ethiopia tailored for every user level.",
     },
   ];
   const settings = {
     dots: true,
     infinite: true,
     speed: 50,
-    slidesToShow: 3, // Number of slides to show at a time
+    slidesToShow: 2, // Number of slides to show at a time
     slidesToScroll: 1,
     centerMode: true,
     arrows: false,

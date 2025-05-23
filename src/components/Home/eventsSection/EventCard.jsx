@@ -7,18 +7,18 @@ export default function EventCard({ img, date, location, title, id }) {
   return (
     <div className="p-5 rounded-md bg-black border border-[#0194FE] mx-5 flex flex-col items-center gap-3">
       <img src={img} className=" object-cover rounded-lg" />
-      <div className="flex justify-between items-center text-sm w-full text-[#A1D3F8]">
+      <div className="flex justify-between items-center text-xs w-full text-[#A1D3F8]">
         <div className="flex items-center gap-2">
           <CiCalendar />
-          <p>{date}</p>
+          <p>{date.toUpperCase()}</p>
         </div>
         <div className="flex items-center gap-2">
           <CiLocationOn />
-          <p>{location}</p>
+          <p>{location.toUpperCase()}</p>
         </div>
       </div>
       <div className="flex justify-between items-center text-sm w-full">
-        <p className="text-lg tracking-[2px]">{title.toUpperCase()}</p>
+        <p className="tracking-[2px]">{title.toUpperCase()}</p>
         <div className="flex items-center gap-2">
           <Link to={`/events/${id}`} className="text-[#48E5E1]">
             View

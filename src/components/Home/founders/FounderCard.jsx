@@ -14,7 +14,7 @@ export default function FounderCard({
 }) {
   return (
     <motion.div
-      className="p-3 py-5 bg-[#000618] text-white rounded-lg flex flex-col gap-5 justify-between items-center max-w-[260px]"
+      className="p-3 py-5 bg-[#000618] text-white rounded-lg flex flex-col gap-5 justify-between items-center max-w-[350px]"
       initial={{
         borderImageSource:
           "linear-gradient(to bottom right, #004DF480 0%, transparent 50%, transparent 50%, #0194FE80 100%)",

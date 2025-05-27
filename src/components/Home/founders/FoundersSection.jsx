@@ -16,7 +16,7 @@ const data = [
   },
   {
     id: 2,
-    img: "/home/review-1.png",
+    img: "/home/founder",
     name: "Ahmed Rameez",
     role: "Co-Founder & Executive Director",
     about:

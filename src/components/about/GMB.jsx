@@ -24,17 +24,17 @@ export default function GMB() {
         style={{
           borderStyle: "solid",
         }}
-        className="p-5 rounded-md border flex flex-col gap-5 items-center justify-center overflow-hidden"
+        className="md:p-5 p-2 rounded-md border flex flex-col gap-5 items-center justify-center overflow-hidden"
       >
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3671.1205725224554!2d54.06791347509289!3d23.056040779150297!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e66cd25347a9cb1%3A0x545d311f79ad9ba8!2sDahab%20Miners%3A%20Crypto%20mining%20company!5e0!3m2!1sen!2sin!4v1748344699469!5m2!1sen!2sin"
-          width="1000"
-          height="600"
+          //   width="1000"
+          //   height="600"
           style={{ border: "0" }}
           allowFullScreen=""
           loading="lazy"
           referrerPolicy="no-referrer-when-downgrade"
-          className="overflow-hidden"
+          className="overflow-hidden w-[320px] sm:w-[400px] md:w-[800px] xl:w-[1000px] h-[400px]"
         ></iframe>
         <a
           href="https://www.google.com/maps/place/Dahab+Miners:+Crypto+mining+company/@23.0560408,54.0679135,17z/data=!3m1!4b1!4m6!3m5!1s0x3e66cd25347a9cb1:0x545d311f79ad9ba8!8m2!3d23.0560408!4d54.0704884!16s%2Fg%2F11x2h_3f3_?entry=ttu&g_ep=EgoyMDI1MDUyMS4wIKXMDSoASAFQAw%3D%3D"

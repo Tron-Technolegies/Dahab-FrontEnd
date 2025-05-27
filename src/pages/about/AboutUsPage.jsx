@@ -24,7 +24,7 @@ export default function AboutUsPage() {
       <WhyChooseUs />
       <MapSection />
       <SolutionsSection />
-      {/* <GMB /> */}
+      <GMB />
       <AboutPageContactSection />
     </div>
   );

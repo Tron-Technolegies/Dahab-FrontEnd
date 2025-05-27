@@ -38,7 +38,7 @@ export default function FounderCard({
       <div className="flex flex-col gap-5 items-center">
         <img
           src={img}
-          className="rounded-full object-cover border-2 border-[#4D8390]"
+          className="rounded-full w-24 object-cover border-2 border-[#4D8390]"
         />
         <div className="flex flex-col items-center">
           <p className="font-semibold">{name}</p>

@@ -42,14 +42,14 @@ export default function MiningFacilitiesSection() {
             content={
               "Our hosting farms offer secure, high-performance environments for your ASIC miners, ensuring peak efficiency and uptime."
             }
-            image={"/2.jpg"}
+            image={"/1.jpg"}
           />
           <FacilityCard
             title={"Repair Services and maintenance"}
             content={
               " Our expert repair team keeps your mining operations running smoothly, minimizing downtime and maximizing profitability."
             }
-            image={"/1.jpg"}
+            image={"/7.jpg"}
           />
         </motion.div>
       </div>

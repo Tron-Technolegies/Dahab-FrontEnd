@@ -80,7 +80,7 @@ export default function ServiceSection() {
     <motion.section
       initial="hidden"
       whileInView="visible"
-      viewport={{ once: false, amount: 0.3 }} // Triggers when 20% of the section is visible
+      viewport={{ once: false, amount: 0.08 }} // Triggers when 20% of the section is visible
       variants={sectionVariants}
       className="main-bg px-5 md:px-10 lg:px-[120px] xl:px-[180px] py-10 flex flex-col gap-5 items-center"
     >

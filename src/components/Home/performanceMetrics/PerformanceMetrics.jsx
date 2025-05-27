@@ -17,9 +17,9 @@ export default function PerformanceMetrics() {
       <motion.h4
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: false, amount: 0.3 }} // Triggers when 20% of the section is visible
+        viewport={{ once: false, amount: 0.2 }} // Triggers when 20% of the section is visible
         variants={sectionVariants}
-        className="text-center text-5xl mb-5 font-semibold gradient-heading"
+        className="text-center text-5xl pb-4 font-semibold gradient-heading"
       >
         Dive into our performance Metrics
       </motion.h4>

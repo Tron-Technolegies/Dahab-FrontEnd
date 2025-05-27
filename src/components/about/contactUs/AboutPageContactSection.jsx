@@ -105,12 +105,12 @@ export default function AboutPageContactSection() {
               <ContactDetailSingleElt
                 icon={<CiLocationOn />}
                 content={
-                  "Plaza 30, Unit 2B-SF - شارع دلما - Abu Dhabi - United Arab Emirates"
+                  "Saif Thamer General Transport Establishment building, Al Jubailah, Liwa, Abu Dhabi"
                 }
               />
               <ContactDetailSingleElt
                 icon={<CiLocationOn />}
-                content={"Ethiopia"}
+                content={"WM92+VCQ Alem Gena, Ethiopia"}
               />
               <ContactDetailSingleElt
                 icon={<CiMail />}

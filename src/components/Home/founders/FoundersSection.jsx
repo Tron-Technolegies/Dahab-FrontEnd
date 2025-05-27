@@ -5,7 +5,7 @@ import FounderCard from "./FounderCard";
 const data = [
   {
     id: 1,
-    img: "/home/review-1.png",
+    img: "/home/founder1.jpg",
     name: "Rizwan Kamarudheen",
     role: "Co-Founder & Chief Executive Officer",
     about:
@@ -16,7 +16,7 @@ const data = [
   },
   {
     id: 2,
-    img: "/home/review-4.png",
+    img: "/home/review-1.png",
     name: "Ahmed Rameez",
     role: "Co-Founder & Executive Director",
     about:
@@ -51,7 +51,7 @@ export default function FoundersSection() {
     <motion.section
       initial="hidden"
       whileInView="visible"
-      viewport={{ once: false, amount: 0.3 }} // Triggers when 20% of the section is visible
+      viewport={{ once: false, amount: 0.1 }} // Triggers when 20% of the section is visible
       variants={sectionVariants}
       className="main-bg px-5 md:px-10 lg:px-[120px] xl:px-[180px] py-10 flex flex-col gap-5 items-center"
     >

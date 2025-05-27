@@ -5,9 +5,12 @@ import { Link } from "react-router-dom";
 
 export default function EventCard({ img, date, location, title, id }) {
   return (
-    <div className="p-5 rounded-md bg-black border border-[#0194FE] mx-5 flex flex-col items-center gap-3">
-      <img src={img} className=" object-cover rounded-lg" />
-      <div className="flex justify-between items-center text-xs w-full text-[#A1D3F8]">
+    <div className="py-5 px-2 rounded-md bg-black border border-[#0194FE] mx-5 flex flex-col items-center overflow-hidden gap-3 md:max-w-[450px] h-[400px]">
+      <img
+        src={img}
+        className=" object-cover rounded-lg md:max-w-[400px] overflow-hidden"
+      />
+      <div className="flex md:flex-row flex-col gap-3 justify-between items-center text-xs w-full text-[#A1D3F8]">
         <div className="flex items-center gap-2">
           <CiCalendar />
           <p>{date.toUpperCase()}</p>
@@ -17,8 +20,10 @@ export default function EventCard({ img, date, location, title, id }) {
           <p>{location.toUpperCase()}</p>
         </div>
       </div>
-      <div className="flex justify-between items-center text-sm w-full">
-        <p className="tracking-[2px]">{title.toUpperCase()}</p>
+      <div className="flex md:flex-row flex-col gap-3 justify-between items-center text-sm w-full">
+        <p className="tracking-[2px] md:text-left text-center">
+          {title.toUpperCase()}
+        </p>
         <div className="flex items-center gap-2">
           <Link to={`/events/${id}`} className="text-[#48E5E1]">
             View

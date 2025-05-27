@@ -6,6 +6,7 @@ import AboutPageContactSection from "../../components/about/contactUs/AboutPageC
 import SolutionsSection from "../../components/about/SolutionsSection";
 import { useLocation } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
+import GMB from "../../components/about/GMB";
 
 export default function AboutUsPage() {
   const location = useLocation();
@@ -23,6 +24,7 @@ export default function AboutUsPage() {
       <WhyChooseUs />
       <MapSection />
       <SolutionsSection />
+      {/* <GMB /> */}
       <AboutPageContactSection />
     </div>
   );

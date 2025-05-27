@@ -25,22 +25,25 @@ export default function EventsPage() {
       <Helmet>
         <link rel="canonical" href={fullUrl || "https://dahabminers.com/"} />
       </Helmet>
-      <section className="px-5 md:px-10 lg:px-[120px] xl:px-[180px] py-10 flex justify-between items-center">
+      <section className="px-5 md:px-10 lg:px-[120px] xl:px-[180px] py-10 flex lg:flex-row flex-col gap-5 justify-between items-center">
         <div className="flex flex-col gap-3">
-          <p className="gradient-heading md:text-2xl text-xl font-semibold">
+          <p className="gradient-heading md:text-2xl lg:text-left text-center text-xl font-semibold">
             {event?.title}
           </p>
-          <div className="flex items-center gap-2 text-[#A1D3F8]">
+          <div className="flex items-center lg:justify-start justify-center gap-2 text-[#A1D3F8]">
             <CiCalendar />
             <p>{event?.date}</p>
           </div>
-          <div className="flex items-center gap-2 text-[#A1D3F8]">
+          <div className="flex items-center lg:justify-start justify-center gap-2 text-[#A1D3F8]">
             <CiLocationOn />
             <p>{event?.location}</p>
           </div>
         </div>
         <div>
-          <img src={event?.img} className="rounded-md object-cover" />
+          <img
+            src={event?.img}
+            className="rounded-md object-cover lg:max-w-[650px] max-w-[350px]"
+          />
         </div>
       </section>
       <section className="px-5 md:px-10 lg:px-[120px] xl:px-[180px] py-10 bg-black flex flex-col gap-5">
@@ -51,7 +54,7 @@ export default function EventsPage() {
         <p>{event?.p5}</p>
         <p>{event?.p6}</p>
       </section>
-      <EventImages images={event?.images} />
+      {/* <EventImages images={event?.images} /> */}
     </div>
   );
 }

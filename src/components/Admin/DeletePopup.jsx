@@ -55,8 +55,8 @@ export default function DeletePopup() {
           >
             Delete
           </button>
-          {loading && <Loading />}
         </div>
+        {loading && <Loading />}
       </motion.div>
     </motion.div>
   );

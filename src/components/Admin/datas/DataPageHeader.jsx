@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import {
@@ -10,21 +10,42 @@ import {
 } from "../../../slices/adminSlice";
 import useDownloadCSV from "../../../hooks/adminDatas/useDownloadCSV";
 import Loading from "../../Loading";
+import Backdrop from "@mui/material/Backdrop";
+import BulkUpload from "./BulkUpload";
 
 export default function DataPageHeader() {
   const { search, farm } = useSelector((state) => state.admin);
+  const [open, setOpen] = useState(false);
+  const [file, setFile] = useState(null);
   const { loading, downloadCSV } = useDownloadCSV();
   const dispatch = useDispatch();
   return (
     <div>
+      <Backdrop
+        sx={(theme) => ({
+          color: "#fff",
+          zIndex: theme.zIndex.drawer + 1,
+          backgroundColor: "rgba(0,0,0, 0.5)",
+        })}
+        open={open}
+        onClick={() => setOpen(false)}
+      >
+        <BulkUpload file={file} setFile={setFile} setOpen={setOpen} />
+      </Backdrop>
       <h4 className="md:text-2xl text-lg my-2">All Datas</h4>
-      <div className="flex justify-end">
+      <div className="flex flex-col gap-2 items-end justify-end">
         <Link
           to={"/admin/data/new"}
-          className="bg-homeBg text-white px-5 py-2 rounded-lg hover:bg-homeBgGradient nav-link"
+          className="bg-homeBg text-white px-5 py-2 rounded-lg hover:bg-homeBgGradient nav-link w-fit"
         >
           Add New Data
         </Link>
+        <button
+          onClick={() => setOpen(true)}
+          className="bg-homeBg text-white px-5 py-2 rounded-lg hover:bg-homeBgGradient nav-link w-fit"
+        >
+          Add Bulk Data
+        </button>
       </div>
       <div className="grid md:grid-cols-2 grid-cols-1 gap-5 px-5 py-7 bg-white my-5 rounded-lg">
         <div className="flex flex-col gap-3">

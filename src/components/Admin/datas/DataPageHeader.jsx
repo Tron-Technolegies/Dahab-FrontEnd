@@ -82,6 +82,8 @@ export default function DataPageHeader() {
               "BADA ZAYED",
               "BAHYA STORAGE",
               "LIWA OFFICE",
+              "AL AIN 1",
+              "SHAMKHA",
             ].map((x, i) => (
               <option key={i}>{x}</option>
             ))}

@@ -38,7 +38,7 @@ export default function FounderCard({
       <div className="flex flex-col gap-5 items-center">
         <img
           src={img}
-          className="rounded-full w-24 object-cover border-2 border-[#4D8390]"
+          className="rounded-full w-24 h-24 object-cover border-2 border-[#4D8390]"
         />
         <div className="flex flex-col items-center">
           <p className="font-semibold">{name}</p>
@@ -47,7 +47,7 @@ export default function FounderCard({
         <p className="text-center text-sm">{about}</p>
         <div className="flex gap-5 text-base font-normal text-white">
           <FooterLinks link={inst} icon={<FaInstagram />} />
-          <FooterLinks link={fb} icon={<FaFacebookF />} />
+          {/* <FooterLinks link={fb} icon={<FaFacebookF />} /> */}
           <FooterLinks link={link} icon={<FaLinkedinIn />} />
         </div>
       </div>

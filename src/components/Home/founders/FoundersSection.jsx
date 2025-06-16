@@ -11,18 +11,18 @@ const data = [
     about:
       "Born and raised in the UAE, Rizwan has been a pioneer in the region’s crypto mining space since 2020—well before founding Dahab Miners. With a deep understanding of the challenges miners face in the UAE, he has developed strategic, streamlined solutions tailored to the local environment. Prior to Dahab, Rizwan held leadership roles at renowned industry firms such as GreenGate and Tron Digital. His background as a technical lead in energy-focused projects, especially in the EV sector at GreenGate, has played a vital role in shaping Dahab’s success and sustainability-driven operations.",
     fb: "#",
-    inst: "#",
-    link: "#",
+    inst: "https://www.instagram.com/kf_rizwan?igsh=b2Y2bG95cGg1MXlw",
+    link: "https://www.linkedin.com/in/rizwan-kamar-ab117a172/",
   },
   {
     id: 2,
-    img: "/home/founder",
+    img: "/home/founder2.jpg",
     name: "Ahmed Rameez",
     role: "Co-Founder & Executive Director",
     about:
       "Also born and raised in the UAE, Ahmed has been actively involved in the crypto mining scene alongside Rizwan since 2020. Coming from a family with deep business roots, he has always had a keen entrepreneurial spirit. In addition to co-founding Dahab Miners, Ahmed leads several successful ventures across industries including F&B, FMCG, and Real Estate. Hisdiverse business experience brings a valuable strategic perspective to Dahab’s leadership. ",
     fb: "#",
-    inst: "#",
+    inst: "https://www.instagram.com/ah_rameez?igsh=eHE2cnpvcHhpMzEw",
     link: "#",
   },
   // {

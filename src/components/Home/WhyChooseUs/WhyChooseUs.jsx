@@ -48,7 +48,7 @@ export default function WhyChooseUs() {
           position={"col-start-2 col-end-3 row-start-4 row-end-6"}
         />
       </motion.div>
-      <div className="bg-[#001030] w-[650px] h-[650px] absolute xl:left-0 lg:-left-[10%] -left-[30%] rounded-e-full md:block hidden"></div>
+      <div className="bg-[#020b25] w-[650px] h-[650px] absolute xl:left-0 lg:-left-[10%] -left-[30%] rounded-e-full md:block hidden"></div>
       <img
         src="/home/arrow-1.png"
         alt="Bitcoin Mining in Dubai"

@@ -21,7 +21,7 @@
 }
 
 body {
-  background-color: #020b25;
+  background-color: #01081c;
   color: white;
 }
 p,
@@ -75,7 +75,7 @@ input:disabled {
 
 .main-bg {
   /* background: linear-gradient(178.57deg, #01081A 44.66%, #05253D 69.09%); */
-  background-color: #020b25;
+  background-color: #01081c;
 }
 
 .buy-miners-heading-bg {
@@ -141,7 +141,7 @@ input:disabled {
   }
 } */
 
-.glowing-box {
+.glowing-box1 {
   width: 40px;
   height: 40px;
   background-color: rgba(142, 240, 255, 0.6); /* No inner circle */
@@ -149,6 +149,14 @@ input:disabled {
   box-shadow: 0 0 60px 30px rgba(47, 215, 241, 0.4),
     0 0 100px 60px rgba(164, 227, 237, 0.4),
     0 0 140px 90px rgba(248, 250, 251, 0.4); /* Glowing effect */
+}
+.glowing-box {
+  width: 40px;
+  height: 40px;
+  background-color: rgba(6, 109, 125, 0.6); /* No inner circle */
+  border-radius: 50%; /* Keeps it circular */
+  box-shadow: 0 0 60px 30px rgba(7, 96, 109, 0.538),
+    0 0 100px 60px rgba(6, 93, 106, 0.384), 0 0 140px 90px rgba(4, 58, 84, 0.4); /* Glowing effect */
 }
 
 .btn-bg {

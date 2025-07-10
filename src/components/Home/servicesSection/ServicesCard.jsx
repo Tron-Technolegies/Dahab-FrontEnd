@@ -12,7 +12,7 @@ export default function ServicesCard({
 }) {
   return (
     <motion.div
-      className="px-5 py-5 bg-[#000618] text-white rounded-lg flex flex-col gap-5 justify-between items-center max-w-[400px]"
+      className="px-5 py-5 bg-[#000618] text-white rounded-lg flex flex-col gap-5 justify-between items-center "
       initial={{
         borderImageSource:
           "linear-gradient(to bottom right, #004DF480 0%, transparent 50%, transparent 50%, #0194FE80 100%)",
@@ -35,10 +35,10 @@ export default function ServicesCard({
     >
       <div className="flex flex-col gap-5 items-center">
         <p className="text-4xl text-[#0194FE]">{icon}</p>
-        <p className="text-[#0194FE] text-center">{title.toUpperCase()}</p>
+        <p className="text-[#0194FE] text-center  ">{title.toUpperCase()}</p>
       </div>
       <div>
-        <p className="text-sm leading-6">{content}</p>
+        <p className="text-sm leading-6 text-justify">{content}</p>
         {list && (
           <ul className="ms-5">
             {list.map((x, index) => (
@@ -46,8 +46,12 @@ export default function ServicesCard({
             ))}
           </ul>
         )}
-        {content2 && <p className="text-sm leading-6">{content2}</p>}
-        {content3 && <p className="text-sm leading-6">{content3}</p>}
+        {content2 && (
+          <p className="text-sm leading-6 text-justify">{content2}</p>
+        )}
+        {content3 && (
+          <p className="text-sm leading-6 text-justify">{content3}</p>
+        )}
       </div>
       <motion.button
         initial={{ scale: 1 }}

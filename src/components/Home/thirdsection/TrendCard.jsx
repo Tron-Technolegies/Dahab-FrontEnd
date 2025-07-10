@@ -41,9 +41,9 @@ export default function TrendCard({ icon, name, short, value, percent, id }) {
             {name}
           </p>
         </div>
-        <p className="w-8 bg-[#2C223B] h-8 rounded-full flex justify-center items-center">
+        {/* <p className="w-8 bg-[#2C223B] h-8 rounded-full flex justify-center items-center">
           <GoArrowUpRight />
-        </p>
+        </p> */}
       </div>
       <div className="flex justify-between items-center my-3">
         <div className="flex flex-col gap-3">

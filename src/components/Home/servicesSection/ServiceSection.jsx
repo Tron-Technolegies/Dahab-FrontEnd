@@ -88,7 +88,7 @@ export default function ServiceSection() {
       <h4 className="gradient-heading md:text-4xl text-3xl font-semibold pb-5">
         Unlock Our Mining Solutions
       </h4>
-      <div className="grid md:grid-cols-2 gap-7">
+      <div className="grid grid-cols-1 gap-7">
         {data.map((item) => (
           <ServicesCard
             key={item.id}

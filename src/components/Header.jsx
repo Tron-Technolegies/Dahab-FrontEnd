@@ -12,8 +12,8 @@ export default function Header() {
 
   return (
     <header
-      className="md:h-20 h-16 px-5 md:px-10 lg:px-[120px] xl:px-[180px] cursor-pointer md:py-5 py-2 flex justify-between items-center relative z-50 bg-bottom bg-cover"
-      style={{ backgroundImage: `url("/home/headerbg.jpg")` }}
+      className="md:h-20 h-16 px-5 md:px-10 lg:px-[120px] xl:px-[180px] cursor-pointer md:py-5 py-2 flex justify-between items-center bg-[#01081c] relative z-50 bg-bottom bg-cover"
+      // style={{ backgroundImage: `url("/home/headerbg.jpg")` }}
     >
       <Link
         to={"/"}

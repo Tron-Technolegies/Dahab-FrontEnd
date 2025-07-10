@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import FeaturedCarousel from "./FeaturedCarousel";
 import { motion } from "framer-motion";
+import { handleChatClick } from "../../../utils/whatsapp";
 
 export default function Miners() {
   const sectionVariants = {
@@ -39,12 +40,12 @@ export default function Miners() {
           >
             Buy a Mining Machine
           </Link>
-          <Link
-            to={"/buy-bitcoin-miners-uae"}
+          <button
+            onClick={handleChatClick}
             className="px-3 py-2 md:my-5 rounded-lg text-base m-2 text-white font-semibold border border-[#1ECBAF] nav-link hover:shadow-lg hover:shadow-[#1ECBAF]"
           >
             Free consultation
-          </Link>
+          </button>
         </div>
       </motion.div>
       <FeaturedCarousel />

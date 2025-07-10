@@ -39,7 +39,7 @@ export default function Footer() {
 
           <div className="flex gap-5 text-base font-normal text-white">
             <FooterLinks
-              link={"https://www.instagram.com/dahabminersuae/"}
+              link={"https://www.instagram.com/dahabminers.btc"}
               icon={<FaInstagram />}
             />
             <FooterLinks

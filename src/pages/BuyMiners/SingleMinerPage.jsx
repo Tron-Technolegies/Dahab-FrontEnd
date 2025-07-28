@@ -49,7 +49,7 @@ export default function SingleMinerPage() {
         </div>
       )}
       {loading ? <Loading /> : <SingleMinerTop product={product} />}
-      <FeaturedSection loading={featureLoading} products={products} />
+      {/* <FeaturedSection loading={featureLoading} products={products} /> */}
     </div>
   );
 }

@@ -4,6 +4,7 @@ import { MdOutlineInventory } from "react-icons/md";
 import { MdCategory } from "react-icons/md";
 import { ImBlog } from "react-icons/im";
 import { MdDashboardCustomize } from "react-icons/md";
+import { SiBitcoinsv } from "react-icons/si";
 export const adminNavLinks = [
   {
     id: 1,
@@ -46,5 +47,12 @@ export const adminNavLinks = [
     path: "/admin/blogs",
     urlword: "blogs",
     icon: <ImBlog />,
+  },
+  {
+    id: 7,
+    name: "Mining App",
+    path: "/admin/mining",
+    urlword: "mining",
+    icon: <SiBitcoinsv />,
   },
 ];

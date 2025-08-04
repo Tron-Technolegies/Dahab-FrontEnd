@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Table from "@mui/material/Table";
 import TableBody from "@mui/material/TableBody";
 import TableCell from "@mui/material/TableCell";
@@ -9,12 +9,23 @@ import Paper from "@mui/material/Paper";
 import useGetAllPayouts from "../../../../hooks/adminMining/useGetAllPayouts";
 import Loading from "../../../Loading";
 import useUpdatePayoutStatus from "../../../../hooks/adminMining/useUpdatePayoutStatus";
+import PaginationComponent from "../PaginationComponent";
 
 export default function PayoutSection() {
-  const { loading, payouts, refetch } = useGetAllPayouts();
+  const [page, setPage] = useState(1);
+  const { loading, payouts, refetch, totalPages } = useGetAllPayouts({
+    currentPage: page,
+  });
   const { loading: updateLoading, updatePayout } = useUpdatePayoutStatus();
   const [statusMap, setStatusMap] = useState({});
 
+  function handlePageChange(event, value) {
+    setPage(value);
+  }
+
+  useEffect(() => {
+    refetch();
+  }, [page]);
   return (
     <div className="p-5">
       <p className="text-lg font-semibold">All Payouts</p>
@@ -122,7 +133,7 @@ export default function PayoutSection() {
                     scope="row"
                     sx={{ width: "12.5%", textAlign: "center" }}
                   >
-                    {x.amount}
+                    {x.amount.toFixed(8)}
                   </TableCell>
                   <TableCell
                     component="th"
@@ -171,6 +182,15 @@ export default function PayoutSection() {
           </Table>
         </TableContainer>
       )}
+      <div className="my-5">
+        {totalPages > 1 && (
+          <PaginationComponent
+            totalPage={totalPages}
+            page={page}
+            pageChange={handlePageChange}
+          />
+        )}
+      </div>
     </div>
   );
 }

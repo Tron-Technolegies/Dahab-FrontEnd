@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Table from "@mui/material/Table";
 import TableBody from "@mui/material/TableBody";
 import TableCell from "@mui/material/TableCell";
@@ -10,12 +10,24 @@ import useGetAllRevenue from "../../../../hooks/adminMining/useGetAllRevenue";
 import Loading from "../../../Loading";
 import useAddRevenue from "../../../../hooks/adminMining/useAddRevenue";
 import { toast } from "react-toastify";
+import PaginationComponent from "../PaginationComponent";
 
 export default function RevenueSection() {
-  const { loading, refetch, revenues } = useGetAllRevenue();
+  const [page, setPage] = useState(1);
+  const { loading, refetch, revenues, totalPages } = useGetAllRevenue({
+    currentPage: page,
+  });
   const [amount, setAmount] = useState(0);
   const [hashRate, setHashRate] = useState(89960);
   const { loading: addLoading, addRevenue } = useAddRevenue();
+
+  function handlePageChange(event, value) {
+    setPage(value);
+  }
+
+  useEffect(() => {
+    refetch();
+  }, [page]);
 
   const handleAdd = async () => {
     if (amount === 0 || hashRate === 0) {
@@ -114,6 +126,15 @@ export default function RevenueSection() {
           </Table>
         </TableContainer>
       )}
+      <div className="my-5">
+        {totalPages > 1 && (
+          <PaginationComponent
+            page={page}
+            totalPage={totalPages}
+            pageChange={handlePageChange}
+          />
+        )}
+      </div>
     </div>
   );
 }

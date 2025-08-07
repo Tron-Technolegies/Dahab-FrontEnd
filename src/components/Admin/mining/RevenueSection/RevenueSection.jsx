@@ -16,6 +16,7 @@ export default function RevenueSection() {
   const [page, setPage] = useState(1);
   const { loading, refetch, revenues, totalPages } = useGetAllRevenue({
     currentPage: page,
+    category: "A1246",
   });
   const [amount, setAmount] = useState(0);
   const [hashRate, setHashRate] = useState(89960);
@@ -34,7 +35,7 @@ export default function RevenueSection() {
       toast.error("Amount or hashrate cant be zero");
       return;
     }
-    await addRevenue({ amount, hashRate });
+    await addRevenue({ amount, hashRate, category: "A1246" });
     setAmount("");
     refetch();
   };

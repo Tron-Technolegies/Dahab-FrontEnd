@@ -3,18 +3,18 @@ import React, { useState } from "react";
 import { BASE_URL } from "../../utils/constants";
 import { toast } from "react-toastify";
 
-const useAddRevenue = () => {
+const useAddNewSats = () => {
   const [loading, setLoading] = useState(false);
-  const addRevenue = async ({ amount, hashRate, category }) => {
+  const addNewSats = async ({ sats }) => {
     setLoading(true);
     try {
       const response = await axios.post(
-        `${BASE_URL}/mining/revenue`,
-        { amount, hashRate, category },
+        `${BASE_URL}/mining/sats`,
+        { sats },
         { withCredentials: true }
       );
       const data = response.data;
-      toast.success("successfully added data");
+      toast.success("successfully added new data");
     } catch (err) {
       console.log(
         err?.response?.data?.msg || err?.error || "something went wrong"
@@ -26,7 +26,7 @@ const useAddRevenue = () => {
       setLoading(false);
     }
   };
-  return { loading, addRevenue };
+  return { loading, addNewSats };
 };
 
-export default useAddRevenue;
+export default useAddNewSats;

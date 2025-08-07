@@ -2,7 +2,7 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { BASE_URL } from "../../utils/constants";
 
-const useGetAllRevenue = ({ currentPage }) => {
+const useGetAllRevenue = ({ currentPage, category }) => {
   const [loading, setLoading] = useState(false);
   const [revenues, setRevenues] = useState([]);
   const [totalPages, setTotalPages] = useState(1);
@@ -12,7 +12,7 @@ const useGetAllRevenue = ({ currentPage }) => {
     try {
       const response = await axios.get(`${BASE_URL}/mining/revenue`, {
         withCredentials: true,
-        params: { currentPage },
+        params: { currentPage, category },
       });
       const data = response.data;
       setRevenues(data.revenues);

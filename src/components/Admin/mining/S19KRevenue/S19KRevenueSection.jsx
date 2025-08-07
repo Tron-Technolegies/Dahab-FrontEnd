@@ -6,60 +6,66 @@ import TableContainer from "@mui/material/TableContainer";
 import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
-import useGetAllRevenue from "../../../../hooks/adminMining/useGetAllRevenue";
 import Loading from "../../../Loading";
-import useAddRevenue from "../../../../hooks/adminMining/useAddRevenue";
-import { toast } from "react-toastify";
 import PaginationComponent from "../PaginationComponent";
+import { useSelector } from "react-redux";
+import useGetAllRevenue from "../../../../hooks/adminMining/useGetAllRevenue";
+import useAddRevenue from "../../../../hooks/adminMining/useAddRevenue";
 
-export default function RevenueSection() {
+export default function S19KRevenueSection() {
   const [page, setPage] = useState(1);
-  const { loading, refetch, revenues, totalPages } = useGetAllRevenue({
+  const { sats } = useSelector((state) => state.admin);
+  const [hashRate, setHashRate] = useState(3840);
+  const [upTime, setUptime] = useState(0.9);
+  const { loading, refetch, totalPages, revenues } = useGetAllRevenue({
     currentPage: page,
-    category: "A1246",
+    category: "S19KPro",
   });
-  const [amount, setAmount] = useState(0);
-  const [hashRate, setHashRate] = useState(89960);
   const { loading: addLoading, addRevenue } = useAddRevenue();
 
   function handlePageChange(event, value) {
     setPage(value);
   }
 
+  async function handleAdd() {
+    const amount = parseFloat(sats.toFixed(9)) * hashRate * upTime;
+    await addRevenue({ amount: amount, hashRate, category: "S19KPro" });
+    refetch();
+  }
+
   useEffect(() => {
     refetch();
   }, [page]);
-
-  const handleAdd = async () => {
-    if (amount === 0 || hashRate === 0) {
-      toast.error("Amount or hashrate cant be zero");
-      return;
-    }
-    await addRevenue({ amount, hashRate, category: "A1246" });
-    setAmount("");
-    refetch();
-  };
   return (
-    <div className="p-5 ">
+    <div className="p-5">
       <div className="flex flex-col gap-2 border-b border-homeBg pb-5">
         <div className="flex justify-between gap-5 items-center">
-          <label className="text-lg font-semibold">Enter Todays Revenue:</label>
+          <label className="text-lg font-semibold">Sats/Th/Day:</label>
           <input
             className="p-2 rounded-lg"
             type="number"
-            value={amount}
-            onChange={(e) => setAmount(e.target.value)}
+            disabled
+            value={sats?.toFixed(9)}
           />
         </div>
         <div className="flex justify-between gap-5 items-center">
           <label className="text-lg font-semibold">
-            Enter Todays HashRate(TH/s):
+            Enter Total HashRate(TH/s):
           </label>
           <input
             className="p-2 rounded-lg"
             type="number"
             value={hashRate}
+            onChange={(e) => setHashRate(e.target.value)}
+          />
+        </div>
+        <div className="flex justify-between gap-5 items-center">
+          <label className="text-lg font-semibold">Daily Uptime:</label>
+          <input
+            className="p-2 rounded-lg"
+            type="number"
             disabled
+            value={upTime}
           />
         </div>
         <button
@@ -70,7 +76,6 @@ export default function RevenueSection() {
         </button>
         {addLoading && <Loading />}
       </div>
-
       <p className="text-lg my-5">Revenue History</p>
       {loading ? (
         <Loading />

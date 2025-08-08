@@ -36,11 +36,12 @@ export default function ProductCategorySection() {
         "Browse compact, efficient home crypto mining machines from trusted brands like Elphapex, Goldshell, iPollo, and IceRiver—designed for hobbyists and small-scale investors. Ideal for Scrypt, Blake2s, and kHeavyHash algorithms, these units support coins like Litecoin, Dogecoin, and Kaspa while offering low-noise and plug-and-play usability. Whether you're mining at home or starting small, Dahab Miners provides mining machines in UAE and Ethiopia tailored for every user level.",
     },
   ];
+
   const settings = {
     dots: true,
     infinite: true,
-    speed: 50,
-    slidesToShow: 2, // Number of slides to show at a time
+    speed: 500,
+    slidesToShow: 2,
     slidesToScroll: 1,
     centerMode: true,
     arrows: false,
@@ -60,6 +61,7 @@ export default function ProductCategorySection() {
       },
     ],
   };
+
   const sectionVariants = {
     hidden: { scale: 0.8, opacity: 0 },
     visible: {
@@ -68,11 +70,12 @@ export default function ProductCategorySection() {
       transition: { duration: 0.5, ease: "easeOut" },
     },
   };
+
   return (
     <motion.section
       initial="hidden"
       whileInView="visible"
-      viewport={{ once: false, amount: 0.3 }} // Triggers when 20% of the section is visible
+      viewport={{ once: false, amount: 0.3 }}
       variants={sectionVariants}
       className="main-bg px-5 md:px-10 lg:px-[120px] xl:px-[180px] py-10 text-white flex flex-col gap-5 items-center"
     >
@@ -80,7 +83,7 @@ export default function ProductCategorySection() {
         <h4 className="gradient-heading md:text-4xl text-3xl font-semibold py-5">
           Product Categories
         </h4>
-        <p className="text-center text-sm">
+        <p className="text-left text-sm ">
           Explore our range of crypto mining solutions, designed to suit every
           miner—from beginners to blockchain pros. At Dahab Crypto Mining, we
           combine performance, reliability, and innovation to help you mine

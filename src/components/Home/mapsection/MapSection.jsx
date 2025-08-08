@@ -27,7 +27,7 @@ function MapSection() {
         <h4 className="text-[40px] gradient-heading font-semibold lg:text-left text-center">
           Global Reach. Strategic Locations
         </h4>
-        <p className="text-sm max-w-[350px] lg:text-left text-center">
+        <p className="text-sm max-w-[350px] lg:text-left text-start">
           Our mining farms are strategically placed in the UAE and Ethiopia to
           maximize efficiency and profitability. Join a global network of crypto
           miners today

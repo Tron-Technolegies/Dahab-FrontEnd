@@ -1,7 +1,7 @@
 export const events = [
   {
     id: 1,
-    img: "/home/event1.jpg",
+    img: "/home/bitcoin-summit.jpg",
     title: "BITCOIN SUMMIT",
     date: "november 28, 2024",
     location: "Addis Ababa, Ethiopia",
@@ -26,7 +26,7 @@ export const events = [
   },
   {
     id: 2,
-    img: "/home/event2.jpg",
+    img: "/home/annual-team-meeting.jpg",
     title: "MINING ROUND TABLE CONFERENCE",
     date: "december 10, 2024",
     location: "Abu Dhabi, United Arab Emirates",
@@ -50,8 +50,8 @@ export const events = [
   },
   {
     id: 3,
-    img: "/home/event3.jpg",
-    title: "bitcoin oasis from gridlock to full stack",
+    img: "/home/bitcoin-oasis.jpg",
+    title: "BITCOIN OASIS FROM GRIDLOCK TO FULL STACK",
     date: " april 28-29 2025",
     location: "museum of the future, dubai, United Arab Emirates",
     images: [
@@ -74,8 +74,8 @@ export const events = [
   },
   {
     id: 4,
-    img: "/home/event4.jpg",
-    title: "annual team meeting",
+    img: "/home/annual-team-meeting.jpg",
+    title: "ANNUAL TEAM MEETING",
     date: "Nov 6, 2025",
     location: "Al Raha Creek, Abu Dhabi",
     images: [

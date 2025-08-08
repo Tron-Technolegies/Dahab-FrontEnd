@@ -10,7 +10,7 @@ export default function EthiopiaLanding() {
         <h1 className="text-[40px] gradient-heading font-semibold md:text-left text-center">
           Bitcoin Mining in Ethiopia
         </h1>
-        <p className="md:text-left text-center">
+        <p className="md:text-left text-start">
           Crypto Mining in Ethiopia<br></br> Take advantage of Ethiopia’s
           low-cost electricity and secure mining infrastructure. Buy a crypto
           mining machine today and start mining with maximum profitability.

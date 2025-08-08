@@ -51,7 +51,7 @@ export default function EventSection() {
       <h4 className="gradient-heading md:text-4xl text-3xl font-semibold pb-2">
         Events & Celebrations
       </h4>
-      <p className="text-sm text-center max-w-[550px]">
+      <p className="text-sm text-start max-w-[550px]">
         At DahabMiners, we believe in more than just blockchain and hash
         rates—we believe in community, innovation, and celebrating milestones
         together. From major achievements to community-driven initiatives,

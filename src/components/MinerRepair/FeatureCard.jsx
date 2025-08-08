@@ -26,7 +26,7 @@ export default function FeatureCard({ title, content }) {
       }}
     >
       <h1 className="text-2xl font-semibold text-[#1ECBAF]">{title}</h1>
-      <p className="text-sm font-normal text-white leading-6 max-w-[317px] text-center">
+      <p className="text-sm font-normal text-white leading-6 max-w-[317px] text-start">
         {content}
       </p>
     </motion.div>

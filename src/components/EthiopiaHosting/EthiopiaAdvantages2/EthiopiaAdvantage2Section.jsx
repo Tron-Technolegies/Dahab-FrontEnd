@@ -11,30 +11,26 @@ export default function EthiopiaAdvantage2Section() {
       transition: { duration: 0.5, ease: "easeOut" },
     },
   };
+
   return (
     <motion.div
       initial="hidden"
       whileInView="visible"
-      viewport={{ once: false, amount: 0.3 }} // Triggers when 20% of the section is visible
+      viewport={{ once: false, amount: 0.3 }}
       variants={sectionVariants}
       className="px-5 md:px-10 lg:px-[120px] xl:px-[180px] py-10 flex flex-col items-center gap-10"
     >
-      <h4 className="text-3xl font-semibold gradient-heading">
+      <h4 className="text-3xl font-semibold gradient-heading text-center">
         Ethiopia: A Prime Destination for Bitcoin Mining
       </h4>
-      <div className="lg:p-10 p-5 flex justify-between lg:flex-row flex-col items-center gap-5 customborder">
+
+      <div className="w-full lg:p-10 p-5 flex justify-between lg:flex-row flex-col items-center gap-5 customborder">
         <img
           src="/abudhabi/img-2.jpg"
           alt="Bitcoin mining hosting Ethiopia"
-          className="max-w-[400px]"
+          className="max-w-[400px] object-cover rounded-md w-full lg:w-[400px]"
         />
         <div className="flex flex-col gap-5">
-          {/* <p>
-            By harnessing hydropower, Ethiopia offers a sustainable and
-            cost-effective source of energy for Bitcoin mining. This move is
-            part of a larger initiative by Ethiopia to invest in the digital
-            economy sector and expand renewable energy.
-          </p> */}
           <EthiopiaAdvantageElt
             heading={"Low-Cost, Renewable Energy"}
             content={

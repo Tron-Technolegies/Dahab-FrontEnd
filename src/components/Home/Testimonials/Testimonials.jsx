@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import TestimonialCard from "./TestimonialCard";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
@@ -10,7 +10,7 @@ const testimonials = [
     name: "Jean",
     image: "/home/review-5.jpeg",
     review:
-      "I have been using Dahab Miners for the more than a year, and my experience has been nothing short of stellar. As someone who was new to Crypto mining, their guidance, patience and seamless onboarding process was sincerely appreciated especially helping me avoid some missteps that befall new entrants to the mining market. My miners have had virtually 100% uptime. Any scheduled maintenance was communicated well in advance. The fee structure is straightforward. No hidden costs, and the electricity and maintenance fees are exactly as advertised. I was hesitant to get into hosted mining, but Dahab Miners has earned my trust. Their platform is reliable, their team is professional, and my earnings have been consistent with network conditions. I wholeheartedly recommend them to both beginners and experienced miners looking for a hassle-free solution.",
+      "I’ve mined with Dahab Miners for over a year. Their reliable crypto mining hosting, near 100% uptime, clear pricing, and expert support made everything smooth even as a beginner. No hidden fees, just consistent earnings. Dahab Miners is a trusted, professional choice for Bitcoin mining",
   },
   {
     name: "Omar Al Mansoori",
@@ -47,23 +47,21 @@ export default function Testimonials() {
       transition: { duration: 0.5, ease: "easeOut" },
     },
   };
+
   const settings = {
     dots: true,
     infinite: true,
     speed: 500,
-    slidesToShow: 1, // Number of slides to show at a time
+    slidesToShow: 2, // Default for desktop
     slidesToScroll: 1,
     responsive: [
       {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 2,
-        },
-      },
-      {
-        breakpoint: 600,
+        breakpoint: 1024, // Below 1024px
         settings: {
           slidesToShow: 1,
+          slidesToScroll: 1,
+          infinite: true,
+          dots: true,
         },
       },
     ],
@@ -74,7 +72,7 @@ export default function Testimonials() {
       <motion.div
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: false, amount: 0.3 }} // Triggers when 20% of the section is visible
+        viewport={{ once: false, amount: 0.3 }}
         variants={sectionVariants}
       >
         <h4 className="text-base font-light tracking-widest text-btnGreen text-center">
@@ -84,10 +82,15 @@ export default function Testimonials() {
           What our clients say about us
         </h4>
       </motion.div>
+
       <Slider {...settings} className="my-10">
         {testimonials.map((x, index) => (
           <div key={index} className="px-2">
-            <TestimonialCard name={x.name} content={x.review} image={x.image} />
+            <TestimonialCard
+              name={x.name}
+              content={x.review}
+              image={x.image}
+            />
           </div>
         ))}
       </Slider>

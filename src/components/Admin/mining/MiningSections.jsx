@@ -35,6 +35,22 @@ export default function MiningSections({ active, setActive }) {
       >
         BTC/Th/Day
       </button>
+      <button
+        onClick={() => setActive("T&C")}
+        className={`px-4 py-2 bg-homeBg text-white hover:bg-homeBgGradient duration-300 ease-in-out rounded-md ${
+          active === "T&C" && "bg-homeBgGradient scale-105"
+        }`}
+      >
+        T & C
+      </button>
+      <button
+        onClick={() => setActive("privacy")}
+        className={`px-4 py-2 bg-homeBg text-white hover:bg-homeBgGradient duration-300 ease-in-out rounded-md ${
+          active === "privacy" && "bg-homeBgGradient scale-105"
+        }`}
+      >
+        Privacy
+      </button>
     </div>
   );
 }

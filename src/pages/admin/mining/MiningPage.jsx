@@ -4,6 +4,8 @@ import RevenueSection from "../../../components/Admin/mining/RevenueSection/Reve
 import PayoutSection from "../../../components/Admin/mining/Payout/PayoutSection";
 import BTCPerHashRate from "../../../components/Admin/mining/BTC/BTCPerHashRate";
 import S19KRevenueSection from "../../../components/Admin/mining/S19KRevenue/S19KRevenueSection";
+import TermsSection from "../../../components/Admin/mining/terms/TermsSection";
+import PrivacySection from "../../../components/Admin/mining/privacy/PrivacySection";
 
 export default function MiningPage() {
   const [active, setActive] = useState("A1246 Revenue");
@@ -14,6 +16,8 @@ export default function MiningPage() {
       {active === "S19KPro Revenue" && <S19KRevenueSection />}
       {active === "Payout" && <PayoutSection />}
       {active === "BTC" && <BTCPerHashRate />}
+      {active === "T&C" && <TermsSection />}
+      {active === "privacy" && <PrivacySection />}
     </div>
   );
 }

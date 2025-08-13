@@ -24,6 +24,7 @@ export const manufacturer = [
   "Innosilicon",
   "iPollo",
   "Jasminer",
+  "Jingle Miner",
   "MicroBT",
   "Obelisk",
   "Pantech",

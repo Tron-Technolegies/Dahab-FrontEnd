@@ -7,6 +7,7 @@ import useGetAllProducts from "../../hooks/userProducts/useGetAllProducts";
 import Loading from "../Loading";
 import { useSelector } from "react-redux";
 import useGetFeaturedProducts from "../../hooks/userProducts/useGetFeaturedProducts";
+import Pagination2 from "./Pagination2";
 
 export default function BuyMinersSection() {
   const { manufacturerOptions, cryptoCurrencyOption, keyWord, sortby } =
@@ -29,6 +30,7 @@ export default function BuyMinersSection() {
 
   useEffect(() => {
     refetch();
+    window.scrollTo(0, 0);
   }, [currentPage]);
   return (
     <div className="bg-[#000618] px-5 md:px-10 lg:px-[120px] xl:px-[180px] py-10 z-[1]">
@@ -49,7 +51,7 @@ export default function BuyMinersSection() {
       </div>
       {totalPage > 1 && (
         <div className="flex justify-center">
-          <Pagination
+          <Pagination2
             setCurrentPage={setCurrentPage}
             currentPage={currentPage}
             totalPage={totalPage}

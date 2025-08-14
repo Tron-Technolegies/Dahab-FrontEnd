@@ -40,6 +40,7 @@ import SingleInventoryItem from "./pages/admin/inventory/SingleInventoryItem";
 import AlertPage from "./pages/admin/inventory/AlertPage";
 import EventsPage from "./pages/eventsPage/EventsPage";
 import SingleMinerPage from "./pages/BuyMiners/SingleMinerPage";
+import MiningPage from "./pages/admin/mining/MiningPage";
 
 function App() {
   const router = createBrowserRouter([
@@ -190,6 +191,10 @@ function App() {
         {
           path: "inventory/:id",
           element: <SingleInventoryItem />,
+        },
+        {
+          path: "mining",
+          element: <MiningPage />,
         },
       ],
     },

@@ -7,9 +7,11 @@ import Loading from "../../components/Loading";
 import SmallSizeSideBar from "../../components/Admin/SmallSizeSideBar";
 import { useSelector } from "react-redux";
 import DeletePopup from "../../components/Admin/DeletePopup";
+import useGetSats from "../../hooks/adminMining/useGetSats";
 
 export default function AdminLayout() {
   const { loading } = useGetUser();
+  const { loading: satLoading } = useGetSats();
   const [showSideBar, setShowSideBar] = useState(true);
   const [showSmallSizeBar, setShowSmallSizeBar] = useState(false);
   const { showPopup } = useSelector((state) => state.admin);

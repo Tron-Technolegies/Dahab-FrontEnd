@@ -8,7 +8,7 @@ export default function AdminSidebar() {
       <div className="flex justify-center">
         <img className="w-32 h-32 " src="/adminlogo.png"></img>
       </div>
-      <div className="mt-10 flex flex-col gap-3">
+      <div className="mt-3 flex flex-col gap-1">
         {adminNavLinks.map((x) => (
           <NavigationLink
             key={x.id}

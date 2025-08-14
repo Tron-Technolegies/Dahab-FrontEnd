@@ -9,6 +9,7 @@ const initialState = {
   currentPage: 1,
   limit: 20,
   sortData: "new",
+  sats: 0,
 };
 
 const adminSlice = createSlice({
@@ -42,6 +43,9 @@ const adminSlice = createSlice({
     setSortData: (state, { payload }) => {
       state.sortData = payload;
     },
+    setSats: (state, { payload }) => {
+      state.sats = payload;
+    },
   },
 });
 
@@ -56,4 +60,5 @@ export const {
   setCurrentPage,
   setLimit,
   setSortData,
+  setSats,
 } = adminSlice.actions;

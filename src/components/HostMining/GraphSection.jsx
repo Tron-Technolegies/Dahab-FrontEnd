@@ -17,7 +17,7 @@ export default function GraphSection() {
           <h3 className="text-base font-bold text-[#1CCBAF]">
             Strategic Locations
           </h3>
-          <p className="text-base font-medium text-center leading-6">
+          <p className="text-base font-medium text-start leading-6">
             Our hosting facilities are located in prime regions, offering,
             affordable electricity, security, reliable power supply, and fast
             internet connectivity for seamless operations.
@@ -30,7 +30,7 @@ export default function GraphSection() {
           <h3 className="text-base font-bold text-[#1CCBAF]">
             Full-Service Hosting
           </h3>
-          <p className="text-base font-medium leading-6 text-center">
+          <p className="text-base font-medium leading-6 text-start">
             From 24/7 support to maintenance, we handle everything to ensure
             your miners run efficiently and profitably. Focus on mining while we
             take care of the rest.
@@ -43,7 +43,7 @@ export default function GraphSection() {
           <h3 className="text-base font-bold text-[#1CCBAF]">
             Affordable Pricing
           </h3>
-          <p className="text-base font-medium text-center leading-6">
+          <p className="text-base font-medium text-start leading-6">
             Enjoy competitive, all-inclusive hosting rates that cover
             electricity, maintenance, and support. Flexible options cater to
             setups from individual miners to large-scale operations.

@@ -34,7 +34,7 @@ export default function RepairCarousel({ setItem, item }) {
               with Expert ASIC Miner Repairs
             </h4>
           </div>
-          <h4 className="text-base font-light text-white leading-6 tracking-wider">
+          <h4 className="text-base font-light text-white leading-6 tracking-wider text-left">
             Downtime costs you money. Trust DAHAB Miners for fast, reliable
             repairs that get your miners back to work. Don’t settle for
             less—maximize uptime and profits with our skilled team
@@ -56,7 +56,7 @@ export default function RepairCarousel({ setItem, item }) {
 
         <div className="w-[315px] h-[244px] md:w-[600px] md:h-[465px] relative animate-slideInRight mt-6 lg:mt-0">
           <img
-            className="absolute z-10"
+            className="absolute z-10 mx-10"
             src="/repaircarouselimage.png"
             alt="Essential-tools-for-crypto-mining-machines-in-abu-dhabi-UAE"
             title="Explore top-tier CRYPTO MINING MACHINES IN UAE at Dahab Miners. Specializing in high-efficiency ASIC miners in Abu Dhabi, UAE, we offer the best solutions for crypto mining in UAE. Browse our range today and enhance your mining setup!"

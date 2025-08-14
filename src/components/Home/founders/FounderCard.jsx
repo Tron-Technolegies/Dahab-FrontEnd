@@ -45,7 +45,7 @@ export default function FounderCard({
             <p className="font-semibold">{name}</p>
             <p className="text-sm">{role}</p>
           </div>
-          <p className="text-center text-sm">{about}</p>
+          <p className="text-start text-sm">{about}</p>
         </div>
 
         <div className="flex gap-5 text-base font-normal text-white">

@@ -64,7 +64,7 @@ export default function Footer() {
           <Link to={"/privacy_policy"}>Privacy Policy</Link>
         </div>
         <div className="bg-[#030815] rounded-md p-5 max-w-[400px]">
-          <p className="text-lg font-semibold text-white lg:text-center text-left">
+          <p className="text-lg font-semibold text-white lg:text-start text-left">
             Contact Us
           </p>
           <div className="flex flex-col gap-7 text-sm font-medium text-white my-5">

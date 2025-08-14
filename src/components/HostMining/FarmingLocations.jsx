@@ -12,21 +12,27 @@ export default function FarmingLocations() {
       transition: { duration: 0.5, ease: "easeOut" },
     },
   };
+
   return (
     <motion.section
       initial="hidden"
       whileInView="visible"
-      viewport={{ once: false, amount: 0.3 }} // Triggers when 20% of the section is visible
+      viewport={{ once: false, amount: 0.3 }}
       variants={sectionVariants}
       className="px-5 md:px-10 lg:px-[120px] xl:px-[180px] py-10 flex flex-col items-center"
     >
-      <h4 className="gradient-heading text-[40px] text-center font-semibold">
-        Bitcoin mining farm locations
-      </h4>
-      <p className="text-sm text-center text-white max-w-[450px]">
-        A service that allows our customers to concentrate on the mining itself
-        while outsourcing the operation of the infrastructure to us.
-      </p>
+      {/* Heading + Paragraph Wrapper */}
+      <div className="max-w-[600px] text-center mb-8">
+        <h4 className="gradient-heading text-[40px] font-semibold">
+          Bitcoin Mining Farm Locations
+        </h4>
+        <p className="text-sm text-white mt-2 text-start">
+          A service that allows our customers to concentrate on the mining itself
+          while outsourcing the operation of the infrastructure to us.
+        </p>
+      </div>
+
+      {/* Farm Cards */}
       <div className="flex md:flex-row flex-col justify-center gap-10 my-10">
         <FarmLocationCard
           image={"/1.jpg"}
@@ -44,7 +50,6 @@ export default function FarmingLocations() {
             "Security: Team on the site",
             "Camera surveillance: 24 hours",
           ]}
-          // path={"/host/abudhabi"}
           action={() => handleEmailEnquiry({ email: `hosting in abudhabi` })}
         />
         <FarmLocationCard
@@ -63,7 +68,6 @@ export default function FarmingLocations() {
             "Security: Armed Personal on the site",
             "Camera surveillance: 24 hours",
           ]}
-          // path={"/host/ethiopia"}
           action={() => handleEmailEnquiry({ email: `hosting in Ethiopia` })}
         />
       </div>

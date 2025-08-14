@@ -18,7 +18,7 @@ export default function SolutionsSection() {
       variants={sectionVariants}
       className="px-5 md:px-10 lg:px-[120px] xl:px-[180px] py-10 text-center "
     >
-      <div className="p-10 customborder flex flex-col justify-center items-center gap-5">
+      <div className="p-10 customborder flex flex-col justify-center items-start gap-5">
         <p className="text-base font-semibold text-[#1ECBAF] mt-10">
           Elevate Your ASIC Repair Expertise Today
         </p>

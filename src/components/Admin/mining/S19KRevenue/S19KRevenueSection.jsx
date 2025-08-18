@@ -44,7 +44,7 @@ export default function S19KRevenueSection() {
   }, [page]);
   return (
     <div className="p-5">
-      <div className="flex flex-col gap-2 border-b border-homeBg pb-5">
+      {/* <div className="flex flex-col gap-2 border-b border-homeBg pb-5">
         <div className="flex justify-between gap-5 items-center">
           <label className="text-lg font-semibold">Sats/Th/Day:</label>
           <input
@@ -81,7 +81,7 @@ export default function S19KRevenueSection() {
           Submit
         </button>
         {addLoading && <Loading />}
-      </div>
+      </div> */}
       <p className="text-lg my-5">Revenue History</p>
       {loading ? (
         <Loading />

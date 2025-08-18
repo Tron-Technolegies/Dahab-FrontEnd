@@ -23,6 +23,13 @@ export default function PayoutSection() {
     setPage(value);
   }
 
+  const options = {
+    hour: "2-digit",
+    minute: "2-digit",
+    hour12: false,
+    timeZone: "Asia/Dubai", // UAE timezone
+  };
+
   useEffect(() => {
     refetch();
   }, [page]);
@@ -105,7 +112,7 @@ export default function PayoutSection() {
                     scope="row"
                     sx={{ width: "12.5%", textAlign: "center" }}
                   >
-                    {x.date.slice(0, 10)}
+                    {new Date(x.date).toLocaleDateString("en-US", options)}
                   </TableCell>
                   <TableCell
                     component="th"

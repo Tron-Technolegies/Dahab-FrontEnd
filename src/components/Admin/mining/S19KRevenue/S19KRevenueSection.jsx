@@ -32,6 +32,12 @@ export default function S19KRevenueSection() {
     await addRevenue({ amount: amount, hashRate, category: "S19KPro" });
     refetch();
   }
+  const options = {
+    hour: "2-digit",
+    minute: "2-digit",
+    hour12: false,
+    timeZone: "Asia/Dubai", // UAE timezone
+  };
 
   useEffect(() => {
     refetch();
@@ -117,14 +123,18 @@ export default function S19KRevenueSection() {
                     scope="row"
                     sx={{ width: "12.5%", textAlign: "center" }}
                   >
-                    {x.date.slice(0, 10)}
+                    <div>
+                      <p>
+                        {new Date(x.date).toLocaleDateString("en-Us", options)}
+                      </p>
+                    </div>
                   </TableCell>
                   <TableCell
                     component="th"
                     scope="row"
                     sx={{ width: "12.5%", textAlign: "center" }}
                   >
-                    {x.amount}
+                    {x.amount.toFixed(7)}
                   </TableCell>
                 </TableRow>
               ))}

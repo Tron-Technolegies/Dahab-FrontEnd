@@ -23,7 +23,7 @@ export default function RepairFeatures({ scrollfunction }) {
         <FeatureCard
           title={"Transparent Pricing"}
           content={
-            "No surprises—just fair and upfront pricing. We offer competitive rates for diagnostics, part replacements, and full repairs, ensuring no hidden fees."
+            "No surprises just fair and upfront pricing. We offer competitive rates for diagnostics, part replacements, and full repairs, ensuring no hidden fees."
           }
         />
         <FeatureCard

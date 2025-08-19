@@ -25,9 +25,9 @@ export default function MiningFacilitiesSection() {
           <h4 className="md:text-4xl text-3xl font-semibold gradient-heading text-center pb-5">
             Effortless Hosting. Reliable Repairs
           </h4>
-          <p className="text-white text-sm max-w-[550px] text-center">
-            We provide end-to-end solutions for mining—hosting, maintenance, and
-            repairs—so you can focus on what matters: maximizing your profits
+          <p className="text-white text-sm max-w-[550px] text-start">
+            We provide end-to-end solutions for mining hosting, maintenance, and
+            repairs <br />so you can focus on what matters: maximizing your profits
           </p>
         </motion.div>
         <motion.div

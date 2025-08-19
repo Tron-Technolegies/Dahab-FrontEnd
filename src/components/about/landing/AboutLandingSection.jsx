@@ -9,7 +9,7 @@ export default function AboutLandingSection() {
         <h4 className="gradient-heading font-semibold text-3xl text-center">
           Welcome to Dahab Miners
         </h4>
-        <p className="max-w-[600px] text-center">
+        <p className="max-w-[600px] text-start">
           At Dahab Miners, we specialize in Crypto mining infrastructure,
           offering top-tier solutions for hardware procurement, hosting, and
           repair services. Our state-of-the-art facilities and industry
@@ -25,20 +25,20 @@ export default function AboutLandingSection() {
           <h5 className="text-[#2295B7] text-2xl md:text-start text-center">
             Leading Crypto Mining Company in Abu Dhabi, UAE
           </h5>
-          <p className="max-w-[600px] md:text-start text-center">
+          <p className="max-w-[600px] md:text-start text-start">
             With years of experience in the UAE, we’ve built a seamless mining
             ecosystem for our clients. From sourcing the most profitable mining
             machines to providing top-tier hosting services, we ensure optimal
             performance and uptime.
           </p>
-          <p className="max-w-[600px] md:text-start text-center">
+          <p className="max-w-[600px] md:text-start text-start">
             Our facilities feature IoT-based controls, expert infrastructure
             setup, and round-the-clock maintenance to ensure maximum efficiency
             and uptime. We also provide free miner configuration, pool setup
             assistance, and on-site repair services to keep your operations
             running smoothly.
           </p>
-          <p className="max-w-[600px] md:text-start text-center">
+          <p className="max-w-[600px] md:text-start text-start">
             Visit our crypto-hosting center in Abu Dhabi and take your mining
             operations to the next level!
           </p>

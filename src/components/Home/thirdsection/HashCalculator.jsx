@@ -30,7 +30,7 @@ export default function HashCalculator({ btcData }) {
       <div className="flex flex-col gap-7">
         <div className="flex justify-between text-white">
           <p>0 TH/s</p>
-          <p>100000 TH/s</p>
+          <p>10000 TH/s</p>
         </div>
         <input
           type="range"

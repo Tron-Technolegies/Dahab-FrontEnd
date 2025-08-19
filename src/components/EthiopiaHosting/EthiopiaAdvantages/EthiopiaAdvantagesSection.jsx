@@ -11,19 +11,21 @@ export default function EthiopiaAdvantagesSection() {
       transition: { duration: 0.5, ease: "easeOut" },
     },
   };
+
   return (
     <motion.div
       initial="hidden"
       whileInView="visible"
-      viewport={{ once: false, amount: 0.3 }} // Triggers when 20% of the section is visible
+      viewport={{ once: false, amount: 0.3 }}
       variants={sectionVariants}
       className="px-5 md:px-10 lg:px-[120px] xl:px-[180px] py-10 flex flex-col gap-10 items-center"
     >
-      <h4 className="text-3xl font-semibold gradient-heading">
-        Why Choose Ethiopia for Crypto mining?
+      <h4 className="text-3xl font-semibold gradient-heading text-center">
+        Why Choose Ethiopia for Crypto Mining?
       </h4>
-      <div className="lg:p-10 p-5 customborder flex lg:flex-row flex-col-reverse justify-between gap-5 items-center">
-        <div>
+
+      <div className="w-full lg:p-10 p-5 customborder flex lg:flex-row flex-col-reverse justify-between gap-5 items-center">
+        <div className="flex flex-col gap-5">
           <EthiopiaAdvantageElt
             heading={"Powered by Ethiopia’s Hydropower Advantage"}
             content={
@@ -43,10 +45,11 @@ export default function EthiopiaAdvantagesSection() {
             }
           />
         </div>
+
         <img
           src="/3.jpg"
           alt="Bitcoin mining hosting Ethiopia"
-          className="max-w-[400px] object-cover rounded-md"
+          className="max-w-[400px] object-cover rounded-md w-full lg:w-[400px]"
         />
       </div>
     </motion.div>

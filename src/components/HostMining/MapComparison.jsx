@@ -27,7 +27,7 @@ export default function MapComparison() {
         <h4 className="text-[40px] gradient-heading font-semibold lg:text-left text-center">
           Strategic Global Locations
         </h4>
-        <p className="text-sm max-w-[350px] lg:text-left text-center">
+        <p className="text-sm max-w-[350px] lg:text-left text-start">
           We operate state-of-the-art mining farms in key locations, ensuring
           stable power, secure facilities, and optimal performance for your
           miners

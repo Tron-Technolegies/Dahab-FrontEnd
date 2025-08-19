@@ -33,7 +33,7 @@ export default function BuyingCarousel({ setItem, item }) {
                   alt="Bitcoin Mining in Dubai"
                 />
               </span>{" "}
-              – Own a Crypto Mining Machine Today
+               Own a Crypto Mining Machine Today
             </h4>
           </div>
           <div>
@@ -42,10 +42,10 @@ export default function BuyingCarousel({ setItem, item }) {
                 Crypto Mining in UAE
               </a>
             </h2>
-            <h4 className="text-base font-light text-white leading-6 tracking-wider">
+            <h4 className="text-base font-light text-white leading-6 tracking-wider text-left">
               The crypto revolution waits for no one. Equip yourself with
-              cutting-edge mining equipment and step into the UAE's most
-              profitable opportunity. Don’t miss out—secure yours now
+              cutting edge mining equipment and step into the UAE's most
+              profitable opportunity. Don’t miss out  secure yours now
             </h4>
             {/* <h4 className="text-base font-light text-white leading-6 tracking-wider">
               With expert support, your success is just a step away. Shop now

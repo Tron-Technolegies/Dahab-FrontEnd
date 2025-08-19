@@ -77,7 +77,7 @@ export default function BuyMinersSection() {
                     name={x.productName}
                     img={x.productImage}
                     price={x.price}
-                    id={x._id}
+                    slug={x.slug}
                   />
                 ))}
           </div>

@@ -28,6 +28,43 @@ export default function AddNewBlog() {
     }
   }, [details, loading]);
 
+  const modules = {
+    toolbar: [
+      [{ header: [1, 2, 3, 4, 5, false] }],
+      [{ font: [] }],
+      [{ size: [] }],
+      ["bold", "italic", "underline", "strike", "blockquote", "code-block"],
+      [
+        { list: "ordered" },
+        { list: "bullet" },
+        { indent: "-1" },
+        { indent: "+1" },
+      ],
+      [{ align: [] }],
+      ["link", "image", "video"], // enables image + video
+      ["clean"],
+    ],
+  };
+
+  const formats = [
+    "header",
+    "font",
+    "size",
+    "bold",
+    "italic",
+    "underline",
+    "strike",
+    "blockquote",
+    "code-block",
+    "list",
+    "bullet",
+    "indent",
+    "align",
+    "link",
+    "image",
+    "video",
+  ];
+
   return (
     <div>
       <div className="flex justify-between items-center">
@@ -64,7 +101,9 @@ export default function AddNewBlog() {
           theme="snow"
           value={content}
           onChange={(value) => setContent(value)}
-          className="bg-purple-50 rounded-lg mb-5"
+          className="bg-purple-50 rounded-lg mb-5 min-h-52"
+          modules={modules}
+          formats={formats}
         />
         <FormInput
           type={"text"}

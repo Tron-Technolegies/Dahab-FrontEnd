@@ -3,9 +3,10 @@ import { IoMdAddCircleOutline } from "react-icons/io";
 import { handleProductEnquiry } from "../../utils/whatsapp";
 import { Link } from "react-router-dom";
 
-export default function ProductCard({ bgwhite, img, name, price, id }) {
+export default function ProductCard({ bgwhite, img, name, price, slug }) {
   return (
-    <div
+    <Link
+      to={`/buy-bitcoin-miners-uae/${slug}`}
       className={`pt-2 border border-[#0F3958] flex flex-col gap-5 justify-between items-center rounded-lg text-white hover:border-[#26ddff] duration-300 ease-in-out bigglow-effect`}
     >
       <div>
@@ -19,7 +20,7 @@ export default function ProductCard({ bgwhite, img, name, price, id }) {
       <p className="text-xl font-semibold text-[#F79009]">{`AED ${price}`}</p>
       <Link
         // onClick={() => handleProductEnquiry({ name })}
-        to={`/buy-bitcoin-miners-uae/${id}`}
+        to={`/buy-bitcoin-miners-uae/${slug}`}
         className="text-base w-full font-semibold flex gap-3 cursor-pointer justify-center py-3 border-t border-[#0F3958] items-center hover:bg-[#1ECBAF] rounded-lg nav-link mb-0"
       >
         <button>Buy Now</button>
@@ -27,6 +28,6 @@ export default function ProductCard({ bgwhite, img, name, price, id }) {
           <IoMdAddCircleOutline />
         </p>
       </Link>
-    </div>
+    </Link>
   );
 }

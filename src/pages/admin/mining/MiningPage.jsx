@@ -6,6 +6,7 @@ import BTCPerHashRate from "../../../components/Admin/mining/BTC/BTCPerHashRate"
 import S19KRevenueSection from "../../../components/Admin/mining/S19KRevenue/S19KRevenueSection";
 import TermsSection from "../../../components/Admin/mining/terms/TermsSection";
 import PrivacySection from "../../../components/Admin/mining/privacy/PrivacySection";
+import NotificationSection from "../../../components/Admin/mining/notifications/NotificationSection";
 
 export default function MiningPage() {
   const [active, setActive] = useState("A1246 Revenue");
@@ -18,6 +19,7 @@ export default function MiningPage() {
       {active === "BTC" && <BTCPerHashRate />}
       {active === "T&C" && <TermsSection />}
       {active === "privacy" && <PrivacySection />}
+      {active === "notifications" && <NotificationSection />}
     </div>
   );
 }

@@ -6,6 +6,29 @@ import Loading from "../../../Loading";
 import useEditData from "../../../../hooks/adminDatas/useEditData";
 import { useSelector } from "react-redux";
 import useRestrictedEdit from "../../../../hooks/adminDatas/useRestrictedEdit";
+import FormSelect from "../../../FormSelect";
+
+const locations = [
+  "LIWA 1",
+  "LIWA 2",
+  "LIWA 3",
+  "LIWA 4",
+  "BADA ZAYED 1",
+  "MBZ 1",
+  "BAHYA 1",
+  "BAHYA 2",
+  "AL FALAH 1",
+  "SWEIHAN 1",
+  "AL AIN 1",
+  "SHAMKHA 1",
+  "ADLA 1",
+  "SHAKABOUT 1",
+  "BAHYA STORAGE",
+  "MUSSAFAH OFFICE",
+  "LIWA OFFICE",
+  "WARRANTY CENTRE",
+  "REPAIR CENTRE",
+];
 
 export default function EditDataForm() {
   const { id } = useParams();
@@ -103,7 +126,7 @@ export default function EditDataForm() {
         disabled={user?.role === "admin" ? true : false}
       />
 
-      <FormInput
+      {/* <FormInput
         title={"Actual Location"}
         admin
         value={actualLocation}
@@ -119,6 +142,20 @@ export default function EditDataForm() {
         onchange={(e) => setCurrentLocation(e.target.value)}
         type={"text"}
         placeholder={"Enter Current Location"}
+      /> */}
+      <FormSelect
+        title={"Actual Location"}
+        list={locations}
+        value={actualLocation}
+        onchange={(e) => setActualLocation(e.target.value)}
+        issue
+      />
+      <FormSelect
+        title={"Current Location"}
+        list={locations}
+        value={currentLocation}
+        onchange={(e) => setCurrentLocation(e.target.value)}
+        issue
       />
 
       <FormInput

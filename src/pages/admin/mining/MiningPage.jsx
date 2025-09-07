@@ -7,9 +7,10 @@ import S19KRevenueSection from "../../../components/Admin/mining/S19KRevenue/S19
 import TermsSection from "../../../components/Admin/mining/terms/TermsSection";
 import PrivacySection from "../../../components/Admin/mining/privacy/PrivacySection";
 import NotificationSection from "../../../components/Admin/mining/notifications/NotificationSection";
+import MiningUsersSection from "../../../components/Admin/mining/users/MiningUsersSection";
 
 export default function MiningPage() {
-  const [active, setActive] = useState("A1246 Revenue");
+  const [active, setActive] = useState("users");
   return (
     <div>
       <MiningSections active={active} setActive={setActive} />
@@ -20,6 +21,7 @@ export default function MiningPage() {
       {active === "T&C" && <TermsSection />}
       {active === "privacy" && <PrivacySection />}
       {active === "notifications" && <NotificationSection />}
+      {active === "users" && <MiningUsersSection />}
     </div>
   );
 }

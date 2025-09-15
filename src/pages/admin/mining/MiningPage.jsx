@@ -8,6 +8,7 @@ import TermsSection from "../../../components/Admin/mining/terms/TermsSection";
 import PrivacySection from "../../../components/Admin/mining/privacy/PrivacySection";
 import NotificationSection from "../../../components/Admin/mining/notifications/NotificationSection";
 import MiningUsersSection from "../../../components/Admin/mining/users/MiningUsersSection";
+import A1246Uptime from "../../../components/Admin/mining/A1246Uptime/A1246Uptime";
 
 export default function MiningPage() {
   const [active, setActive] = useState("users");
@@ -18,6 +19,7 @@ export default function MiningPage() {
       {active === "S19KPro Revenue" && <S19KRevenueSection />}
       {active === "Payout" && <PayoutSection />}
       {active === "BTC" && <BTCPerHashRate />}
+      {active === "A1246 Uptime" && <A1246Uptime />}
       {active === "T&C" && <TermsSection />}
       {active === "privacy" && <PrivacySection />}
       {active === "notifications" && <NotificationSection />}

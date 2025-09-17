@@ -2,14 +2,13 @@ import React, { useState } from "react";
 import FormInput from "../../../FormInput";
 import ReactQuill from "react-quill";
 import "react-quill/dist/quill.snow.css";
-import useAddTerms from "../../../../hooks/adminMining/useAddTerms";
-import Loading from "../../../Loading";
+import useAddPrivacy from "../../../../hooks/adminMining/useAddPrivacy";
 import { toast } from "react-toastify";
 
-export default function AddNewTermsForm({ refetch }) {
+export default function AddNewPrivacyForm({ refetch }) {
   const [version, setVersion] = useState(0);
   const [content, setContent] = useState("");
-  const { loading, addTerms } = useAddTerms();
+  const { loading, addPrivacy } = useAddPrivacy();
   const modules = {
     toolbar: [
       [{ header: [1, 2, 3, 4, 5, false] }],
@@ -71,7 +70,7 @@ export default function AddNewTermsForm({ refetch }) {
             toast.error("Please fill all fields");
             return;
           }
-          await addTerms({ content, version });
+          await addPrivacy({ content, version });
           setVersion("");
           setContent("");
           refetch();
@@ -80,7 +79,6 @@ export default function AddNewTermsForm({ refetch }) {
       >
         Add
       </button>
-      {loading && <Loading />}
     </div>
   );
 }

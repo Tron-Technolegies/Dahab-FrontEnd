@@ -6,11 +6,10 @@ import TableContainer from "@mui/material/TableContainer";
 import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
-
-export default function AllTerms({ revenues }) {
+export default function AllPrivacies({ policies }) {
   return (
     <div>
-      <p className="text-lg font-semibold">All Terms and Conditions</p>
+      <p className="text-lg font-semibold">All Privacy Policies</p>
       <TableContainer component={Paper} sx={{ marginTop: 3 }}>
         <Table sx={{ minWidth: 650 }} aria-label="simple table">
           <TableHead>
@@ -45,7 +44,7 @@ export default function AllTerms({ revenues }) {
             </TableRow>
           </TableHead>
           <TableBody>
-            {revenues?.map((x) => (
+            {policies?.map((x) => (
               <TableRow
                 key={x._id}
                 sx={{

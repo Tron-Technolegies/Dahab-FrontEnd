@@ -74,7 +74,7 @@ export const events = [
   },
   {
     id: 4,
-    img: "/home/annual-team-meeting.jpg",
+    img: "/home/annual-team-meeting-new.webp",
     title: "ANNUAL TEAM MEETING",
     date: "Nov 6, 2025",
     location: "Al Raha Creek, Abu Dhabi",

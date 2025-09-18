@@ -33,11 +33,11 @@ export default function TestimonialCard({ name, content, image }) {
         </span>
       </h4>
 
-      <img
+      {/* <img
         src={image}
         className="w-[50px] h-[50px] rounded-full object-cover"
         alt={`${name}'s profile`}
-      />
+      /> */}
 
       <p className="text-base font-normal leading-relaxed">
         "{content}"

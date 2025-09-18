@@ -71,13 +71,14 @@ cost-effective crypto mining and hosting solutions for your miners in UAE."
       <ServiceSection />
       <MiningFacilitiesSection />
       <SecondSection />
-
+        <EventSection />
       <HardwareReviewSection />
       <PerformanceMetrics />
+      
       <WhyChooseUs />
       <FoundersSection />
       <CryptoCurrencySection />
-      <EventSection />
+      
 
       {/* <ConsultationSection /> */}
       {/* <BlogSection /> */}

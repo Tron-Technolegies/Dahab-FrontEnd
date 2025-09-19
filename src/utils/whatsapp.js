@@ -39,3 +39,6 @@ export const handleEmailEnquiry = ({ email }) => {
 
   window.open(whatsappUrl, "_blank");
 };
+
+
+

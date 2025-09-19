@@ -20,7 +20,7 @@ export default function HashCalculator({ btcData }) {
   };
 
   const getBackgroundStyle = () => {
-    const percentage = (value / 100000) * 100;
+    const percentage = (value / 10000) * 100;
     return {
       background: `linear-gradient(to right, #1ECBAF  ${percentage}%, #1ECBAF59 ${percentage}%)`,
     };
@@ -35,7 +35,7 @@ export default function HashCalculator({ btcData }) {
         <input
           type="range"
           min={0}
-          max={100000}
+          max={10000}
           value={value}
           onChange={(e) => setValue(e.target.value)}
           style={{

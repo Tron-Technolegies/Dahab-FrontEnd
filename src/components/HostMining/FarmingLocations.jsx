@@ -1,9 +1,12 @@
 import React from "react";
 import FarmLocationCard from "./FarmLocationCard";
 import { motion } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 import { handleEmailEnquiry } from "../../utils/whatsapp";
 
 export default function FarmingLocations() {
+  const navigate = useNavigate();
+
   const sectionVariants = {
     hidden: { scale: 0.8, opacity: 0 },
     visible: {
@@ -21,7 +24,6 @@ export default function FarmingLocations() {
       variants={sectionVariants}
       className="px-5 md:px-10 lg:px-[120px] xl:px-[180px] py-10 flex flex-col items-center"
     >
-      {/* Heading + Paragraph Wrapper */}
       <div className="max-w-[600px] text-center mb-8">
         <h4 className="gradient-heading text-[40px] font-semibold">
           Bitcoin Mining Farm Locations
@@ -32,8 +34,8 @@ export default function FarmingLocations() {
         </p>
       </div>
 
-      {/* Farm Cards */}
       <div className="flex md:flex-row flex-col justify-center gap-10 my-10">
+        {/* Abu Dhabi Card */}
         <FarmLocationCard
           image={"/1.jpg"}
           power={"From $0.06 / kWh"}
@@ -50,8 +52,15 @@ export default function FarmingLocations() {
             "Security: Team on the site",
             "Camera surveillance: 24 hours",
           ]}
-          action={() => handleEmailEnquiry({ email: `hosting in abudhabi` })}
+          hostingAction={() =>
+            navigate("/host-miners/bitcoin-mining-hosting-abu-dhabi")
+          }
+          whatsappAction={() =>
+            handleEmailEnquiry({ email: `hosting in abudhabi` })
+          }
         />
+
+        {/* Ethiopia Card */}
         <FarmLocationCard
           image={"/2.jpg"}
           power={"From $0.05 / kWh"}
@@ -68,7 +77,12 @@ export default function FarmingLocations() {
             "Security: Armed Personal on the site",
             "Camera surveillance: 24 hours",
           ]}
-          action={() => handleEmailEnquiry({ email: `hosting in Ethiopia` })}
+          hostingAction={() =>
+            navigate("/host-miners/bitcoin-mining-hosting-ethiopia")
+          }
+          whatsappAction={() =>
+            handleEmailEnquiry({ email: `hosting in Ethiopia` })
+          }
         />
       </div>
     </motion.section>

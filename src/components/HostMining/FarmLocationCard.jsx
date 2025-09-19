@@ -1,15 +1,14 @@
 import { motion } from "framer-motion";
 import React from "react";
-import { Link } from "react-router-dom";
 
 export default function FarmLocationCard({
   image,
   power,
   location,
   hostingInfo,
-  path,
-  action,
   generalInfo,
+  hostingAction, // For Hosting Available navigation
+  whatsappAction, // For Know More Details WhatsApp
 }) {
   return (
     <motion.div
@@ -28,25 +27,29 @@ export default function FarmLocationCard({
         boxShadow: "0px 0px 20px rgba(1, 148, 254, 0.6)",
         transition: { duration: 0.6, ease: "easeOut" },
       }}
-      style={{
-        borderStyle: "solid",
-      }}
+      style={{ borderStyle: "solid" }}
       className="text-white p-5 border rounded-lg flex flex-col gap-5 bg-[#000618] z-[1]"
     >
       <div className="flex flex-col gap-3">
         <img
           src={image}
           className="w-[300px] h-[200px] rounded-lg object-cover"
-          alt="Crypto mining hosting UAE"
+          alt={location}
         />
         <div className="flex gap-2 items-center">
           <button className="px-4 py-2 bg-[#0194FE] rounded-lg">{power}</button>
-          <button className="px-4 py-2 bg-[#07EAD3] text-black rounded-lg">
-            Hosting Available
+          
+          {/* Hosting Available → Page Navigation */}
+          <button
+            onClick={hostingAction}
+            className="px-4 py-2 bg-[#07EAD3] text-black rounded-lg"
+          >
+            Know More Details
           </button>
         </div>
         <h5 className="text-[#07EAD3] text-2xl">{location}</h5>
       </div>
+
       <div className="flex flex-col gap-3">
         <div>
           <p className="text-[#CCF2FF] text-xl">Hosting Information</p>
@@ -65,8 +68,13 @@ export default function FarmLocationCard({
           </ul>
         </div>
       </div>
-      <button onClick={action} className="p-2 rounded-full btn-bg text-center">
-        Know More Details
+
+      {/* Know More Details → WhatsApp */}
+      <button
+        onClick={whatsappAction}
+        className="p-2 rounded-full btn-bg text-center"
+      >
+        Enquire Now
       </button>
     </motion.div>
   );

@@ -50,7 +50,7 @@ export default function FarmingLocations() {
             "Capacity: 5 MW",
             "Accommodation: Various",
             "Security: Team on the site",
-            "Camera surveillance: 24 hours",
+            "Camera surveillance: 24x7",
           ]}
           hostingAction={() =>
             navigate("/host-miners/bitcoin-mining-hosting-abu-dhabi")
@@ -75,7 +75,7 @@ export default function FarmingLocations() {
             "Capacity: 10 MW",
             "Accommodation: Warehouse",
             "Security: Armed Personal on the site",
-            "Camera surveillance: 24 hours",
+            "Camera surveillance: 24x7",
           ]}
           hostingAction={() =>
             navigate("/host-miners/bitcoin-mining-hosting-ethiopia")

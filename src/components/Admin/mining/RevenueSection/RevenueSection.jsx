@@ -19,6 +19,7 @@ export default function RevenueSection() {
     category: "A1246",
   });
   const [amount, setAmount] = useState(0);
+  const [newUptime, setNewUptime] = useState(0);
   const [hashRate, setHashRate] = useState(89960);
   const { loading: addLoading, addRevenue } = useAddRevenue();
 
@@ -38,12 +39,26 @@ export default function RevenueSection() {
   }, [page]);
 
   const handleAdd = async () => {
-    if (amount === 0 || hashRate === 0) {
-      toast.error("Amount or hashrate cant be zero");
+    if (amount === 0 || hashRate === 0 || newUptime === 0) {
+      toast.error("Amount or hashrate or uptime cant be zero");
       return;
     }
-    await addRevenue({ amount, hashRate, category: "A1246" });
-    setAmount("");
+    if (newUptime < 0) {
+      toast.error("Uptime cannot be below zero percent");
+      return;
+    }
+    if (newUptime > 100) {
+      toast.error("Uptime cannot be more than 100 percent");
+      return;
+    }
+    await addRevenue({
+      amount,
+      hashRate,
+      category: "A1246",
+      uptime: Number(newUptime / 100),
+    });
+    setAmount(0);
+    setNewUptime(0);
     refetch();
   };
   return (
@@ -56,6 +71,17 @@ export default function RevenueSection() {
             type="number"
             value={amount}
             onChange={(e) => setAmount(e.target.value)}
+          />
+        </div>
+        <div className="flex justify-between gap-5 items-center">
+          <label className="text-lg font-semibold">
+            Enter Todays A1246 Uptime (0 - 100):
+          </label>
+          <input
+            className="p-2 rounded-lg"
+            type="number"
+            value={newUptime}
+            onChange={(e) => setNewUptime(e.target.value)}
           />
         </div>
         <div className="flex justify-between gap-5 items-center">

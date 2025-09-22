@@ -8,14 +8,10 @@ import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
 import useGetUptime from "../../../../hooks/adminMining/useGetUptime";
 import Loading from "../../../Loading";
-import useAddNewUptime from "../../../../hooks/adminMining/useAddNewUptime";
-import { toast } from "react-toastify";
 
 export default function A1246Uptime() {
-  const { loading, uptime, refetch } = useGetUptime();
-  const { loading: addLoading, addUptime } = useAddNewUptime();
+  const { loading, uptime } = useGetUptime();
   const [history, setHistory] = useState([]);
-  const [newUptime, setNewUptime] = useState(0);
 
   useEffect(() => {
     if (uptime && uptime.uptimeHistory) {
@@ -32,38 +28,6 @@ export default function A1246Uptime() {
 
   return (
     <div className="p-5">
-      <div className="flex flex-col gap-2 border-b border-homeBg pb-5 my-5">
-        <div className="flex justify-between gap-5 items-center">
-          <label className="text-lg font-semibold">
-            Enter Todays A1246 Uptime (0 - 100):
-          </label>
-          <input
-            className="p-2 rounded-lg"
-            type="number"
-            value={newUptime}
-            onChange={(e) => setNewUptime(e.target.value)}
-          />
-        </div>
-
-        <button
-          onClick={async () => {
-            if (newUptime < 0) {
-              toast.error("Unable to add Uptime below 0 percent");
-              return;
-            }
-            if (newUptime > 100) {
-              toast.error("Unable to add Uptime above 100 percent");
-              return;
-            }
-            await addUptime({ uptime: Number(newUptime / 100) });
-            refetch();
-          }}
-          className="px-3 py-2 bg-homeBg text-white rounded-md w-fit ms-auto"
-        >
-          Submit
-        </button>
-        {addLoading && <Loading />}
-      </div>
       <p className="text-lg font-semibold">Uptime History</p>
       {loading ? (
         <Loading />

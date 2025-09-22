@@ -5,12 +5,12 @@ import { toast } from "react-toastify";
 
 const useAddRevenue = () => {
   const [loading, setLoading] = useState(false);
-  const addRevenue = async ({ amount, hashRate, category }) => {
+  const addRevenue = async ({ amount, hashRate, category, uptime }) => {
     setLoading(true);
     try {
       const response = await axios.post(
         `${BASE_URL}/mining/revenue`,
-        { amount, hashRate, category },
+        { amount, hashRate, category, uptime },
         { withCredentials: true }
       );
       const data = response.data;

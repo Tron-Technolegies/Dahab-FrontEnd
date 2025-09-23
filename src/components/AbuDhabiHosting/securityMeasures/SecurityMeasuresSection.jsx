@@ -57,8 +57,8 @@ export default function SecurityMeasuresSection() {
 
         <div className="flex-1 w-full">
           <img
-            src="/abudhabi/new-img.jpg"
-            alt="Modern cryptocurrency mining facility at Dahab Miners Hosting Abu Dhabi with multiple ASIC miners, industrial control panels, and high-capacity power cables in a secure environment."
+            src="/abudhabi/hostingfacilities_abudhabi.webp"
+            alt="Modern cryptocurrency mining facility at Dahab Miners Hosting Crypto Mining in UAE with multiple ASIC miners, industrial control panels, and high-capacity power cables in a secure environment."
             className="w-full h-auto rounded-lg shadow-md object-cover max-h-[400px]"
           />
         </div>

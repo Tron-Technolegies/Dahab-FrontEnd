@@ -42,7 +42,7 @@ export default function FarmLocationCard({
           {/* Hosting Available → Page Navigation */}
           <button
             onClick={hostingAction}
-            className="px-4 py-2 bg-[#07EAD3] text-black rounded-lg"
+            className="px-4 py-2 bg-[#07EAD3] text-white rounded-lg"
           >
             Know More Details
           </button>

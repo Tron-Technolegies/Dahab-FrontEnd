@@ -74,7 +74,7 @@ export default function FarmingLocations() {
             "Power Source: Hydropower",
             "Capacity: 10 MW",
             "Accommodation: Warehouse",
-            "Security: Armed Personal on the site",
+            "Security: Team on the site",
             "Camera surveillance: 24x7",
           ]}
           hostingAction={() =>

@@ -26,10 +26,10 @@ export default function EthiopiaSafetySection() {
           <p className="lg:text-start text-center">
             The security of your investment is our top priority. Our facility is
             safeguarded with Armed personnel at the gates and 24/7 on-site staff
-            and round-the-clock surveillance, ensuring maximum protection.
+            and round the clock surveillance, ensuring maximum protection.
           </p>
           <p className="lg:text-start text-center">
-            Additionally, our agreement includes a compensation clause—in case
+            Additionally, our agreement includes a compensation clause in case
             of fire, theft, or any negligence on our part, we cover the damages.
           </p>
           <p className="lg:text-start text-center">

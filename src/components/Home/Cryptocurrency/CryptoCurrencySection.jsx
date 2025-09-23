@@ -31,7 +31,7 @@ export default function CryptoCurrencySection() {
           </h3>
         </div>
         <p className="text-sm font-medium text-white leading-7 max-w-[500px]">
-          From buying top-tier mining machines to hosting them in secure
+          From buying top tier mining machines to hosting them in secure
           facilities and ensuring seamless repairs, we cover every step of your
           crypto mining needs. Start mining smarter with us today.
         </p>

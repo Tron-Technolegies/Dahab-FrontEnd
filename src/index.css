@@ -167,9 +167,9 @@ input:disabled {
     #6fc6b8 94.43%
   );
 }
-.btn-bg:hover {
+/* .btn-bg:hover {
   box-shadow: 0px 14px 30px 0px #22def96e;
-}
+} */
 
 /* .customborder{
         position: relative;
@@ -276,7 +276,8 @@ input:disabled {
 
 @media (max-width: 768px) {
   .glow-effect {
-    box-shadow: 0 0 5px #118ff9, 0 0 10px #118ff9, 0 0 15px #118ff9;
+    /* box-shadow: 0 0 5px #118ff9, 0 0 10px #118ff9, 0 0 15px #118ff9; */
+    box-shadow: 0 0 12px rgba(17, 143, 249, 0.4);
     transition: box-shadow 0.3s ease-in-out;
   }
 
@@ -311,5 +312,8 @@ input:disabled {
 .div-tile:hover {
   transform: skewY(0deg) rotate(0deg) scale(1.05);
 }
+
+
+
 
 

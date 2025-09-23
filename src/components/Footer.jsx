@@ -1,145 +1,193 @@
 import React from "react";
-import { CiLocationOn } from "react-icons/ci";
-import { CiMail } from "react-icons/ci";
-import { CiPhone } from "react-icons/ci";
+import { CiLocationOn, CiMail, CiPhone } from "react-icons/ci";
 import { FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa";
 import { Link } from "react-router-dom";
-import FooterLinks from "./FooterLinks";
 import { motion } from "framer-motion";
 
+const FooterLinks = ({ link, icon }) => (
+  <a
+    href={link}
+    target="_blank"
+    rel="noopener noreferrer"
+    className="text-white hover:text-[#0194FE] transition-colors duration-300"
+  >
+    {icon}
+  </a>
+);
+
 export default function Footer() {
+  const containerVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.6, ease: "easeOut", staggerChildren: 0.1 },
+    },
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 10 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.4 } },
+  };
+
   return (
     <motion.footer
-      className="px-5 md:px-10 lg:px-[120px] xl:px-[180px] pt-5 bg-[#000618]"
-      initial={{
-        borderImageSource:
-          "linear-gradient(to bottom right, #004DF480 0%, transparent 50%, transparent 50%, #0194FE80 100%)",
-        borderWidth: "2px",
-        borderImageSlice: 1,
-        borderRadius: "12px",
-        boxShadow: "0px 0px 20px rgba(1, 148, 254, 0.6)",
-      }}
-      style={{
-        borderStyle: "solid",
-      }}
+      className="bg-gradient-to-b from-[#000618] to-[#021124] text-white px-6 md:px-12 lg:px-24 xl:px-32 py-12"
+      variants={containerVariants}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true }}
     >
-      <div className="flex lg:flex-row flex-col gap-10 justify-between items-start lg:items-center">
-        <div className="flex flex-col">
-          <a
-            href="https://dahabminers.com/"
-            className="w-[170px] h-[170px] rounded-md overflow-hidden"
+      <div className="max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+          {/* Logo and Social Links */}
+          <motion.div variants={itemVariants} className="flex flex-col gap-6">
+            <a href="https://dahabminers.com/" className="block w-40">
+              <img
+                src="/home/footerLogo.png"
+                alt="Dahab Miners Logo"
+                title="Dahab Miners - Premier Crypto Mining Service in UAE"
+                className="w-full h-auto rounded-lg shadow-md"
+              />
+            </a>
+            <div className="flex gap-5 text-base font-normal text-white">
+              <FooterLinks
+                link="https://www.instagram.com/dahabminers.btc"
+                icon={<FaInstagram />}
+              />
+              <FooterLinks
+                link="https://www.facebook.com/dahabminers"
+                icon={<FaFacebookF />}
+              />
+              <FooterLinks
+                link="https://www.linkedin.com/company/thedahab-miners"
+                icon={<FaLinkedinIn />}
+              />
+            </div>
+          </motion.div>
+
+          {/* Navigation Links */}
+          <motion.div
+            variants={itemVariants}
+            className="grid grid-cols-2 gap-x-8 gap-y-3 text-sm font-medium md:flex md:flex-col md:gap-3"
           >
-            <img
-              src="/home/footerLogo.png"
-              className="overflow-hidden"
-              alt="asic-miners-in-abu-dhabi-UAE-for-new-miners"
-              title="Dahab Miners is the premier crypto mining service in UAE Explore our Bitcoin machines in Abu Dhabi and maximize your cryptocurrency earnings!"
-            ></img>
-          </a>
+            <Link
+              to="/"
+              className="hover:text-[#0194FE] transition-colors duration-300"
+            >
+              Home
+            </Link>
+            <Link
+              to="/buy-bitcoin-miners-uae"
+              className="hover:text-[#0194FE] transition-colors duration-300"
+            >
+              Buy Miners
+            </Link>
+            <Link
+              to="/host-miners"
+              className="hover:text-[#0194FE] transition-colors duration-300"
+            >
+              Host Mining
+            </Link>
+            <Link
+              to="/asic-miner-repair-dubai"
+              className="hover:text-[#0194FE] transition-colors duration-300"
+            >
+              Miner Repair
+            </Link>
+            <Link
+              to="/blogs"
+              className="hover:text-[#0194FE] transition-colors duration-300"
+            >
+              Blogs
+            </Link>
+            <Link
+              to="/about-us"
+              className="hover:text-[#0194FE] transition-colors duration-300"
+            >
+              About Us
+            </Link>
+            <Link
+              to="/terms_and_conditions"
+              className="hover:text-[#0194FE] transition-colors duration-300"
+            >
+              Terms & Conditions
+            </Link>
+            <Link
+              to="/privacy_policy"
+              className="hover:text-[#0194FE] transition-colors duration-300"
+            >
+              Privacy Policy
+            </Link>
+          </motion.div>
 
-          <div className="flex gap-5 text-base font-normal text-white">
-            <FooterLinks
-              link={"https://www.instagram.com/dahabminers.btc"}
-              icon={<FaInstagram />}
-            />
-            <FooterLinks
-              link={"https://www.facebook.com/dahabminers"}
-              icon={<FaFacebookF />}
-            />
-            <FooterLinks
-              link={"https://www.linkedin.com/company/thedahab-miners"}
-              icon={<FaLinkedinIn />}
-            />
-          </div>
-          <div className="flex flex-col gap-5"></div>
+          {/* Contact Information */}
+          <motion.div
+            variants={itemVariants}
+            className="bg-[#030815]/50 rounded-xl p-6 shadow-lg"
+          >
+            <h3 className="text-lg font-semibold mb-4">Contact Us</h3>
+            <div className="flex flex-col gap-4 text-sm font-medium">
+              <a
+                href="https://maps.app.goo.gl/eLqPGSFbuweek7788?g_st=ipc"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex gap-3 items-start hover:text-[#0194FE] transition-colors duration-300"
+              >
+                <CiLocationOn className="text-xl flex-shrink-0 mt-1" />
+                <p>
+                  Plot 122 Ad Doja 1 St, Musaffah - M40, Abu Dhabi, United Arab
+                  Emirates
+                </p>
+              </a>
+              <a
+                href="https://maps.app.goo.gl/PCJcJS8TUPDGca6HA"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex gap-3 items-start hover:text-[#0194FE] transition-colors duration-300"
+              >
+                <CiLocationOn className="text-xl flex-shrink-0 mt-1" />
+                <p>
+                  Saif Thamer General Transport Establishment building, Al
+                  Jubailah, Liwa, Abu Dhabi
+                </p>
+              </a>
+              <a
+                href="https://maps.app.goo.gl/nvicitwD6T9yF4Ei8"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex gap-3 items-start hover:text-[#0194FE] transition-colors duration-300"
+              >
+                <CiLocationOn className="text-xl flex-shrink-0 mt-1" />
+                <p>WM92+VCQ Alem Gena, Ethiopia</p>
+              </a>
+              <div
+                className="flex gap-3 items-center hover:text-[#0194FE] cursor-pointer transition-colors duration-300"
+                onClick={() => (window.location.href = "mailto:Rizwan@dahabminers.ae")}
+              >
+                <CiMail className="text-xl flex-shrink-0" />
+                <p>Rizwan@dahabminers.ae</p>
+              </div>
+              <div
+                className="flex gap-3 items-center hover:text-[#0194FE] cursor-pointer transition-colors duration-300"
+                onClick={() => (window.location.href = "tel:+971568145866")}
+              >
+                <CiPhone className="text-xl flex-shrink-0" />
+                <p>+971568145866</p>
+              </div>
+            </div>
+          </motion.div>
         </div>
-        <div className="flex flex-col gap-3 text-sm font-medium text-white">
-          <Link to={"/"}>Home</Link>
-          <Link to={"/buy-bitcoin-miners-uae"}>Buy Miners</Link>
-          <Link to={"/host-miners"}>Host Mining</Link>
-          <Link to={"/asic-miner-repair-dubai"}>Miner Repair</Link>
-          <Link to={"/blogs"}>Blogs</Link>
-          <Link to={"/about-us"}>About Us</Link>
-          <Link to={"/terms_and_conditions"}>Terms & Conditions</Link>
-          <Link to={"/privacy_policy"}>Privacy Policy</Link>
-        </div>
-        <div className="bg-[#030815] rounded-md p-5 max-w-[400px]">
-          <p className="text-lg font-semibold text-white lg:text-start text-left">
-            Contact Us
+
+        {/* Copyright */}
+        <motion.div
+          variants={itemVariants}
+          className="mt-12 pt-6 border-t border-white/10 text-center"
+        >
+          <p className="text-xs font-normal text-white/80">
+            © 2025 Dahab Miners. All Rights Reserved.
           </p>
-          <div className="flex flex-col gap-7 text-sm font-medium text-white my-5">
-            {/* <div className="flex sm:flex-row flex-col gap-5 justify-between items-start"> */}
-            <a
-              className="flex gap-3 items-start"
-              href="https://maps.app.goo.gl/eLqPGSFbuweek7788?g_st=ipc"
-              target="_blank"
-            >
-              <div>
-                <CiLocationOn />
-              </div>
-              <p>
-                Plot 122 Ad Doja 1 St - Musaffah - M40 - Abu Dhabi - United Arab
-                Emirates
-              </p>
-            </a>
-            <a
-              className="flex gap-3 items-start"
-              href="https://maps.app.goo.gl/PCJcJS8TUPDGca6HA"
-              target="_blank"
-            >
-              <div>
-                <CiLocationOn />
-              </div>
-              <p>
-                Saif Thamer General Transport Establishment building, Al
-                Jubailah, Liwa, Abu Dhabi
-              </p>
-            </a>
-            {/* <div className="text-4xl font-thin h-10 border-l sm:block hidden"></div> */}
-            <a
-              className="flex gap-3 items-start"
-              href="https://maps.app.goo.gl/nvicitwD6T9yF4Ei8"
-              target="_blank"
-            >
-              <div>
-                <CiLocationOn />
-              </div>
-              <p>WM92+VCQ Alem Gena, Ethiopia</p>
-            </a>
-            {/* </div> */}
-
-            <div className="flex gap-3 items-center">
-              <div>
-                <CiMail />
-              </div>
-              <p
-                className="cursor-pointer"
-                onClick={() =>
-                  (window.location.href = `mailto:Rizwan@dahabminers.ae`)
-                }
-              >
-                Rizwan@dahabminers.ae
-              </p>
-            </div>
-            <div className="flex gap-3 items-center">
-              <div>
-                <CiPhone />
-              </div>
-              <p
-                className="cursor-pointer"
-                onClick={() => (window.location.href = `tel:${+971568145866}`)}
-              >
-                +971568145866
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div className="flex md:flex-row flex-col justify-center items-center copyright-bg py-1">
-        <p className="text-black text-xs font-normal text-center">
-          © 2025 Dahab Miners. All Rights Reserved
-        </p>
+        </motion.div>
       </div>
     </motion.footer>
   );

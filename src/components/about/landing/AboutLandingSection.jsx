@@ -11,8 +11,8 @@ export default function AboutLandingSection() {
         </h4>
         <p className="max-w-[600px] text-start">
           At Dahab Miners, we specialize in Crypto mining infrastructure,
-          offering top-tier solutions for hardware procurement, hosting, and
-          repair services. Our state-of-the-art facilities and industry
+          offering top tier solutions for hardware procurement, hosting, and
+          repair services. Our state of the art facilities and industry
           expertise ensure seamless mining operations, whether you’re looking to
           buy, host, or maintain ASIC miners.
         </p>
@@ -33,13 +33,13 @@ export default function AboutLandingSection() {
           </p>
           <p className="max-w-[600px] md:text-start text-start">
             Our facilities feature IoT-based controls, expert infrastructure
-            setup, and round-the-clock maintenance to ensure maximum efficiency
+            setup, and round the clock maintenance to ensure maximum efficiency
             and uptime. We also provide free miner configuration, pool setup
             assistance, and on-site repair services to keep your operations
             running smoothly.
           </p>
           <p className="max-w-[600px] md:text-start text-start">
-            Visit our crypto-hosting center in Abu Dhabi and take your mining
+            Visit our crypto hosting center in Abu Dhabi and take your mining
             operations to the next level!
           </p>
         </div>

@@ -40,23 +40,45 @@ export default function ProductCategorySection() {
   const settings = {
     dots: true,
     infinite: true,
-    speed: 500,
+    speed: 300,
     slidesToShow: 2,
     slidesToScroll: 1,
     centerMode: true,
     arrows: false,
     autoplay: true,
+    autoplaySpeed: 4000,
+    swipeToSlide: true,
+    touchMove: true,
+    draggable: true,
+    touchThreshold: 10,
+    swipe: true,
+    useCSS: true,
+    useTransform: true,
     responsive: [
       {
         breakpoint: 1024,
         settings: {
-          slidesToShow: 2,
+          slidesToShow: 1,
+          centerMode: false,
+          infinite: true,
+          swipeToSlide: true,
+          touchMove: true,
+          draggable: true,
+          swipe: true,
         },
       },
       {
-        breakpoint: 600,
+        breakpoint: 640,
         settings: {
           slidesToShow: 1,
+          centerMode: false,
+          infinite: true,
+          swipeToSlide: true,
+          touchMove: true,
+          draggable: true,
+          swipe: true,
+          variableWidth: false,
+          touchThreshold: 5,
         },
       },
     ],
@@ -85,23 +107,25 @@ export default function ProductCategorySection() {
         </h4>
         <p className="text-left text-sm ">
           Explore our range of crypto mining solutions, designed to suit every
-          miner—from beginners to blockchain pros. At Dahab Crypto Mining, we
+          miner from beginners to blockchain pros. At Dahab Crypto Mining, we
           combine performance, reliability, and innovation to help you mine
           smarter.
         </p>
       </div>
 
-      <Slider {...settings} className="my-10 w-full">
-        {data.map((x) => (
-          <div key={x.id}>
-            <ProductCategoryCard
-              img={x.img}
-              title={x.title}
-              content={x.content}
-            />
-          </div>
-        ))}
-      </Slider>
+      <div className="my-10 w-full [&_.slick-list]:mx-0 [&_.slick-slide]:px-2 [&_.slick-dots]:bottom-[-50px] [&_.slick-dots_li_button:before]:text-[#0194FE] [&_.slick-dots_li_button:before]:text-xs [&_.slick-dots_li.slick-active_button:before]:text-[#48E5E1] [&_.slick-track]:flex [&_.slick-track]:items-center [&_.slick-slide]:transition-transform [&_.slick-slide]:duration-300 [&_.slick-slide:active]:scale-[0.98]">
+        <Slider {...settings}>
+          {data.map((x) => (
+            <div key={x.id} className="px-2 focus:outline-none">
+              <ProductCategoryCard
+                img={x.img}
+                title={x.title}
+                content={x.content}
+              />
+            </div>
+          ))}
+        </Slider>
+      </div>
     </motion.section>
   );
 }

@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 export default function ProductCategoryCard({ img, title, content }) {
   return (
     <motion.div
-      className="p-3 py-5 mx-3 bg-[#000618] text-white rounded-lg flex flex-col gap-3 items-center justify-between max-w-[380px] h-[600px] md:h-[500px]"
+      className="w-full max-w-[320px] sm:max-w-[380px] mx-auto p-3 py-5 bg-[#000618] text-white rounded-lg flex flex-col gap-3 items-center justify-between h-[600px] md:h-[500px]"
       initial={{
         borderImageSource:
           "linear-gradient(to bottom right, #004DF480 0%, transparent 50%, transparent 50%, #0194FE80 100%)",
@@ -31,13 +31,13 @@ export default function ProductCategoryCard({ img, title, content }) {
         <p className="text-center text-lg font-semibold">{title}</p>
       </div>
 
-      <p className="text-sm tracking-wider leading-5 text-left font-light flex-1 px-2 o overflow-visible">
+      <p className="text-sm tracking-wider leading-5 text-left font-light flex-1 px-2 overflow-visible ">
         {content}
       </p>
 
       <Link
         to={"/buy-bitcoin-miners-uae"}
-        className="w-10 h-10 rounded-full bg-[#2c689d1a] flex justify-center items-center text-[#3DB2E8]"
+        className="w-10 h-10 rounded-full bg-[#2c689d1a] flex justify-center items-center text-[#3DB2E8] hover:bg-[#2c689d2a] hover:scale-105 transition-all duration-300"
       >
         <FaArrowRight />
       </Link>

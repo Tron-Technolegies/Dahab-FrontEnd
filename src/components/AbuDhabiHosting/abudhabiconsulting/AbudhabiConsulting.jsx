@@ -26,7 +26,7 @@ export default function AbudhabiConsulting() {
         </h5>
         <p className="text-center">
           Get free consultation, expert purchasing advice, miner configuration
-          assistance, and tailored investment strategies—all at no extra cost.
+          assistance, and tailored investment strategies all at no extra cost.
         </p>
       </div>
       <div className="flex p-10 customborder gap-5 md:flex-row flex-col justify-between items-center mt-10">

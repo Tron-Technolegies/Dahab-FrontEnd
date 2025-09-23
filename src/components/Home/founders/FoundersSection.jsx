@@ -9,7 +9,7 @@ const data = [
     name: "Rizwan Kamarudheen",
     role: "Co-Founder & Chief Executive Officer",
     about:
-      "Born and raised in the UAE, Rizwan has been a pioneer in the region’s crypto mining space since 2020—well before founding Dahab Miners. With a deep understanding of the challenges miners face in the UAE, he has developed strategic, streamlined solutions tailored to the local environment. Prior to Dahab, Rizwan held leadership roles at renowned industry firms such as GreenGate and Tron Digital. His background as a technical lead in energy-focused projects, especially in the EV sector at GreenGate, has played a vital role in shaping Dahab’s success and sustainability-driven operations.",
+      "Born and raised in the UAE, Rizwan has been a pioneer in the region’s crypto mining space since 2020 well before founding Dahab Miners. With a deep understanding of the challenges miners face in the UAE, he has developed strategic, streamlined solutions tailored to the local environment. Prior to Dahab, Rizwan held leadership roles at renowned industry firms such as GreenGate and Tron Digital. His background as a technical lead in energy focused projects, especially in the EV sector at GreenGate, has played a vital role in shaping Dahab’s success and sustainability driven operations.",
     fb: "#",
     inst: "https://www.instagram.com/kf_rizwan?igsh=b2Y2bG95cGg1MXlw",
     link: "https://www.linkedin.com/in/rizwan-kamar-ab117a172/",

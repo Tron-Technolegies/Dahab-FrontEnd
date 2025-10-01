@@ -119,7 +119,7 @@ export default function PayoutSection() {
                     scope="row"
                     sx={{ width: "12.5%", textAlign: "center" }}
                   >
-                    {x.user.username}
+                    {x.user?.username}
                   </TableCell>
                   <TableCell
                     component="th"
@@ -133,7 +133,7 @@ export default function PayoutSection() {
                     scope="row"
                     sx={{ width: "12.5%", textAlign: "center" }}
                   >
-                    {x.user.currentBalance.toFixed(8)}
+                    {x.user?.currentBalance.toFixed(8)}
                   </TableCell>
                   <TableCell
                     component="th"
@@ -170,7 +170,7 @@ export default function PayoutSection() {
                           if (!newStatus || newStatus === x.status) return;
                           await updatePayout({
                             id: x._id,
-                            userId: x.user._id,
+                            userId: x.user?._id,
                             status: newStatus,
                             amount: x.amount,
                           });

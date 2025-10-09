@@ -1,8 +1,8 @@
 export const events = [
   {
     id: 1,
-    imglg: "/home/bitcoin-summit-lg.jpg",
-    imgsm: "/home/bitcoin-summit-lg.jpg",
+    imglg: "/home/bitcoin-summit-lg.webp",
+    imgsm: "/home/bitcoin-summit-lg.webp",
     title: "BITCOIN SUMMIT",
     date: "november 28, 2024",
     location: "Addis Ababa, Ethiopia",

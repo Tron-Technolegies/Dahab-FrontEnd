@@ -27,7 +27,13 @@ export default function ProductCategoryCard({ img, title, content }) {
       }}
     >
       <div className="flex flex-col gap-2 items-center min-h-[150px] justify-start">
-        <img src={img} className="w-32 h-24 object-contain" alt={title} />
+        <img
+          src={img}
+          className="w-32 h-24 object-contain"
+          alt={title}
+          loading="lazy"
+          decoding="async"
+        />
         <p className="text-center text-lg font-semibold">{title}</p>
       </div>
 

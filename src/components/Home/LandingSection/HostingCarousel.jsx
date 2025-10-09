@@ -14,12 +14,24 @@ function HostingCarousel({ setItem, item }) {
               <img
                 src="/home/thunder.png"
                 alt="Bitcoin Mining in Dubai"
+                loading="lazy"
+                decoding="async"
                 className="w-[20px]"
               />
               <div className="text-[#00C4F4] flex gap-3 items-center">
-                <img src="/home/short-line.png" alt="Bitcoin Mining in Dubai" />
+                <img
+                  src="/home/short-line.png"
+                  alt="Bitcoin Mining in Dubai"
+                  loading="lazy"
+                  decoding="async"
+                />
                 <p>Host</p>
-                <img src="/home/long-line.png" alt="Bitcoin Mining in Dubai" />
+                <img
+                  src="/home/long-line.png"
+                  alt="Bitcoin Mining in Dubai"
+                  loading="lazy"
+                  decoding="async"
+                />
               </div>
             </div>
             <h4 className="md:text-5xl text-3xl font-semibold md:leading-[72px] leading-10 gradient-heading z-[10]">
@@ -30,6 +42,8 @@ function HostingCarousel({ setItem, item }) {
                   className="absolute left-0 -bottom-2"
                   src="/home/underline.png"
                   alt="Bitcoin Mining in Dubai"
+                  loading="lazy"
+                  decoding="async"
                 />
               </span>{" "}
               – Only at DAHAB Miners
@@ -66,6 +80,8 @@ function HostingCarousel({ setItem, item }) {
           <div className="absolute md:-left-[35%] md:top-[20%] bottom-0 -left-[10%] overflow-hidden">
             <img
               src="/home/homeline-1.png"
+              loading="lazy"
+              decoding="async"
               className="object-contain w-full max-w-[65%] mx-auto md:object-cover md:w-auto md:max-w-full"
               alt="crypto-mining-machines-in-abu-dhabi-UAE-for-sale"
               title="Dahab Miners is your trusted partner for crypto mining in UAE, offering a diverse array of advanced ASIC miners in Abu Dhabi. Discover our premium CRYPTO MINING MACHINES IN UAE and optimize your mining operations with the best tools available."
@@ -79,6 +95,8 @@ function HostingCarousel({ setItem, item }) {
                 className="w-full h-auto object-contain scale-[0.6] md:scale-100"
                 alt="Crypto mining container"
                 title="Dahab Miners is your trusted partner for crypto mining in UAE"
+                loading="lazy"
+                decoding="async"
               />
             </div>
           </div>

@@ -13,11 +13,23 @@ export default function RepairCarousel({ setItem, item }) {
                 src="/home/thunder.png"
                 alt="Bitcoin Mining in Dubai"
                 className="w-[20px]"
+                loading="lazy"
+                decoding="async"
               />
               <div className="text-[#00C4F4] flex gap-3 items-center">
-                <img src="/home/short-line.png" alt="Bitcoin Mining in Dubai" />
+                <img
+                  src="/home/short-line.png"
+                  alt="Bitcoin Mining in Dubai"
+                  loading="lazy"
+                  decoding="async"
+                />
                 <p>Repair</p>
-                <img src="/home/long-line.png" alt="Bitcoin Mining in Dubai" />
+                <img
+                  src="/home/long-line.png"
+                  alt="Bitcoin Mining in Dubai"
+                  loading="lazy"
+                  decoding="async"
+                />
               </div>
             </div>
             <h4 className="md:text-5xl text-3xl my-3 font-semibold  gradient-heading">
@@ -27,6 +39,8 @@ export default function RepairCarousel({ setItem, item }) {
               <span className="relative gradient-heading">
                 <img
                   className="absolute -bottom-2"
+                  loading="lazy"
+                  decoding="async"
                   src="/home/underline.png"
                   alt="Bitcoin Mining in Dubai"
                 />
@@ -65,6 +79,8 @@ export default function RepairCarousel({ setItem, item }) {
             <img
               src={"/home/homeline-1.png"}
               className="object-cover"
+              loading="lazy"
+              decoding="async"
               alt="crypto-mining-machines-in-abu-dhabi-UAE-for-sale"
               title="Dahab Miners is your trusted partner for crypto mining in UAE, offering a diverse array of advanced ASIC miners in Abu Dhabi. Discover our premium CRYPTO MINING MACHINES IN UAE and optimize your mining operations with the best tools available."
             ></img>
@@ -72,6 +88,8 @@ export default function RepairCarousel({ setItem, item }) {
           <div className="absolute flex gap-2 md:-top-[10%] md:right-0 -right-[20%] overflow-hidden">
             <img
               src={"/home/homeline-2.png"}
+              loading="lazy"
+              decoding="async"
               className="object-cover"
               alt="crypto-mining-machines-in-abu-dhabi-UAE-for-sale 2"
               title="Dahab Miners is your trusted partner 2 for crypto mining in UAE, offering a diverse array of advanced ASIC miners in Abu Dhabi. Discover our premium CRYPTO MINING MACHINES IN UAE and optimize your mining operations with the best tools available."

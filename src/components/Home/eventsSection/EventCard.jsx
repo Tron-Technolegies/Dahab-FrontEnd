@@ -6,12 +6,13 @@ import { Link } from "react-router-dom";
 export default function EventCard({ img, date, location, title, id }) {
   return (
     <div className="p-4 rounded-2xl bg-[#0A0A0A] border border-[#0194FE] shadow-lg hover:shadow-[#0194FE]/40 transition-all duration-300 mx-3 flex flex-col gap-4 md:max-w-[450px] h-[440px]">
-      
       {/* Image Container */}
       <div className="flex-1 overflow-hidden rounded-xl relative group">
         <img
           src={img}
           alt={title}
+          loading="lazy"
+          decoding="async"
           className="w-full h-full object-cover rounded-xl transform group-hover:scale-105 transition-transform duration-500"
         />
         {/* Gradient Overlay */}

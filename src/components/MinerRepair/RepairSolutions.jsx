@@ -28,7 +28,9 @@ export default function RepairSolutions() {
         </h1>
         <img
           className="object-cover rounded-md lg:max-w-[600px]"
-          src="/7.jpg"
+          src="/7-lg.webp"
+          loading="lazy"
+          decoding="async"
         />
         <p className="text-base font-medium text-white leading-6 max-w-[900px] mb-10">
           From troubleshooting to full-scale repairs, our team ensures your ASIC

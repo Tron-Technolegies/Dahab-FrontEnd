@@ -88,9 +88,6 @@ export default function BuyingCarousel({ setItem, item }) {
             src="/buycarousel-lg.webp"
             srcSet={`/buycarousel-sm.webp 350w, /buycarousel-lg.webp 650w`}
             sizes="(max-width: 768px) 350px, 650px"
-            loading="lazy"
-            decoding="async"
-            fetchPriority="high"
             alt="crypto-mining-machines-in-abu-dhabi-UAE-for-sale"
             title="Dahab Miners is your trusted partner for crypto mining in UAE, offering a diverse array of advanced ASIC miners in Abu Dhabi. Discover our premium CRYPTO MINING MACHINES IN UAE and optimize your mining operations with the best tools available."
           />

@@ -41,8 +41,12 @@ export default function EventsPage() {
         </div>
         <div>
           <img
-            src={event?.img}
+            src={event?.imglg}
+            srcSet={`${event?.imgsm} 350w, ${event?.imglg} 650w`}
+            sizes="(max-width: 768px) 350px, 650px"
             className="rounded-md object-cover lg:max-w-[650px] max-w-[350px]"
+            loading="lazy"
+            decoding="async"
           />
         </div>
       </section>

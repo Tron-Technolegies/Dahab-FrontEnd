@@ -5,7 +5,6 @@ import FeaturedCard from "./FeaturedCard";
 
 export default function FeaturedCarousel() {
   const { loading, products } = useGetFeaturedProducts();
-  console.log(products);
 
   const settings = {
     dots: true, // Show dots navigation

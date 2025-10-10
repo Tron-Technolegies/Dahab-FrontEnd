@@ -28,36 +28,17 @@ cost effective hosting solutions for your miners in UAE."
       crossorigin
     />
     <link rel="preconnect" href="https://api.coingecko.com" crossorigin />
-
     <script>
-      function load3rdParty() {
-        // Google Tag Manager
-        (function (w, d, s, l, i) {
-          w[l] = w[l] || [];
-          w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
-          var f = d.getElementsByTagName(s)[0],
-            j = d.createElement(s),
-            dl = l != "dataLayer" ? "&l=" + l : "";
-          j.async = true;
-          j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
-          f.parentNode.insertBefore(j, f);
-        })(window, document, "script", "dataLayer", "GTM-54MR4JDD");
-
-        // Microsoft Clarity
-        var c = document.createElement("script");
-        c.src = "https://scripts.clarity.ms/0.8.33/clarity.js";
-        c.async = true;
-        document.head.appendChild(c);
-      }
-      // Delay load until idle or user interaction
-      if ("requestIdleCallback" in window) {
-        requestIdleCallback(load3rdParty, { timeout: 4000 });
-      } else {
-        setTimeout(load3rdParty, 3000);
-      }
-      ["scroll", "mousemove", "touchstart", "keydown"].forEach((e) =>
-        window.addEventListener(e, load3rdParty, { once: true })
-      );
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-54MR4JDD");
     </script>
   </head>
   <body>

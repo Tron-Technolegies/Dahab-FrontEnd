@@ -60,7 +60,13 @@ export default function CryptoCurrencySection() {
                 ease: "linear",
               },
             }}
-            src="/home/crypto.png"
+            src="/home/crypto-lg.webp"
+            srcSet={`/home/crypto-sm.webp 455w, /home/crypto-lg.webp 590w`}
+            sizes="(max-width: 768px) 455px, 590px"
+            width="590"
+            height="645"
+            loading="lazy"
+            decoding="async"
             alt="Explore-the-potential-of-crypto-mining-in-abu-dhabi-UAE"
             title="Dahab Miners is the premier crypto mining service in UAE Explore our Bitcoin machines in Abu Dhabi and maximize your cryptocurrency earnings!"
           ></motion.img>

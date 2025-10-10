@@ -1,5 +1,4 @@
-import React from "react";
-import { AreaChart, Area, LineChart, Line } from "recharts";
+import { LineChart, Line } from "recharts";
 
 export default function SmallGraph({ data, color }) {
   const chartData = data?.map((value, index) => ({ index, value }));

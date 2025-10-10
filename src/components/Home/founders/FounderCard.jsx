@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import React from "react";
 import FooterLinks from "../../FooterLinks";
 import { FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa";
 

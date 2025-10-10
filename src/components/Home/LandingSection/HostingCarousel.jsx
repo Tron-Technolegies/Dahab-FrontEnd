@@ -1,4 +1,3 @@
-import React from "react";
 import CarouselNavigation from "./CarouselNavigation";
 import { handleChatClick } from "../../../utils/whatsapp";
 import { motion } from "framer-motion";

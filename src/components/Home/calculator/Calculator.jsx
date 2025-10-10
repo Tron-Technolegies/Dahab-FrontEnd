@@ -1,7 +1,7 @@
-import React, { useState } from "react";
-import useGetBitCoinData from "../../../hooks/coins/useGetBitCoinData";
+import { useState } from "react";
+
 import { useSelector } from "react-redux";
-import { bitcoinBought, coinsPerDay } from "../../../utils/BTCCalculator";
+import { coinsPerDay } from "../../../utils/BTCCalculator";
 
 export default function Calculator() {
   const {
@@ -60,7 +60,7 @@ export default function Calculator() {
           CALCULATE
         </button>
       </div>
-      <div className="customborder p-10 ">
+      <div className="border-2 border-[#004DF480] bg-[#000618] rounded-lg p-10 ">
         <div className="flex lg:flex-row flex-col lg:items-start items-center justify-around text-white">
           <div className="flex flex-col gap-10 lg:w-fit w-full">
             <p className="text-[#07EAD3] text-center">TRADING BTC</p>
@@ -92,9 +92,11 @@ export default function Calculator() {
             </div>
           </div>
           <img
-            src="/home/roundlogo.png"
+            src="/home/roundlogo.webp"
             alt="logo of dahab miners"
             className="self-center"
+            loading="lazy"
+            decoding="async"
           />
           <div className="flex flex-col gap-10 lg:w-fit w-full">
             <p className="text-[#07EAD3] text-center">MINING BTC</p>

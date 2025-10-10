@@ -1,5 +1,3 @@
-import React from "react";
-
 import CarouselNavigation from "./CarouselNavigation";
 import { handleChatClick } from "../../../utils/whatsapp";
 import { motion } from "framer-motion";
@@ -86,10 +84,10 @@ export default function BuyingCarousel({ setItem, item }) {
           <img
             className="object-cover z-20 absolute "
             src="/buycarousel-lg.webp"
-            srcSet={`/buycarousel-sm.webp 375w, /buycarousel-lg.webp 1000w`}
+            srcSet={`/buycarousel-sm.webp 375w, /buycarousel-lg.webp 550w`}
             sizes="(max-width: 768px) 375px, 550px"
-            width="1000"
-            height="1000"
+            width="550"
+            height="550"
             alt="crypto-mining-machines-in-abu-dhabi-UAE-for-sale"
             title="Dahab Miners is your trusted partner for crypto mining in UAE, offering a diverse array of advanced ASIC miners in Abu Dhabi. Discover our premium CRYPTO MINING MACHINES IN UAE and optimize your mining operations with the best tools available."
           />

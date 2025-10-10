@@ -1,4 +1,3 @@
-import React from "react";
 import { FaStar } from "react-icons/fa";
 import HardwareReviewCard from "./HardwareReviewCard";
 import { CiHeart } from "react-icons/ci";

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 
 import HostingCarousel from "./HostingCarousel";
 import BuyingCarousel from "./BuyingCarousel";

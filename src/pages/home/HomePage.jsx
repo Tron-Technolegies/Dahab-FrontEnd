@@ -1,19 +1,15 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import LandingSection from "../../components/Home/LandingSection/LandingSection";
 import Miners from "../../components/Home/MinersSection/Miners";
 import MiningFacilitiesSection from "../../components/Home/MiningFacilities/MiningFacilitiesSection";
 import HardwareReviewSection from "../../components/Home/HardwareReviews/HardwareReviewSection";
 import PerformanceMetrics from "../../components/Home/performanceMetrics/PerformanceMetrics";
-// import ConsultationSection from "../../components/Home/consultation/ConsultationSection";
-import BlogSection from "../../components/Home/blog/BlogSection";
 import Testimonials from "../../components/Home/Testimonials/Testimonials";
 import CryptoCurrencySection from "../../components/Home/Cryptocurrency/CryptoCurrencySection";
-// import ContactForm from "../../components/Home/contactform/ContactForm";
 import { Helmet } from "react-helmet-async";
 import SecondSection from "../../components/Home/secondsection/SecondSection";
 import ThirdSection from "../../components/Home/thirdsection/ThirdSection";
 import Calculator from "../../components/Home/calculator/Calculator";
-// import MapSection from "../../components/Home/mapsection/MapSection";
 import WhyChooseUs from "../../components/Home/WhyChooseUs/WhyChooseUs";
 import FAQSection from "../../components/Home/Faq/FAQSection";
 import DiscussSection from "../../components/Home/Discuss/DiscussSection";
@@ -64,23 +60,21 @@ cost-effective crypto mining and hosting solutions for your miners in UAE."
       <Miners />
       <ProductCategorySection />
       {/* <ProfitSection /> */}
-      {/* <MapSection /> */}
+
       <MapComparison />
       <ThirdSection btcData={btcData} />
       <Calculator />
       <ServiceSection />
       <MiningFacilitiesSection />
       <SecondSection />
-        <EventSection />
+      <EventSection />
       <HardwareReviewSection />
       <PerformanceMetrics />
-      
+
       <WhyChooseUs />
       <FoundersSection />
       <CryptoCurrencySection />
-      
 
-      {/* <ConsultationSection /> */}
       {/* <BlogSection /> */}
       <Testimonials />
       <FAQSection full={false} />

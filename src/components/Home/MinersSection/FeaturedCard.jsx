@@ -1,9 +1,20 @@
-import React from "react";
 import { handleProductEnquiry } from "../../../utils/whatsapp";
 import { HiOutlineCube } from "react-icons/hi2";
 import { PiLightning } from "react-icons/pi";
 import { GoCpu } from "react-icons/go";
 import { motion } from "framer-motion";
+
+export const getOptimizedCloudinaryUrl = (url, options = {}) => {
+  if (!url || typeof url !== "string") return url;
+
+  const { width, quality = "auto", format = "auto" } = options;
+
+  // Insert Cloudinary transformations after `/upload/`
+  return url.replace(
+    "/upload/",
+    `/upload/f_${format},q_${quality}${width ? `,w_${width}` : ""}/`
+  );
+};
 
 export default function FeaturedCard({
   img,
@@ -17,7 +28,9 @@ export default function FeaturedCard({
     <div className="flex md:flex-row flex-col my-10 justify-center gap-40 items-center">
       <div className="w-full max-w-[400px] h-auto md:max-w-[350px] overflow-hidden">
         <img
-          src={img}
+          src={getOptimizedCloudinaryUrl(img, { width: 405 })}
+          loading="lazy"
+          decoding="async"
           alt="Find-top-asic-miner-models-in-abu-dhabi-UAE-here"
           title="Dahab Miners is your trusted partner for crypto mining in UAE, offering a diverse array of advanced ASIC miners in Abu Dhabi. Discover our premium CRYPTO MINING MACHINES IN UAE and optimize your mining operations with the best tools available."
           className="w-full h-auto object-cover"

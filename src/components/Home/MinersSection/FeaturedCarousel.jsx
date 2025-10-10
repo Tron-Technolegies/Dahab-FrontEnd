@@ -1,4 +1,3 @@
-import React from "react";
 import Slider from "react-slick";
 import useGetFeaturedProducts from "../../../hooks/userProducts/useGetFeaturedProducts";
 import FeaturedCard from "./FeaturedCard";
@@ -18,7 +17,7 @@ export default function FeaturedCarousel() {
     prevArrow: <SamplePrevArrow />, // Custom previous arrow
   };
   return (
-    <div className="w-full flex justify-center customborder relative p-5 my-10">
+    <div className="w-full flex justify-center border-2 border-[#004DF480] bg-[#000618] rounded-lg relative p-5 my-10">
       <Slider {...settings} className="w-full ">
         {products.map((x) => (
           <FeaturedCard

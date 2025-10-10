@@ -1,12 +1,10 @@
-import React from "react";
-// import SmallGraph from "./SmallGraph";
-import { GoArrowDownRight, GoArrowUpRight } from "react-icons/go";
 import { motion } from "framer-motion";
-// import useGetSingleCoinGraphData from "../../../hooks/coins/useGetSingleCoinGraphData";
-// import Loading from "../../Loading";
 
 export default function TrendCard({ icon, name, short, value, percent, id }) {
-  // const { loading, graphData } = useGetSingleCoinGraphData({ id });
+  const getOptimizedUrl = (url) => {
+    // Insert Cloudinary transformations after `/upload/`
+    return url.replace("/large/", `/small/`);
+  };
   return (
     <motion.div
       className="p-5 relative text-white w-[250px] my-5 bg-[#000618] z-[5]"
@@ -35,15 +33,18 @@ export default function TrendCard({ icon, name, short, value, percent, id }) {
     >
       <div className="flex items-center justify-between ">
         <div className="flex items-center gap-3">
-          <img src={icon} alt="Bitcoin Mining in Dubai" className="w-10" />
+          <img
+            src={getOptimizedUrl(icon)}
+            alt="Bitcoin Mining in Dubai"
+            loading="lazy"
+            decoding="async"
+            className="w-10"
+          />
           <p className="text-sm">{short}</p>
           <p className="text-[10px] bg-[#B6B6B6] p-1 rounded-md text-black">
             {name}
           </p>
         </div>
-        {/* <p className="w-8 bg-[#2C223B] h-8 rounded-full flex justify-center items-center">
-          <GoArrowUpRight />
-        </p> */}
       </div>
       <div className="flex justify-between items-center my-3">
         <div className="flex flex-col gap-3">
@@ -55,11 +56,6 @@ export default function TrendCard({ icon, name, short, value, percent, id }) {
             %
           </p>
         </div>
-        {/* {loading ? (
-          <Loading />
-        ) : (
-          <SmallGraph data={graphData && graphData} color={"#5FCBC8"} />
-        )} */}
       </div>
     </motion.div>
   );

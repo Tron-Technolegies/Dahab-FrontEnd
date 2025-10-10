@@ -1,4 +1,3 @@
-import React from "react";
 import MarketTrend from "./MarketTrend";
 import HashCalculator from "./HashCalculator";
 

@@ -1,4 +1,3 @@
-import React from "react";
 import SecondSectionHeader from "./SecondSectionHeader";
 
 export default function SecondSection() {

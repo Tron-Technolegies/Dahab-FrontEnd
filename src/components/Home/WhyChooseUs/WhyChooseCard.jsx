@@ -1,9 +1,7 @@
-import React from "react";
-
 function WhyChooseCard({ icon, content, position }) {
   return (
     <div
-      className={`flex flex-col gap-3 justify-center items-center p-3 md:p-5 rounded-lg w-[130px] h-[130px] md:w-[200px] md:h-[200px] customborder ${position}`}
+      className={`flex flex-col gap-3 justify-center items-center p-3 md:p-5 rounded-lg w-[130px] h-[130px] md:w-[200px] md:h-[200px] border-2 border-[#004DF480] bg-[#000618] ${position}`}
     >
       <img
         src={icon}

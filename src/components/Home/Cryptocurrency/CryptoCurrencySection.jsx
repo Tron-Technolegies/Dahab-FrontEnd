@@ -1,4 +1,3 @@
-import React from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 export default function CryptoCurrencySection() {
@@ -63,6 +62,7 @@ export default function CryptoCurrencySection() {
             src="/home/crypto-lg.webp"
             srcSet={`/home/crypto-sm.webp 455w, /home/crypto-lg.webp 590w`}
             sizes="(max-width: 768px) 455px, 590px"
+            className="will-change-transform"
             width="590"
             height="645"
             loading="lazy"

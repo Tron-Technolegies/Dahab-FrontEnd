@@ -131,16 +131,6 @@ input:disabled {
   animation: spinner 0.6s linear infinite;
 }
 
-/* .landingHeight {
-  min-height: calc(100vh - 80px);
-} */
-
-/* @media (max-width: 768px) {
-  .landingHeight {
-    height: calc(100vh - 64px);
-  }
-} */
-
 .glowing-box1 {
   width: 40px;
   height: 40px;
@@ -167,47 +157,6 @@ input:disabled {
     #6fc6b8 94.43%
   );
 }
-/* .btn-bg:hover {
-  box-shadow: 0px 14px 30px 0px #22def96e;
-} */
-
-/* .customborder{
-        position: relative;
-        border: 5px solid rgb(5, 8, 48);
-
-        &::before,
-        &::after {
-          content: "";
-          position: absolute;
-          width: 250px;
-          height: 80px;
-          border-radius: 10px;
-          transition: 0.5s ease-in-out;
-         
-        }
-        &::before {
-          top: -5px;
-          left: -5px;
-          border-top: 4px solid #03a9f3;
-          border-left: 4px solid #03a9f3;
-          
-        }
-        &::after {
-          right: -5px;
-          bottom: -5px;
-          border-bottom: 4px solid #03a9f3;
-          border-right: 4px solid #03a9f3;
-        }
-        &:hover::before,
-        &:hover::after {
-          width: calc(100% + 9px);
-          height: calc(100% + 9px);
-        }
-}
-.customborder:hover {
-  box-shadow: 0 0 10px 5px rgba(3, 169, 243, 0.5),  0 0 20px 10px rgba(0, 229, 255, 0.5);
-  transition: 0.5s ease-in-out;
-} */
 
 .customborder {
   z-index: 5;
@@ -312,8 +261,3 @@ input:disabled {
 .div-tile:hover {
   transform: skewY(0deg) rotate(0deg) scale(1.05);
 }
-
-
-
-
-

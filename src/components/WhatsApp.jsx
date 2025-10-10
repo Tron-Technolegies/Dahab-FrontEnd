@@ -1,4 +1,3 @@
-import React from "react";
 import { handleChatClick } from "../utils/whatsapp";
 import { motion } from "framer-motion";
 

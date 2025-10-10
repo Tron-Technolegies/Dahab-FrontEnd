@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { handleChatClick } from "../utils/whatsapp";
 import { MdArrowDropDown } from "react-icons/md";

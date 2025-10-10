@@ -1,4 +1,3 @@
-import React from "react";
 import WhyChooseCard from "./WhyChooseCard";
 import { handleChatClick } from "../../../utils/whatsapp";
 import { motion } from "framer-motion";
@@ -72,7 +71,8 @@ export default function WhyChooseUs() {
           Why DAHAB Miners Is Your Trusted Mining Partner
         </h4>
         <p className="text-sm text-white w-[250px] text-start">
-          Purpose built solutions to help you succeed in the world of crypto mining.
+          Purpose built solutions to help you succeed in the world of crypto
+          mining.
         </p>
         <button
           className="btn-bg px-5 py-2 rounded-lg text-white"

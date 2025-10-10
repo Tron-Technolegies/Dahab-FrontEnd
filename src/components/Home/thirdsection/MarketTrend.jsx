@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import TrendCard from "./TrendCard";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
@@ -10,6 +10,7 @@ import { setBtcData2 } from "../../../slices/userSlice";
 
 export default function MarketTrend() {
   const { loading, data, prices, btcData2 } = useGetCoinData();
+
   const dispatch = useDispatch();
   const settings = {
     dots: true,

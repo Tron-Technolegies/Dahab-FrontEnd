@@ -1,5 +1,3 @@
-import React from "react";
-
 export default function DescriptionBox({ flag, place, amt, position }) {
   return (
     <div className={`absolute p-2 rounded-lg text-black ${position}`}>

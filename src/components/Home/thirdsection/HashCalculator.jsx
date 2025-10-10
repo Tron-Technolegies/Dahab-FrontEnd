@@ -1,5 +1,4 @@
-import React, { useEffect, useState } from "react";
-import useGetBitCoinData from "../../../hooks/coins/useGetBitCoinData";
+import { useState } from "react";
 import { coinsPerDay, dailyEarnings } from "../../../utils/BTCCalculator";
 
 export default function HashCalculator({ btcData }) {
@@ -26,7 +25,7 @@ export default function HashCalculator({ btcData }) {
     };
   };
   return (
-    <div className="p-5 relative sm:px-[100px] text-white my-10 rounded-lg customborder">
+    <div className="p-5 relative sm:px-[100px] text-white my-10 rounded-lg border-2 border-[#004DF480] bg-[#000618]">
       <div className="flex flex-col gap-7">
         <div className="flex justify-between text-white">
           <p>0 TH/s</p>

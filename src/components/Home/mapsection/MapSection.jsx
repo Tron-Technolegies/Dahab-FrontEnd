@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import DescriptionBox from "./DescriptionBox";
 // import { Link } from "react-router-dom";
 import { motion } from "framer-motion";

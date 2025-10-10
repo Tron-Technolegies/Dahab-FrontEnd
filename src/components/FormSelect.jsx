@@ -1,5 +1,3 @@
-import React from "react";
-
 function FormSelect({ title, value, onchange, list, multi, issue, disabled }) {
   return (
     <div className="form-row">

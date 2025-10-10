@@ -1,4 +1,3 @@
-import React from "react";
 import { TiTick } from "react-icons/ti";
 import { motion } from "framer-motion";
 
@@ -39,9 +38,7 @@ export default function TestimonialCard({ name, content, image }) {
         alt={`${name}'s profile`}
       /> */}
 
-      <p className="text-base font-normal leading-relaxed">
-        "{content}"
-      </p>
+      <p className="text-base font-normal leading-relaxed">"{content}"</p>
     </motion.div>
   );
 }

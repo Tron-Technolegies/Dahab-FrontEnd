@@ -1,5 +1,3 @@
-import React from "react";
-import metrics from "../../../assets/metrics.svg";
 import MetricsCard from "./MetricsCard";
 import { motion } from "framer-motion";
 

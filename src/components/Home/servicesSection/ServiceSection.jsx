@@ -1,4 +1,3 @@
-import React from "react";
 import ServicesCard from "./ServicesCard";
 import { motion } from "framer-motion";
 import { IoHardwareChipOutline, IoServerOutline } from "react-icons/io5";

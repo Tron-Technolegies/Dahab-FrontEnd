@@ -1,11 +1,11 @@
 import { motion } from "framer-motion";
-import React from "react";
+
 import FounderCard from "./FounderCard";
 
 const data = [
   {
     id: 1,
-    img: "/home/founder1.jpg",
+    img: "/home/founder1.webp",
     name: "Rizwan Kamarudheen",
     role: "Co-Founder & Chief Executive Officer",
     about:
@@ -16,7 +16,7 @@ const data = [
   },
   {
     id: 2,
-    img: "/home/founder2.jpg",
+    img: "/home/founder2.webp",
     name: "Ahmed Rameez",
     role: "Co-Founder & Executive Director",
     about:

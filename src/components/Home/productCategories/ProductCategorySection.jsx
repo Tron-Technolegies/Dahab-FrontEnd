@@ -1,10 +1,14 @@
 import ProductCategoryCard from "./ProductCategoryCard";
 import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
 import { motion } from "framer-motion";
+import { useEffect } from "react";
 
 export default function ProductCategorySection() {
+  useEffect(() => {
+    import("slick-carousel/slick/slick.css");
+    import("slick-carousel/slick/slick-theme.css");
+  }, []);
+
   const data = [
     {
       id: 1,

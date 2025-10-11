@@ -1,9 +1,8 @@
 import { motion } from "framer-motion";
 import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
 import { events } from "../../../utils/events&Celebrations";
 import EventCard from "./EventCard";
+import { useEffect } from "react";
 
 const settings = {
   dots: true,
@@ -53,6 +52,10 @@ const settings = {
 };
 
 export default function EventSection() {
+  useEffect(() => {
+    import("slick-carousel/slick/slick.css");
+    import("slick-carousel/slick/slick-theme.css");
+  }, []);
   const sectionVariants = {
     hidden: { scale: 0.8, opacity: 0 },
     visible: {

@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import PhoneInput from "react-phone-input-2";
-import "react-phone-input-2/lib/style.css";
+
 import { handleEnquiryFormClick } from "../../utils/whatsapp";
 
 export default function RequestHostingForm() {
@@ -9,6 +9,10 @@ export default function RequestHostingForm() {
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
   const [message, SetMessage] = useState("");
+
+  useEffect(() => {
+    import("react-phone-input-2/lib/style.css");
+  }, []);
   return (
     <div className="lg:w-1/2 w-full flex flex-col gap-7">
       <h1 className="text-[40px] font-semibold gradient-heading">

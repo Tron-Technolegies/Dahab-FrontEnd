@@ -41,6 +41,7 @@ import AlertPage from "./pages/admin/inventory/AlertPage";
 import EventsPage from "./pages/eventsPage/EventsPage";
 import SingleMinerPage from "./pages/BuyMiners/SingleMinerPage";
 import MiningPage from "./pages/admin/mining/MiningPage";
+import ServicePage from "./pages/services/ServicePage";
 
 function App() {
   const router = createBrowserRouter([
@@ -92,6 +93,10 @@ function App() {
         {
           path: "events/:id",
           element: <EventsPage />,
+        },
+        {
+          path: "services",
+          element: <ServicePage />,
         },
       ],
     },

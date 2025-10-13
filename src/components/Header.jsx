@@ -15,11 +15,7 @@ export default function Header() {
       className="md:h-20 h-16 px-5 md:px-10 lg:px-[120px] xl:px-[180px] cursor-pointer md:py-5 py-2 flex justify-between items-center bg-[#01081c] relative z-50 bg-bottom bg-cover"
       // style={{ backgroundImage: `url("/home/headerbg.jpg")` }}
     >
-      <Link
-        to={"/"}
-        className="w-36 h-14 mt-5"
-        onClick={() => window.scrollTo(0, 0)}
-      >
+      <Link to={"/"} className="w-36 h-14 mt-5" onClick={() => window.scrollTo(0, 0)}>
         <img
           src="/home/logo.png"
           alt="Special-offers-on-crypto-mining-machines-in-abu-dhabi-UAE"
@@ -27,17 +23,14 @@ export default function Header() {
         ></img>
       </Link>
       <nav className="lg:flex gap-5 xl:gap-10 text-sm xl:text-base font-medium hidden">
-        <NavLink className={"text-white"} to={"/"}>
+        {/* <NavLink className={"text-white"} to={"/"}>
           Home
-        </NavLink>
+        </NavLink> */}
         <NavLink className={"text-white"} to={"/buy-bitcoin-miners-uae"}>
           Buy Miners
         </NavLink>
         <div className="relative">
-          <div
-            className="text-white flex items-center gap-1"
-            onClick={() => setisHover(!isHover)}
-          >
+          <div className="text-white flex items-center gap-1" onClick={() => setisHover(!isHover)}>
             Host Miners
             <span className="text-xl">
               <MdArrowDropDown />
@@ -73,6 +66,9 @@ export default function Header() {
         <NavLink className={"text-white"} to={"/asic-miner-repair-dubai"}>
           Miner Repair
         </NavLink>
+        {/* <NavLink className={"text-white"} to={"/services"}>
+          Services
+        </NavLink> */}
         <NavLink className={"text-white"} to={"/blogs"}>
           Blogs
         </NavLink>

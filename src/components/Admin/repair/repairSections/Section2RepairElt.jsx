@@ -10,6 +10,13 @@ import { repairTechnicians } from "../../../../utils/repairdata";
 
 const options = ["Pending", "Repair Done", "Component Needed"];
 
+const options2 = {
+  hour: "2-digit",
+  minute: "2-digit",
+  hour12: false,
+  timeZone: "Asia/Dubai", // UAE timezone
+};
+
 export default function Section2RepairElt({
   item,
   minerId,
@@ -68,11 +75,9 @@ export default function Section2RepairElt({
           <p>{item?.issueRemark ? item?.issueRemark : "N/A"}</p>
         </div>
         {item?.issueStatus !== "Pending" && (
-          <p>{`Last Updated : ${item?.repairUpdatedOn
-            ?.toString()
-            .slice(0, 10)} at ${item?.repairUpdatedOn
-            ?.toString()
-            .slice(14, 19)}`}</p>
+          <p>{`Last Updated : ${new Date(
+            item?.repairUpdatedOn
+          ).toLocaleDateString("en-US", options2)}`}</p>
         )}
       </div>
       <div className="flex flex-col gap-2">
@@ -190,11 +195,9 @@ export default function Section2RepairElt({
         />
         {(minerStatus === "Need Testing" ||
           minerStatus === "Ready To Connect") && (
-          <p className="mb-2">{`last updated : ${item?.repairUpdatedOn
-            ?.toString()
-            .slice(0, 10)} at ${item?.repairUpdatedOn
-            ?.toString()
-            .slice(14, 19)}`}</p>
+          <p className="mb-2">{`last updated : ${new Date(
+            item?.repairUpdatedOn
+          ).toLocaleDateString("en-US", options2)}`}</p>
         )}
         <button
           className="px-4 py-2 rounded-md bg-homeBg hover:bg-homeBgGradient text-white disabled:bg-gray-400 disabled:cursor-not-allowed"

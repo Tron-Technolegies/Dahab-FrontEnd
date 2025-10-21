@@ -55,10 +55,7 @@ export default function Footer() {
                 link="https://www.instagram.com/dahabminers.btc"
                 icon={<FaInstagram />}
               />
-              <FooterLinks
-                link="https://www.facebook.com/dahabminers"
-                icon={<FaFacebookF />}
-              />
+              <FooterLinks link="https://www.facebook.com/dahabminers" icon={<FaFacebookF />} />
               <FooterLinks
                 link="https://www.linkedin.com/company/thedahab-miners"
                 icon={<FaLinkedinIn />}
@@ -71,10 +68,7 @@ export default function Footer() {
             variants={itemVariants}
             className="grid grid-cols-2 gap-x-8 gap-y-3 text-sm font-medium md:flex md:flex-col md:gap-3"
           >
-            <Link
-              to="/"
-              className="hover:text-[#0194FE] transition-colors duration-300"
-            >
+            <Link to="/" className="hover:text-[#0194FE] transition-colors duration-300">
               Home
             </Link>
             <Link
@@ -83,10 +77,7 @@ export default function Footer() {
             >
               Buy Miners
             </Link>
-            <Link
-              to="/host-miners"
-              className="hover:text-[#0194FE] transition-colors duration-300"
-            >
+            <Link to="/host-miners" className="hover:text-[#0194FE] transition-colors duration-300">
               Host Mining
             </Link>
             <Link
@@ -95,16 +86,10 @@ export default function Footer() {
             >
               Miner Repair
             </Link>
-            <Link
-              to="/blogs"
-              className="hover:text-[#0194FE] transition-colors duration-300"
-            >
+            <Link to="/blogs" className="hover:text-[#0194FE] transition-colors duration-300">
               Blogs
             </Link>
-            <Link
-              to="/about-us"
-              className="hover:text-[#0194FE] transition-colors duration-300"
-            >
+            <Link to="/about-us" className="hover:text-[#0194FE] transition-colors duration-300">
               About Us
             </Link>
             <Link
@@ -122,10 +107,7 @@ export default function Footer() {
           </motion.div>
 
           {/* Contact Information */}
-          <motion.div
-            variants={itemVariants}
-            className="bg-[#030815]/50 rounded-xl p-6 shadow-lg"
-          >
+          <motion.div variants={itemVariants} className="bg-[#030815]/50 rounded-xl p-6 shadow-lg">
             <h3 className="text-lg font-semibold mb-4">Contact Us</h3>
             <div className="flex flex-col gap-4 text-sm font-medium">
               <a
@@ -135,10 +117,7 @@ export default function Footer() {
                 className="flex gap-3 items-start hover:text-[#0194FE] transition-colors duration-300"
               >
                 <CiLocationOn className="text-xl flex-shrink-0 mt-1" />
-                <p>
-                  Plot 122 Ad Doja 1 St, Musaffah - M40, Abu Dhabi, United Arab
-                  Emirates
-                </p>
+                <p>Plot 122 Ad Doja 1 St, Musaffah - M40, Abu Dhabi, United Arab Emirates</p>
               </a>
               <a
                 href="https://maps.app.goo.gl/PCJcJS8TUPDGca6HA"
@@ -148,8 +127,7 @@ export default function Footer() {
               >
                 <CiLocationOn className="text-xl flex-shrink-0 mt-1" />
                 <p>
-                  Saif Thamer General Transport Establishment building, Al
-                  Jubailah, Liwa, Abu Dhabi
+                  Saif Thamer General Transport Establishment building, Al Jubailah, Liwa, Abu Dhabi
                 </p>
               </a>
               <a
@@ -170,10 +148,10 @@ export default function Footer() {
               </div>
               <div
                 className="flex gap-3 items-center hover:text-[#0194FE] cursor-pointer transition-colors duration-300"
-                onClick={() => (window.location.href = "tel:+971568145866")}
+                onClick={() => (window.location.href = "tel:+971509669623")}
               >
                 <CiPhone className="text-xl flex-shrink-0" />
-                <p>+971568145866</p>
+                <p>+971509669623</p>
               </div>
             </div>
           </motion.div>

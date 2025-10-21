@@ -13,6 +13,7 @@ const data = [
     fb: "#",
     inst: "https://www.instagram.com/kf_rizwan?igsh=b2Y2bG95cGg1MXlw",
     link: "https://www.linkedin.com/in/rizwan-kamar-ab117a172/",
+    alt: "Rizwan Kamarudheen Co-Founder & Chief Executive Officer",
   },
   {
     id: 2,
@@ -24,6 +25,7 @@ const data = [
     fb: "#",
     inst: "https://www.instagram.com/ah_rameez?igsh=eHE2cnpvcHhpMzEw",
     link: "#",
+    alt: "Ahmed Rameez Co-Founder & Executive Director",
   },
   // {
   //   id: 3,
@@ -59,8 +61,8 @@ export default function FoundersSection() {
         Meet our Founders
       </h4>
       <p className="text-sm text-center">
-        The visionaries behind Dahab Miners driving innovation and Excellence in
-        the Crypto mining industry
+        The visionaries behind Dahab Miners driving innovation and Excellence in the Crypto mining
+        industry
       </p>
       <div className="grid md:grid-cols-2 gap-9 my-5">
         {data.map((item) => (
@@ -73,6 +75,7 @@ export default function FoundersSection() {
             fb={item.fb}
             inst={item.inst}
             link={item.link}
+            alt={item.alt}
           />
         ))}
       </div>

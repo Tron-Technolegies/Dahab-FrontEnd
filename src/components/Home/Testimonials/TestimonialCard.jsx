@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 export default function TestimonialCard({ name, content, image }) {
   return (
     <motion.div
-      className="w-full p-6 bg-[#000618] text-white rounded-lg flex flex-col gap-4 min-h-[350px]"
+      className="w-full p-6 bg-[#000618] text-white rounded-lg flex flex-col gap-4 min-h-[250px]"
       initial={{
         borderImageSource:
           "linear-gradient(to bottom right, #004DF480 0%, transparent 50%, transparent 50%, #0194FE80 100%)",
@@ -23,7 +23,7 @@ export default function TestimonialCard({ name, content, image }) {
       }}
       style={{
         borderStyle: "solid",
-        textAlign: "left", // ✅ Enforces left alignment directly via inline style
+        textAlign: "left", //  Enforces left alignment directly via inline style
       }}
     >
       <h4 className="flex items-center gap-2 text-lg font-semibold">
@@ -39,9 +39,7 @@ export default function TestimonialCard({ name, content, image }) {
         alt={`${name}'s profile`}
       /> */}
 
-      <p className="text-base font-normal leading-relaxed">
-        "{content}"
-      </p>
+      <p className="text-base font-normal leading-relaxed">"{content}"</p>
     </motion.div>
   );
 }

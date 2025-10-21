@@ -11,12 +11,12 @@ const HostingCard = ({ title, subtitle, features, buttonText, gradient }) => {
         borderImageSlice: 1,
         scale: 1,
       }}
-      whileHover={{
-        borderImageSource: gradient.replace("transparent 50%", "#A5E7F380 50%"),
-        boxShadow: "0px 0px 20px rgba(1, 148, 254, 0.6)",
-        scale: 1.02,
-        transition: { duration: 0.4, ease: "easeOut" },
-      }}
+      // whileHover={{
+      //   borderImageSource: gradient.replace("transparent 50%", "#A5E7F380 50%"),
+      //   boxShadow: "0px 0px 20px rgba(1, 148, 254, 0.6)",
+      //   scale: 1.02,
+      //   transition: { duration: 0.4, ease: "easeOut" },
+      // }}
       style={{
         borderStyle: "solid",
       }}
@@ -24,12 +24,11 @@ const HostingCard = ({ title, subtitle, features, buttonText, gradient }) => {
       {/* Content Section */}
       <div className="p-6 sm:p-8 flex flex-col gap-4 flex-grow">
         <h3 className="text-2xl sm:text-3xl font-semibold text-[#1ECBAF]">{title}</h3>
-        <p className="text-lg sm:text-xl text-[#2295B7] font-medium">{subtitle}</p>
+        <p className="text-sm sm:text-xl text-[#2295B7] font-medium">{subtitle}</p>
 
         <div className="flex flex-col gap-3 text-sm sm:text-base text-gray-300 leading-relaxed flex-grow">
           {features.map((feature, index) => (
             <div key={index} className="flex items-start gap-2">
-              <span className="text-[#1ECBAF] mt-1 flex-shrink-0">✓</span>
               <p>{feature}</p>
             </div>
           ))}
@@ -45,22 +44,11 @@ const HostingCard = ({ title, subtitle, features, buttonText, gradient }) => {
 
 export default function HostingServices() {
   const ethiopiaFeatures = [
-    "Ultra-low electricity rates at around $0.05 per kWh",
-    "100% renewable hydropower for sustainable mining",
-    "Up to 30 MW capacity with containerized infrastructure",
-    "High-altitude cool climate for optimal efficiency",
-    "Robust grid with minimal downtime",
-    "Easy scaling for growing operations",
+    "Maximize profits by hosting your miners in our Ethiopia facility, which boasts some of the cheapest electricity rates in the world (around $0.05 per kWh) thanks to 100% renewable hydropowernews.cryptos.com. Our Ethiopian farm offers up to 30 MW of capacity with containerized infrastructure for easy scaling. The high-altitude cool climate and robust grid mean your miners run efficiently with minimal downtime.Get industry-leading low costs and sustainable power in Ethiopia.",
   ];
 
   const uaeFeatures = [
-    "Reliable 24/7 power from $0.06/kWh electricity",
-    "Advanced air and immersion cooling systems",
-    "Over 95% uptime guarantee",
-    "Up to 10 MW capacity for any scale deployment",
-    "24/7 security monitoring and on-site staff",
-    "Equipment insurance coverage included",
-    "Stable energy backed by oil, gas, and nuclear infrastructure",
+    "Plug into the Middle East’s mining hotspot. Our Abu Dhabi data center provides reliable 24/7 power (from $0.06/kWh electricity) and cutting-edge cooling systems to beat the desert heat. We guarantee high uptime (over 95%) by leveraging advanced air and immersion cooling and a stable energy supply backed by Abu Dhabi’s oil, gas, and nuclear infrastructure. With capacity for up to 10 MW, our UAE facility easily supports deployments from single miners to industrial farms. We also maintain strict on-site security (24/7 monitoring, staff, and insurance coverage for your equipment) so your investment stays safe. Scale your mining operation with confidence in the UAE",
   ];
 
   return (
@@ -71,7 +59,7 @@ export default function HostingServices() {
             title="Hosting in Ethiopia"
             subtitle="Ultra-Low-Cost, Green Energy"
             features={ethiopiaFeatures}
-            buttonText="Know more"
+            buttonText="Know more abot Ethiopia hosting"
             gradient="linear-gradient(to bottom right, #004DF480 0%, transparent 50%, transparent 50%, #0194FE80 100%)"
           />
 
@@ -80,7 +68,7 @@ export default function HostingServices() {
             title="Hosting in UAE (Abu Dhabi)"
             subtitle="Secure & Scalable"
             features={uaeFeatures}
-            buttonText="Know more"
+            buttonText="Know more about UAE hosting"
             gradient="linear-gradient(to bottom right, #0194FE80 0%, transparent 50%, transparent 50%, #004DF480 100%)"
           />
         </div>
@@ -88,29 +76,29 @@ export default function HostingServices() {
         {/* ASIC Repair Service Section */}
         <div className="max-w-6xl mx-auto text-center ">
           <motion.div
-            className="bg-[#060E23] rounded-xl p-6 sm:p-8 lg:p-10"
-            initial={{
-              borderImageSource:
-                "linear-gradient(to right, #004DF480 0%, #1ECBAF80 50%, #0194FE80 100%)",
-              borderWidth: "2px",
-              borderImageSlice: 1,
-              scale: 1,
-            }}
-            whileHover={{
-              borderImageSource:
-                "linear-gradient(to right, #004DF480 0%, #1ECBAF 50%, #0194FE80 100%)",
-              boxShadow: "0px 0px 20px rgba(30, 203, 175, 0.4)",
-              scale: 1.01,
-              transition: { duration: 0.4, ease: "easeOut" },
-            }}
+            className=" rounded-xl p-6 sm:p-8 lg:p-10"
+            // initial={{
+            //   borderImageSource:
+            //     "linear-gradient(to right, #004DF480 0%, #1ECBAF80 50%, #0194FE80 100%)",
+            //   borderWidth: "2px",
+            //   borderImageSlice: 1,
+            //   scale: 1,
+            // }}
+            // whileHover={{
+            //   borderImageSource:
+            //     "linear-gradient(to right, #004DF480 0%, #1ECBAF 50%, #0194FE80 100%)",
+            //   boxShadow: "0px 0px 20px rgba(30, 203, 175, 0.4)",
+            //   scale: 1.01,
+            //   transition: { duration: 0.4, ease: "easeOut" },
+            // }}
             style={{
               borderStyle: "solid",
             }}
           >
-            <h3 className="text-2xl sm:text-3xl font-semibold text-[#1ECBAF] mb-3">
+            <h3 className="text-2xl sm:text-3xl font-semibold gradient-heading mb-3">
               ASIC Miner Repair in UAE
             </h3>
-            <p className="text-lg sm:text-xl text-[#2295B7] font-medium mb-6">
+            <p className="text-lg sm:text-xl text-[#1ECBAF] font-medium mb-6">
               Expert Maintenance & Fixes
             </p>
 

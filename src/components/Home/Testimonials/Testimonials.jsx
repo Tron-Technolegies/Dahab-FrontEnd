@@ -14,13 +14,13 @@ const testimonials = [
     name: "Omar Al Mansoori",
     image: "/home/review-1.png",
     review:
-      "I’ve had uptime issues with other hosting companies, but DAHAB Miners is on another level. My miners have been running at full capacity with almost zero downtime, and their repair services are exceptional. Whenever there’s an issue, their team gets it fixed fast and efficiently, reducing downtime- keeping my earnings steady",
+      "I’ve had uptime issues with other hosting companies, but DAHAB Miners is on another level. My miners have been running at full capacity with almost zero downtime, and their repair services are exceptional. Whenever there’s an issue, their team gets it fixed fast and efficiently, reducing downtime keeping my earnings steady",
   },
   {
     name: "Sergei Ivanov",
     image: "/home/review-2.png",
     review:
-      "I’ve worked with mining companies all over the world, but DAHAB Miners stands out. Their setup process was quick and hassle-free, and I was mining within days. On top of that, they don’t take any commissions—every bit of what I earn is mine. It’s rare to find a company this reliable.",
+      "I’ve worked with mining companies all over the world, but DAHAB Miners stands out. Their setup process was quick and hassle-free, and I was mining within days. On top of that, they don’t take any commissions every bit of what I earn is mine. It’s rare to find a company this reliable.",
   },
   {
     name: "Hans Müller",

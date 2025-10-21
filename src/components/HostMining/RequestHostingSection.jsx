@@ -11,25 +11,15 @@ export default function RequestHostingSection() {
       <RequestHostingForm />
       <div className="lg:w-1/2 w-full flex flex-col gap-10">
         <div className="w-full h-[400px] overflow-hidden rounded-lg object-cover">
-          <img
-            className=""
-            alt="Crypto mining hosting UAE"
-            src="/requesthosting.jpg"
-          ></img>
+          <img className="" alt="Crypto mining hosting UAE" src="/requesthosting.jpg"></img>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
           <RequestHostingContactCard
             icon={<IoLocationOutline />}
             content={"Based in Abu Dhabi, UAE"}
           />
-          <RequestHostingContactCard
-            icon={<MdMailOutline />}
-            content={"Rizwan@dahabminers.ae"}
-          />
-          <RequestHostingContactCard
-            icon={<LuPhone />}
-            content={"+971568145866"}
-          />
+          <RequestHostingContactCard icon={<MdMailOutline />} content={"Rizwan@dahabminers.ae"} />
+          <RequestHostingContactCard icon={<LuPhone />} content={"+971509669623"} />
         </div>
       </div>
     </div>

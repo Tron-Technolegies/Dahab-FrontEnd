@@ -4,8 +4,9 @@ import { Link, useLocation, useParams } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import useGetSingleProduct from "../../hooks/userProducts/useGetSingleProduct";
 import Loading from "../../components/Loading";
-import FeaturedSection from "../../components/buyMiners/singleMiner/FeaturedSection";
+// import FeaturedSection from "../../components/buyMiners/singleMiner/FeaturedSection";
 import useGetFeaturedProducts from "../../hooks/userProducts/useGetFeaturedProducts";
+import { productSchemas } from "../../utils/productSchemas";
 
 export default function SingleMinerPage() {
   const location = useLocation();
@@ -13,28 +14,50 @@ export default function SingleMinerPage() {
   const { id } = useParams();
   const { loading, product, refetch } = useGetSingleProduct({ id });
   const { loading: featureLoading, products } = useGetFeaturedProducts();
+
   useEffect(() => {
     window.scrollTo(0, 0);
     refetch();
   }, [id]);
 
+  // Match the schema for this product based on its name
+  const productSchema = productSchemas.find(
+    (schema) => schema.name.toLowerCase().trim() === product?.productName?.toLowerCase().trim()
+  );
+
+  // Inject schema dynamically into <head>
+  useEffect(() => {
+    if (productSchema) {
+      const script = document.createElement("script");
+      script.type = "application/ld+json";
+      script.innerHTML = JSON.stringify(productSchema);
+      document.head.appendChild(script);
+
+      return () => {
+        document.head.removeChild(script);
+      };
+    }
+  }, [productSchema]);
+
   return (
     <div className="px-5 md:px-10 lg:px-[120px] xl:px-[180px] py-10 ">
       <Helmet>
         <link rel="canonical" href={fullUrl || "https://dahabminers.com/"} />
-        <title>
-          Buy Bitcoin Miners in UAE | Bitcoin mining equipment Abu Dhabi
-        </title>
+        <title>{`Buy ${product?.productName || "Bitcoin Miners"} in UAE | Dahab Miners`}</title>
         <meta
           name="description"
-          content="Find and purchase the top Bitcoin Mining Machines in Dubai, UAE, such as the Bitmain Antminer AL1 Pro, DragonBall Miner A11, and IceRiver AL3. 
-    "
+          content={`Buy ${
+            product?.productName || "Bitcoin mining machines"
+          } in Dubai, UAE. Discover efficient miners with top hashrate performance and energy savings.`}
         />
         <meta
           name="keywords"
-          content="Buy Bitcoin Miners UAE, Crypto mining hardware Dubai, Bitcoin mining equipment Abu Dhabi, Purchase crypto miners UAE"
+          content={`Buy ${
+            product?.productName || "Bitcoin miners"
+          } UAE, Crypto mining hardware Dubai, Bitcoin mining equipment Abu Dhabi, Purchase crypto miners UAE`}
         />
       </Helmet>
+
       {loading ? (
         <Loading />
       ) : (
@@ -48,7 +71,9 @@ export default function SingleMinerPage() {
           <p className="text-2xl font-semibold text-[#1ECBAF]">{`Buy ${product?.productName}`}</p>
         </div>
       )}
+
       {loading ? <Loading /> : <SingleMinerTop product={product} />}
+      {/* Uncomment if needed */}
       {/* <FeaturedSection loading={featureLoading} products={products} /> */}
     </div>
   );

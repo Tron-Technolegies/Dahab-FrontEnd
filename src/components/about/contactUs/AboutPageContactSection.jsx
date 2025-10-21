@@ -84,10 +84,7 @@ export default function AboutPageContactSection() {
               value={message}
               onChange={(e) => setMessage(e.target.value)}
             />
-            <button
-              className="px-4 py-2 rounded-full btn-bg w-full"
-              onClick={handleClick}
-            >
+            <button className="px-4 py-2 rounded-full btn-bg w-full" onClick={handleClick}>
               Send Message
             </button>
           </div>
@@ -115,14 +112,8 @@ export default function AboutPageContactSection() {
                 icon={<CiLocationOn />}
                 content="WM92+VCQ Alem Gena, Ethiopia"
               />
-              <ContactDetailSingleElt
-                icon={<CiMail />}
-                content="Rizwan@dahabminers.ae"
-              />
-              <ContactDetailSingleElt
-                icon={<CiPhone />}
-                content="+971568145866"
-              />
+              <ContactDetailSingleElt icon={<CiMail />} content="Rizwan@dahabminers.ae" />
+              <ContactDetailSingleElt icon={<CiPhone />} content="+971509669623" />
             </div>
           </div>
         </div>

@@ -1,4 +1,3 @@
-import React from "react";
 import { Link } from "react-router-dom";
 import FeaturedCarousel from "./FeaturedCarousel";
 import { motion } from "framer-motion";
@@ -49,17 +48,6 @@ export default function Miners() {
         </div>
       </motion.div>
       <FeaturedCarousel />
-      <div className="flex justify-around">
-        <div></div>
-        {/* <div className="text-3xl flex gap-2">
-          <div className="w-12 h-12 border flex items-center justify-center rounded-lg">
-            <MdKeyboardArrowLeft />
-          </div>
-          <div className="w-12 h-12 border flex items-center justify-center rounded-lg">
-            <MdKeyboardArrowRight />
-          </div>
-        </div> */}
-      </div>
     </section>
   );
 }

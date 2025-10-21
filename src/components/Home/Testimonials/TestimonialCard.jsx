@@ -1,4 +1,3 @@
-import React from "react";
 import { TiTick } from "react-icons/ti";
 import { motion } from "framer-motion";
 

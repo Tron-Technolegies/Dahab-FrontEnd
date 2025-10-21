@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { NavLink, Link } from "react-router-dom";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { MdArrowDropDown } from "react-icons/md";
@@ -17,7 +17,9 @@ export default function Header() {
     >
       <Link to={"/"} className="w-36 h-14 mt-5" onClick={() => window.scrollTo(0, 0)}>
         <img
-          src="/home/logo.png"
+          src="/home/logo.webp"
+          fetchPriority="high"
+          decoding="async"
           alt="Special-offers-on-crypto-mining-machines-in-abu-dhabi-UAE"
           title="Explore top-tier CRYPTO MINING MACHINES IN UAE at Dahab Miners. Specializing in high-efficiency ASIC miners in Abu Dhabi, UAE, we offer the best solutions for crypto mining in UAE. Browse our range today and enhance your mining setup!"
         ></img>

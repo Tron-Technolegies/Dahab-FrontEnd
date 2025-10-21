@@ -1,5 +1,3 @@
-import React from "react";
-import { handleChatClick } from "../../../utils/whatsapp";
 import { motion } from "framer-motion";
 import FacilityCard from "./FacilityCard";
 
@@ -27,7 +25,8 @@ export default function MiningFacilitiesSection() {
           </h4>
           <p className="text-white text-sm max-w-[550px] text-start">
             We provide end-to-end solutions for mining hosting, maintenance, and
-            repairs <br />so you can focus on what matters: maximizing your profits
+            repairs <br />
+            so you can focus on what matters: maximizing your profits
           </p>
         </motion.div>
         <motion.div
@@ -49,7 +48,7 @@ export default function MiningFacilitiesSection() {
             content={
               " Our expert repair team keeps your mining operations running smoothly, minimizing downtime and maximizing profitability."
             }
-            image={"/7.jpg"}
+            image={"/7-sm.webp"}
           />
         </motion.div>
       </div>

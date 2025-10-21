@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { toast } from "react-toastify";
 import { handleEmailEnquiry } from "../../../utils/whatsapp";
 
@@ -14,7 +14,7 @@ export default function DiscussSection() {
   }
   return (
     <section className="px-5 md:px-10 lg:px-[120px] xl:px-[180px] py-10 main-bg">
-      <div className="flex md:flex-row flex-col justify-between gap-5 items-center customborder p-10">
+      <div className="flex md:flex-row flex-col justify-between gap-5 items-center bg-[#000618] border-2 border-[#004DF480] p-10">
         <div className="w-[350px] flex flex-col gap-5">
           <p className="text-[#0194FE] text-3xl font-semibold md:text-left text-center">
             Let’s Talk About Your Mining Goals

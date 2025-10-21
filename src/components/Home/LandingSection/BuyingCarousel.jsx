@@ -1,5 +1,3 @@
-import React from "react";
-
 import CarouselNavigation from "./CarouselNavigation";
 import { handleChatClick } from "../../../utils/whatsapp";
 import { motion } from "framer-motion";
@@ -16,11 +14,23 @@ export default function BuyingCarousel({ setItem, item }) {
                 src="/home/thunder.png"
                 alt="Bitcoin Mining in Dubai"
                 className="w-[20px]"
+                loading="lazy"
+                decoding="async"
               />
               <div className="text-[#00C4F4] flex gap-3 items-center">
-                <img src="/home/short-line.png" alt="Bitcoin Mining in Dubai" />
+                <img
+                  src="/home/short-line.png"
+                  alt="Bitcoin Mining in Dubai"
+                  loading="lazy"
+                  decoding="async"
+                />
                 <p>Buy</p>
-                <img src="/home/long-line.png" alt="Bitcoin Mining in Dubai" />
+                <img
+                  src="/home/long-line.png"
+                  alt="Bitcoin Mining in Dubai"
+                  loading="lazy"
+                  decoding="async"
+                />
               </div>
             </div>
             <h4 className="md:text-5xl text-3xl md:leading-[60px] leading-10 inline-block font-semibold gradient-heading pt-5">
@@ -31,9 +41,11 @@ export default function BuyingCarousel({ setItem, item }) {
                   className="absolute w-48 left-0 -bottom-1"
                   src="/home/underline.png"
                   alt="Bitcoin Mining in Dubai"
+                  loading="lazy"
+                  decoding="async"
                 />
               </span>{" "}
-               Own a Crypto Mining Machine Today
+              Own a Crypto Mining Machine Today
             </h4>
           </div>
           <div>
@@ -45,7 +57,7 @@ export default function BuyingCarousel({ setItem, item }) {
             <h4 className="text-base font-light text-white leading-6 tracking-wider text-left">
               The crypto revolution waits for no one. Equip yourself with
               cutting edge mining equipment and step into the UAE's most
-              profitable opportunity. Don’t miss out  secure yours now
+              profitable opportunity. Don’t miss out secure yours now
             </h4>
             {/* <h4 className="text-base font-light text-white leading-6 tracking-wider">
               With expert support, your success is just a step away. Shop now
@@ -71,7 +83,13 @@ export default function BuyingCarousel({ setItem, item }) {
         <div className="w-full max-w-[300px] h-[250px] md:max-w-[550px] md:h-[450px] mx-auto animate-slideInRight mt-4 md:mt-7 lg:-mt-20 relative z-[5]">
           <img
             className="object-cover z-20 absolute "
-            src="/buycarousel.webp"
+            src="/buycarousel-sm.webp"
+            srcSet={`/buycarousel-sm.webp 375w, /buycarousel-lg.webp 550w`}
+            sizes="(max-width: 768px) 375px, 550px"
+            width="550"
+            height="550"
+            fetchPriority="high"
+            decoding="async"
             alt="crypto-mining-machines-in-abu-dhabi-UAE-for-sale"
             title="Dahab Miners is your trusted partner for crypto mining in UAE, offering a diverse array of advanced ASIC miners in Abu Dhabi. Discover our premium CRYPTO MINING MACHINES IN UAE and optimize your mining operations with the best tools available."
           />
@@ -79,6 +97,8 @@ export default function BuyingCarousel({ setItem, item }) {
             <img
               src={"/home/homeline-1.png"}
               className="object-cover"
+              fetchPriority="high"
+              decoding="async"
               alt="crypto-mining-machines-in-abu-dhabi-UAE-for-sale"
               title="Dahab Miners is your trusted partner for crypto mining in UAE, offering a diverse array of advanced ASIC miners in Abu Dhabi. Discover our premium CRYPTO MINING MACHINES IN UAE and optimize your mining operations with the best tools available."
             ></img>
@@ -87,6 +107,8 @@ export default function BuyingCarousel({ setItem, item }) {
             <img
               src={"/home/homeline-2.png"}
               className="object-cover"
+              fetchPriority="high"
+              decoding="async"
               alt="crypto-mining-machines-in-abu-dhabi-UAE-for-sale 2"
               title="Dahab Miners is your trusted partner 2 for crypto mining in UAE, offering a diverse array of advanced ASIC miners in Abu Dhabi. Discover our premium CRYPTO MINING MACHINES IN UAE and optimize your mining operations with the best tools available."
             ></img>

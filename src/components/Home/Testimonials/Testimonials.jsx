@@ -1,9 +1,7 @@
-import React from "react";
 import TestimonialCard from "./TestimonialCard";
 import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
 import { motion } from "framer-motion";
+import { useEffect } from "react";
 
 const testimonials = [
   {
@@ -39,6 +37,10 @@ const testimonials = [
 ];
 
 export default function Testimonials() {
+  useEffect(() => {
+    import("slick-carousel/slick/slick.css");
+    import("slick-carousel/slick/slick-theme.css");
+  }, []);
   const sectionVariants = {
     hidden: { scale: 0.8, opacity: 0 },
     visible: {

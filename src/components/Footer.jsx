@@ -1,4 +1,3 @@
-import React from "react";
 import { CiLocationOn, CiMail, CiPhone } from "react-icons/ci";
 import { FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa";
 import { Link } from "react-router-dom";
@@ -44,7 +43,9 @@ export default function Footer() {
           <motion.div variants={itemVariants} className="flex flex-col gap-6">
             <a href="https://dahabminers.com/" className="block w-40">
               <img
-                src="/home/footerLogo.png"
+                src="/home/footerLogo.webp"
+                loading="lazy"
+                decoding="async"
                 alt="Dahab Miners Logo"
                 title="Dahab Miners - Premier Crypto Mining Service in UAE"
                 className="w-full h-auto rounded-lg shadow-md"
@@ -141,7 +142,9 @@ export default function Footer() {
               </a>
               <div
                 className="flex gap-3 items-center hover:text-[#0194FE] cursor-pointer transition-colors duration-300"
-                onClick={() => (window.location.href = "mailto:Rizwan@dahabminers.ae")}
+                onClick={() =>
+                  (window.location.href = "mailto:Rizwan@dahabminers.ae")
+                }
               >
                 <CiMail className="text-xl flex-shrink-0" />
                 <p>Rizwan@dahabminers.ae</p>

@@ -1,8 +1,7 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import FormInput from "../../FormInput";
 import PhoneInput from "react-phone-input-2";
-import "react-phone-input-2/lib/style.css";
-import "./PhoneInputCustomStyles.css";
+
 import { handleEnquiryFormClick } from "../../../utils/whatsapp";
 import { CiLocationOn, CiMail, CiPhone } from "react-icons/ci";
 import ContactDetailSingleElt from "./ContactDetailSingleElt";
@@ -14,6 +13,11 @@ export default function AboutPageContactSection() {
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
+
+  useEffect(() => {
+    import("react-phone-input-2/lib/style.css");
+    import("./PhoneInputCustomStyles.css");
+  }, []);
 
   function handleClick() {
     if (!phone || !firstName || !lastName || !email || !message) {

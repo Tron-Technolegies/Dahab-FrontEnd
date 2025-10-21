@@ -1,5 +1,3 @@
-import React from "react";
-
 export default function MetricsCard({ stat, content, border }) {
   return (
     <div

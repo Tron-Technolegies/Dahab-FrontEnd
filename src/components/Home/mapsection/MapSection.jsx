@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import DescriptionBox from "./DescriptionBox";
 // import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
@@ -78,9 +78,18 @@ function MapSection() {
         </div>
       </div>
       <div className="relative">
-        <img src="/home/map.png" alt="Bitcoin Mining in Dubai" />
+        <img
+          src="/home/map-lg.webp"
+          srcSet={`/home/map-sm.webp 350w, /home/map-lg.webp 650w`}
+          sizes="(max-width: 768px) 350px, 650px"
+          alt="Bitcoin Mining in Dubai"
+          loading="lazy"
+          decoding="async"
+        />
         <img
           className="absolute right-[42%] bottom-[45%] z-10 w-3 cursor-pointer"
+          loading="lazy"
+          decoding="async"
           src="/home/location-1.png"
           alt="Bitcoin Mining in Dubai"
           // onMouseEnter={() => setIsHover2(true)}
@@ -90,6 +99,8 @@ function MapSection() {
           className="absolute right-[38%] top-[33%] w-3 cursor-pointer"
           src="/home/location-2.png"
           alt="Bitcoin Mining in Dubai"
+          loading="lazy"
+          decoding="async"
           // onMouseEnter={() => setIsHover1(true)}
           // onMouseLeave={() => setIsHover1(false)}
         />

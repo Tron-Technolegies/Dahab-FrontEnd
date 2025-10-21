@@ -1,6 +1,13 @@
 import React from "react";
 
 export default function HistoryElement({ report, miner }) {
+  const options = {
+    hour: "2-digit",
+    minute: "2-digit",
+    hour12: false,
+    timeZone: "Asia/Dubai", // UAE timezone
+  };
+
   return (
     <div className="p-5 bg-white rounded-md my-2">
       <div className="my-5 flex flex-col gap-5 p-5 bg-gray-100">
@@ -15,10 +22,17 @@ export default function HistoryElement({ report, miner }) {
             <p>{`Additional Component: ${x.additionalComponent}`}</p>
             <p>{`Additional Quantity: ${x.additionalQty}`}</p>
             <p>{`Issue Identified by: ${x.identifyTechnician}`}</p>
-            <p>{`Issue Identified on: ${x.issueUpdatedOn.slice(0, 10)}`}</p>
+            <p>{`Issue Identified on: ${new Date(
+              x.issueUpdatedOn
+            ).toLocaleDateString("en-US", options)}`}</p>
             <p>{`Repair Updated by: ${x.repairTechnician}`}</p>
-            <p>{`Repair Updated on: ${x.repairUpdatedOn.slice(0, 10)}`}</p>
-            <p>{`${x.issueStatus} on ${x.updatedAt.slice(0, 10)}`}</p>
+            <p>{`Repair Updated on: ${new Date(
+              x.repairUpdatedOn
+            ).toLocaleDateString("en-US", options)}`}</p>
+            <p>{`${x.issueStatus} on ${new Date(x.updatedAt).toLocaleDateString(
+              "en-US",
+              options
+            )}`}</p>
             <p>{`Remarks during Identification: ${x.issueRemark}`}</p>
             <p>{`Remarks during Repair Process: ${x.repairRemark}`}</p>
           </div>
@@ -30,10 +44,9 @@ export default function HistoryElement({ report, miner }) {
         />
         <p className="font-semibold">{`Test Remarks: ${report.remarks}`}</p>
         <p className="font-semibold">{`Test Performed by: ${report.testTechnician}`}</p>
-        <p className="font-semibold">{`Test Performed On: ${report.testUpdatedOn.slice(
-          0,
-          10
-        )}`}</p>
+        <p className="font-semibold">{`Test Performed On: ${new Date(
+          report.testUpdatedOn
+        ).toLocaleDateString("en-US", options)}`}</p>
       </div>
     </div>
   );

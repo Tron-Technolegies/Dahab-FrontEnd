@@ -16,7 +16,11 @@ export default function AdminRepairPage() {
   return (
     <div>
       <AdminRepairHeader search={search} setSearch={setSearch} />
-      {loading ? <Loading /> : <AdminRepairTable miners={miners} />}
+      {loading ? (
+        <Loading />
+      ) : (
+        <AdminRepairTable miners={miners} refetch={refetch} />
+      )}
     </div>
   );
 }

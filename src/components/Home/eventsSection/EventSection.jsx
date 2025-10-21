@@ -1,10 +1,8 @@
 import { motion } from "framer-motion";
-import React from "react";
 import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
 import { events } from "../../../utils/events&Celebrations";
 import EventCard from "./EventCard";
+import { useEffect } from "react";
 
 const settings = {
   dots: true,
@@ -54,6 +52,10 @@ const settings = {
 };
 
 export default function EventSection() {
+  useEffect(() => {
+    import("slick-carousel/slick/slick.css");
+    import("slick-carousel/slick/slick-theme.css");
+  }, []);
   const sectionVariants = {
     hidden: { scale: 0.8, opacity: 0 },
     visible: {
@@ -75,23 +77,23 @@ export default function EventSection() {
         Events & Celebrations
       </h4>
       <p className="text-sm text-start max-w-[650px]">
-        At DahabMiners, we believe in more than just blockchain and hash
-        rates we believe in community, innovation, and celebrating milestones
+        At DahabMiners, we believe in more than just blockchain and hash rates
+        we believe in community, innovation, and celebrating milestones
         together. From major achievements to community driven initiatives,
         here's how we keep the energy high and the crypto vibes strong.
       </p>
-      
+
       {/* Mobile: Show scroll hint */}
       {/* <div className="block md:hidden text-xs text-[#A1D3F8] mb-2">
         ← Swipe to explore events →
       </div> */}
-      
+
       <div className="my-10 w-full [&_.slick-list]:mx-0 [&_.slick-slide]:px-2 [&_.slick-dots]:bottom-[-50px] [&_.slick-dots_li_button:before]:text-[#0194FE] [&_.slick-dots_li_button:before]:text-xs [&_.slick-dots_li.slick-active_button:before]:text-[#48E5E1] [&_.slick-track]:flex [&_.slick-track]:items-center [&_.slick-slide]:transition-transform [&_.slick-slide]:duration-300 [&_.slick-slide:active]:scale-[0.98]">
         <Slider {...settings}>
           {events.map((x) => (
             <div key={x.id} className="px-2 focus:outline-none">
               <EventCard
-                img={x.img}
+                img={x.imgsm}
                 title={x.title}
                 date={x.date}
                 location={x.location}

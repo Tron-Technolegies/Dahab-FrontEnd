@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import React from "react";
 
 export default function FarmLocationCard({
   image,
@@ -38,7 +37,7 @@ export default function FarmLocationCard({
         />
         <div className="flex gap-2 items-center">
           <button className="px-4 py-2 bg-[#0194FE] rounded-lg">{power}</button>
-          
+
           {/* Hosting Available → Page Navigation */}
           <button
             onClick={hostingAction}

@@ -8,6 +8,13 @@ import FormInput from "../../../FormInput";
 import useGetAvailableQuantity from "../../../../hooks/adminRepair/useGetAvailableQuantity";
 import { RepairIssues, repairTechnicians } from "../../../../utils/repairdata";
 
+const options = {
+  hour: "2-digit",
+  minute: "2-digit",
+  hour12: false,
+  timeZone: "Asia/Dubai", // UAE timezone
+};
+
 export default function IssueIdentificationElt({
   issueDetail,
   index,
@@ -177,11 +184,9 @@ export default function IssueIdentificationElt({
       {(miner?.status === "Need Repair" ||
         miner?.status === "Need Testing" ||
         miner?.status === "Ready To Connect") && (
-        <p className="mb-2">{`last updated : ${issueDetail?.issueUpdatedOn
-          ?.toString()
-          .slice(0, 10)} at ${issueDetail?.issueUpdatedOn
-          ?.toString()
-          .slice(14, 19)}`}</p>
+        <p className="mb-2">{`last updated : ${new Date(
+          issueDetail?.issueUpdatedOn
+        ).toLocaleDateString("en-US", options)}`}</p>
       )}
       {index > 0 && (
         <button

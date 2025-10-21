@@ -1,5 +1,3 @@
-import React from "react";
-
 export default function SecondSectionHeaderElement({ icon, text, style }) {
   return (
     <div

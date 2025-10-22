@@ -7,6 +7,7 @@ import Loading from "../../components/Loading";
 // import FeaturedSection from "../../components/buyMiners/singleMiner/FeaturedSection";
 import useGetFeaturedProducts from "../../hooks/userProducts/useGetFeaturedProducts";
 import { productSchemas } from "../../utils/productSchemas";
+import SingleMinerDetailsTabs from "../../components/buyMiners/singleMiner/SingleMinerDetailsTabs";
 
 export default function SingleMinerPage() {
   const location = useLocation();
@@ -72,7 +73,15 @@ export default function SingleMinerPage() {
         </div>
       )}
 
-      {loading ? <Loading /> : <SingleMinerTop product={product} />}
+      {loading ? (
+        <Loading />
+      ) : (
+        <>
+          <SingleMinerTop product={product} />
+          <SingleMinerDetailsTabs product={product} />
+        </>
+      )}
+
       {/* Uncomment if needed */}
       {/* <FeaturedSection loading={featureLoading} products={products} /> */}
     </div>

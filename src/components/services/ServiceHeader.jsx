@@ -29,13 +29,12 @@ export default function ServiceHeader() {
         </div>
       </div>
 
-      {/* -------------------- CONTENT SECTION -------------------- */}
       <div className="flex flex-col lg:flex-row items-center justify-between px-5 md:px-10 lg:px-[120px] xl:px-[180px] py-16 gap-10">
         {/* Left Content */}
         <div className="flex flex-col text-center lg:text-left lg:w-1/2">
-          <h2 className="text-[#22B7B7] text-xl sm:text-2xl font-semibold">
+          <h3 className="text-[#22B7B7] text-xl sm:text-2xl font-semibold">
             Explore Our Comprehensive Ecosystem
-          </h2>
+          </h3>
           <p className="my-3 text-sm sm:text-base">
             Dahab Miners provides a full spectrum of crypto mining services to fit every need.
             Whether you're an investor without hardware or a miner with a fleet of machines, we have
@@ -48,9 +47,9 @@ export default function ServiceHeader() {
           <p className="my-3 text-sm sm:text-base">
             Start earning from real mining hardware without owning a physical miner. With our
             digital mining service, you can purchase a "Digital Dahab Miner" through our app and
-            begin mining immediately — no delays, no setup hassles. Your purchased share of
-            hashpower is backed by actual ASIC machines running in our secure farms, delivering
-            daily Bitcoin payouts to your account. It's real mining with zero stress.
+            begin mining immediately no delays, no setup hassles. Your purchased share of hashpower
+            is backed by actual ASIC machines running in our secure farms, delivering daily Bitcoin
+            payouts to your account. It's real mining with zero stress.
           </p>
 
           <button

@@ -125,9 +125,15 @@ export default function WhyChooseUsService() {
               <p className="text-base sm:text-lg text-[#2295B7] font-semibold">
                 Ready to start mining without the headaches?
               </p>
-              <button className="btn-bg px-6 py-3 rounded-lg text-white text-sm sm:text-base font-medium hover:opacity-90 transition-opacity">
+
+              <a
+                href="https://mining.dahabminers.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-bg px-6 py-3 rounded-lg text-white text-sm sm:text-base font-medium hover:opacity-90 transition-opacity inline-block"
+              >
                 Learn more Dahab Digital Mining
-              </button>
+              </a>
             </div>
           </motion.div>
         </div>

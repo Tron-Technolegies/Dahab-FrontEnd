@@ -142,9 +142,7 @@ export default function Footer() {
               </a>
               <div
                 className="flex gap-3 items-center hover:text-[#0194FE] cursor-pointer transition-colors duration-300"
-                onClick={() =>
-                  (window.location.href = "mailto:Rizwan@dahabminers.ae")
-                }
+                onClick={() => (window.location.href = "mailto:Rizwan@dahabminers.ae")}
               >
                 <CiMail className="text-xl flex-shrink-0" />
                 <p>Rizwan@dahabminers.ae</p>

@@ -68,9 +68,9 @@ export default function Header() {
         <NavLink className={"text-white"} to={"/asic-miner-repair-dubai"}>
           Miner Repair
         </NavLink>
-        {/* <NavLink className={"text-white"} to={"/services"}>
+        <NavLink className={"text-white"} to={"/services"}>
           Services
-        </NavLink> */}
+        </NavLink>
         <NavLink className={"text-white"} to={"/blogs"}>
           Blogs
         </NavLink>

@@ -1,7 +1,8 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
-const HostingCard = ({ title, subtitle, features, buttonText, gradient }) => {
+const HostingCard = ({ title, subtitle, features, buttonText, buttonLink, gradient }) => {
   return (
     <motion.div
       className="bg-[#060E23] rounded-xl overflow-hidden flex flex-col h-full"
@@ -34,9 +35,12 @@ const HostingCard = ({ title, subtitle, features, buttonText, gradient }) => {
           ))}
         </div>
 
-        <button className="btn-bg px-5 py-2.5 rounded-lg text-white text-sm sm:text-base font-medium mt-4 hover:opacity-90 transition-opacity inline-block">
+        <Link
+          to={buttonLink}
+          className="btn-bg px-5 py-2.5 rounded-lg text-white text-sm sm:text-base font-medium mt-4 hover:opacity-90 transition-opacity inline-block text-center"
+        >
           {buttonText}
-        </button>
+        </Link>
       </div>
     </motion.div>
   );
@@ -44,7 +48,8 @@ const HostingCard = ({ title, subtitle, features, buttonText, gradient }) => {
 
 export default function HostingServices() {
   const ethiopiaFeatures = [
-    "Maximize profits by hosting your miners in our Ethiopia facility, which boasts some of the cheapest electricity rates in the world (around $0.05 per kWh) thanks to 100% renewable hydropowernews.cryptos.com. Our Ethiopian farm offers up to 30 MW of capacity with containerized infrastructure for easy scaling. The high-altitude cool climate and robust grid mean your miners run efficiently with minimal downtime.Get industry-leading low costs and sustainable power in Ethiopia.",
+    "Maximize profits by hosting your miners in our Ethiopia facility, which boasts some of the cheapest electricity rates in the world (around $0.05 per kWh) thanks to 100% renewable hydropowernews.cryptos.com. Our Ethiopian farm offers up to 30 MW of capacity with containerized infrastructure for easy scaling. The high-altitude cool climate and robust grid mean your miners run efficiently with minimal downtime.",
+    "Get industry-leading low costs and sustainable power in Ethiopia.",
   ];
 
   const uaeFeatures = [
@@ -59,7 +64,8 @@ export default function HostingServices() {
             title="Hosting in Ethiopia"
             subtitle="Ultra-Low-Cost, Green Energy"
             features={ethiopiaFeatures}
-            buttonText="Know more abot Ethiopia hosting"
+            buttonText="Know more about Ethiopia hosting"
+            buttonLink="/host-miners/bitcoin-mining-hosting-ethiopia"
             gradient="linear-gradient(to bottom right, #004DF480 0%, transparent 50%, transparent 50%, #0194FE80 100%)"
           />
 
@@ -69,6 +75,7 @@ export default function HostingServices() {
             subtitle="Secure & Scalable"
             features={uaeFeatures}
             buttonText="Know more about UAE hosting"
+            buttonLink="/host-miners/bitcoin-mining-hosting-abu-dhabi"
             gradient="linear-gradient(to bottom right, #0194FE80 0%, transparent 50%, transparent 50%, #004DF480 100%)"
           />
         </div>
@@ -95,9 +102,9 @@ export default function HostingServices() {
               borderStyle: "solid",
             }}
           >
-            <h3 className="text-2xl sm:text-3xl font-semibold gradient-heading mb-3">
+            <h2 className="text-2xl sm:text-3xl font-semibold gradient-heading mb-3">
               ASIC Miner Repair in UAE
-            </h3>
+            </h2>
             <p className="text-lg sm:text-xl text-[#1ECBAF] font-medium mb-6">
               Expert Maintenance & Fixes
             </p>
@@ -116,10 +123,11 @@ export default function HostingServices() {
               Don't let faulty hardware stop your earnings our UAE repair center will have you
               mining again in no time.
             </p>
-
-            <button className="btn-bg px-5 py-2.5 rounded-lg text-white text-sm sm:text-base font-medium hover:opacity-90 transition-opacity inline-block">
-              Learn about Repair Services
-            </button>
+            <Link to={"/asic-miner-repair-dubai"}>
+              <button className="btn-bg px-5 py-2.5 rounded-lg text-white text-sm sm:text-base font-medium hover:opacity-90 transition-opacity inline-block">
+                Learn about Repair Services
+              </button>
+            </Link>
           </motion.div>
         </div>
       </div>

@@ -8,13 +8,13 @@ import { Helmet } from "react-helmet-async";
 export default function EventsPage() {
   const location = useLocation();
   const fullUrl = window.location.origin + location.pathname + location.search;
-  const { id } = useParams();
+  const { slug } = useParams();
   const [event, setEvent] = useState(null);
 
   useEffect(() => {
-    const event = events.find((x) => x.id == id);
+    const event = events.find((x) => x.slug == slug);
     setEvent(event);
-  }, [id]);
+  }, [slug]);
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -23,6 +23,23 @@ export default function EventsPage() {
   return (
     <div className=" text-white">
       <Helmet>
+        <title>Dahab Miners App Launch | Green Bitcoin Mining in UAE & Ethiopia</title>
+        <meta
+          name="description"
+          content="Dahab Miners App launched at Bitcoin Summit Ethiopia 2025 | showcasing sustainable Bitcoin mining powered by hosting farms in the UAE and Ethiopia."
+        />
+        <meta
+          name="keyword"
+          content="Dahab Miners App Ethiopia launch,
+Real Bitcoin mining platform UAE,
+Eco Bitcoin mining company UAE,
+Host Bitcoin miners in Ethiopia,
+Crypto miners UAE,
+Bitcoin Mining in Dubai,
+Miner repair service UAE,
+Host miners in Ethiopia,
+Bitcoin Mining in Dubai,"
+        />
         <link rel="canonical" href={fullUrl || "https://dahabminers.com/"} />
       </Helmet>
       <section className="px-5 md:px-10 lg:px-[120px] xl:px-[180px] py-10 flex lg:flex-row flex-col gap-5 justify-between items-center">
@@ -43,6 +60,7 @@ export default function EventsPage() {
           <img
             src={event?.imglg}
             srcSet={`${event?.imgsm} 350w, ${event?.imglg} 650w`}
+            alt={event?.alt}
             sizes="(max-width: 768px) 350px, 650px"
             className="rounded-md object-cover lg:max-w-[650px] max-w-[350px]"
             loading="lazy"
@@ -50,14 +68,22 @@ export default function EventsPage() {
           />
         </div>
       </section>
-      <section className="px-5 md:px-10 lg:px-[120px] xl:px-[180px] py-10 bg-black flex flex-col gap-5">
+      {/* <section className="px-5 md:px-10 lg:px-[120px] xl:px-[180px] py-10 bg-black flex flex-col gap-5">
         <p>{event?.p1}</p>
         <p>{event?.p2}</p>
         <p>{event?.p3}</p>
         <p>{event?.p4}</p>
         <p>{event?.p5}</p>
         <p>{event?.p6}</p>
+      </section> */}
+      <section className="px-5 md:px-10 lg:px-[120px] xl:px-[180px] py-10 bg-black flex flex-col gap-5">
+        {event &&
+          Object.keys(event)
+            .filter((key) => key.startsWith("p"))
+            .sort((a, b) => a.localeCompare(b, undefined, { numeric: true }))
+            .map((key) => <p key={key}>{event[key]}</p>)}
       </section>
+
       {/* <EventImages images={event?.images} /> */}
     </div>
   );

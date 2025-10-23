@@ -91,7 +91,7 @@ function App() {
           element: <AboutUsPage />,
         },
         {
-          path: "events/:id",
+          path: "events/:slug",
           element: <EventsPage />,
         },
         {

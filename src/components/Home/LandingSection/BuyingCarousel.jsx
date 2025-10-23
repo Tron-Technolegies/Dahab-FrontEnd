@@ -50,14 +50,12 @@ export default function BuyingCarousel({ setItem, item }) {
           </div>
           <div>
             <h2 className="text-base font-light text-white leading-6 tracking-wider">
-              <a href="https://www.dahabminers.com/buy-bitcoin-miners-uae/">
-                Crypto Mining in UAE
-              </a>
+              <a href="https://www.dahabminers.com/buy-bitcoin-miners-uae/">Crypto Mining in UAE</a>
             </h2>
             <h4 className="text-base font-light text-white leading-6 tracking-wider text-left">
-              The crypto revolution waits for no one. Equip yourself with
-              cutting edge mining equipment and step into the UAE's most
-              profitable opportunity. Don’t miss out secure yours now
+              The crypto revolution waits for no one. Equip yourself with cutting edge mining
+              equipment and step into the UAE's most profitable opportunity. Don’t miss out secure
+              yours now
             </h4>
             {/* <h4 className="text-base font-light text-white leading-6 tracking-wider">
               With expert support, your success is just a step away. Shop now
@@ -88,7 +86,7 @@ export default function BuyingCarousel({ setItem, item }) {
             sizes="(max-width: 768px) 375px, 550px"
             width="550"
             height="550"
-            fetchPriority="high"
+            fetchpriority="high"
             decoding="async"
             alt="crypto-mining-machines-in-abu-dhabi-UAE-for-sale"
             title="Dahab Miners is your trusted partner for crypto mining in UAE, offering a diverse array of advanced ASIC miners in Abu Dhabi. Discover our premium CRYPTO MINING MACHINES IN UAE and optimize your mining operations with the best tools available."
@@ -97,7 +95,7 @@ export default function BuyingCarousel({ setItem, item }) {
             <img
               src={"/home/homeline-1.png"}
               className="object-cover"
-              fetchPriority="high"
+              fetchpriority="high"
               decoding="async"
               alt="crypto-mining-machines-in-abu-dhabi-UAE-for-sale"
               title="Dahab Miners is your trusted partner for crypto mining in UAE, offering a diverse array of advanced ASIC miners in Abu Dhabi. Discover our premium CRYPTO MINING MACHINES IN UAE and optimize your mining operations with the best tools available."
@@ -107,7 +105,7 @@ export default function BuyingCarousel({ setItem, item }) {
             <img
               src={"/home/homeline-2.png"}
               className="object-cover"
-              fetchPriority="high"
+              fetchpriority="high"
               decoding="async"
               alt="crypto-mining-machines-in-abu-dhabi-UAE-for-sale 2"
               title="Dahab Miners is your trusted partner 2 for crypto mining in UAE, offering a diverse array of advanced ASIC miners in Abu Dhabi. Discover our premium CRYPTO MINING MACHINES IN UAE and optimize your mining operations with the best tools available."

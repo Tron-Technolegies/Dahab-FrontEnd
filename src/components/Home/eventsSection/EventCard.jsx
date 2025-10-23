@@ -2,7 +2,7 @@ import { CiCalendar, CiLocationOn } from "react-icons/ci";
 import { FaArrowRight } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
-export default function EventCard({ img, date, location, title, id }) {
+export default function EventCard({ img, date, location, title, slug }) {
   return (
     <div className="p-4 rounded-2xl bg-[#0A0A0A] border border-[#0194FE] shadow-lg hover:shadow-[#0194FE]/40 transition-all duration-300 mx-3 flex flex-col gap-4 md:max-w-[450px] h-[440px]">
       {/* Image Container */}
@@ -40,7 +40,7 @@ export default function EventCard({ img, date, location, title, id }) {
         <div className="flex flex-col sm:flex-row gap-3 w-full sm:w-auto">
           {/* View text link (hidden on mobile, visible on desktop) */}
           <Link
-            to={`/events/${id}`}
+            to={`/events/${slug}`}
             className="hidden sm:inline text-[#48E5E1] text-sm sm:text-base font-medium hover:underline transition-all duration-200"
           >
             View
@@ -48,7 +48,7 @@ export default function EventCard({ img, date, location, title, id }) {
 
           {/* Full-width button on mobile, small round button on desktop */}
           <Link
-            to={`/events/${id}`}
+            to={`/events/${slug}`}
             className="w-full sm:w-10 sm:h-10 h-12 rounded-lg sm:rounded-full bg-gradient-to-r from-[#48E5E1] to-[#00C6FF] flex justify-center sm:justify-center items-center gap-2 text-black font-medium shadow-md hover:shadow-lg hover:scale-105 active:scale-95 transition-all duration-300"
           >
             <span className="block sm:hidden">View Event</span>

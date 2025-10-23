@@ -77,10 +77,10 @@ export default function EventSection() {
         Events & Celebrations
       </h4>
       <p className="text-sm text-start max-w-[650px]">
-        At DahabMiners, we believe in more than just blockchain and hash rates
-        we believe in community, innovation, and celebrating milestones
-        together. From major achievements to community driven initiatives,
-        here's how we keep the energy high and the crypto vibes strong.
+        At DahabMiners, we believe in more than just blockchain and hash rates we believe in
+        community, innovation, and celebrating milestones together. From major achievements to
+        community driven initiatives, here's how we keep the energy high and the crypto vibes
+        strong.
       </p>
 
       {/* Mobile: Show scroll hint */}
@@ -98,6 +98,7 @@ export default function EventSection() {
                 date={x.date}
                 location={x.location}
                 id={x.id}
+                slug={x.slug}
               />
             </div>
           ))}

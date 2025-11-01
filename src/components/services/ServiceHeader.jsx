@@ -4,13 +4,17 @@ import { handleChatClick } from "../../utils/whatsapp";
 export default function ServiceHeader() {
   return (
     <div className="w-full">
-      <div className="relative h-[100vh] flex items-center justify-center text-center text-white bg-[url('/service-hero.png')] bg-cover">
+      <div className="relative h-[100vh] flex items-center justify-center text-center text-white bg-[url('/service-hero.webp')] bg-cover">
+        <img
+          src="/service-hero.webp"
+          alt="Technician repairing crypto miners at Dahab Digital Mining facility in Ethiopia and UAE - Bitcoin mining in Dubai."
+          className="hidden"
+        />
         {/* Overlay for readability */}
-        <div className="absolute inset-0 bg-black/80"></div>
-
+        <div className="absolute inset-0 bg-black/50"></div>
         {/* Hero Content */}
         <div className="relative z-10 px-5 md:px-10 lg:px-[120px] xl:px-[180px]">
-          <h1 className="text-2xl gradient-heading py-1 sm:text-3xl lg:text-4xl font-bold max-w-[800px] mx-auto">
+          <h1 className="text-2xl gradient-heading py-2 sm:text-4xl lg:text-5xl  font-bold max-w-[1000px] mx-auto">
             Start Mining Today with the Best Crypto Mining Services in UAE & Ethiopia
           </h1>
           <p className="mt-3 max-w-[900px] mx-auto text-md sm:text-lg">
@@ -63,8 +67,8 @@ export default function ServiceHeader() {
         {/* Right Image */}
         <div className="lg:w-1/2 flex justify-center">
           <img
-            src="/service-hero.webp"
-            alt="Crypto Mining Services"
+            src="/service-img.webp"
+            alt="High-performance Bitcoin mining machine glowing with blue light, representing Dahab Digital crypto miners in UAE for Bitcoin Mining in Dubai and Ethiopia."
             className="rounded-lg shadow-lg w-full max-w-[500px] object-cover"
           />
         </div>

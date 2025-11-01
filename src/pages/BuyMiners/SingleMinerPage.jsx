@@ -1,13 +1,14 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import SingleMinerTop from "../../components/buyMiners/singleMiner/SingleMinerTop";
 import { Link, useLocation, useParams } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import useGetSingleProduct from "../../hooks/userProducts/useGetSingleProduct";
 import Loading from "../../components/Loading";
-// import FeaturedSection from "../../components/buyMiners/singleMiner/FeaturedSection";
 import useGetFeaturedProducts from "../../hooks/userProducts/useGetFeaturedProducts";
 import { productSchemas } from "../../utils/productSchemas";
 import SingleMinerDetailsTabs from "../../components/buyMiners/singleMiner/SingleMinerDetailsTabs";
+
+import ProductFaqSection from "../../components/Home/Faq/ProductFaqSection";
 
 export default function SingleMinerPage() {
   const location = useLocation();
@@ -58,7 +59,6 @@ export default function SingleMinerPage() {
           } UAE, Crypto mining hardware Dubai, Bitcoin mining equipment Abu Dhabi, Purchase crypto miners UAE`}
         />
       </Helmet>
-
       {loading ? (
         <Loading />
       ) : (
@@ -72,17 +72,18 @@ export default function SingleMinerPage() {
           <p className="text-2xl font-semibold text-[#1ECBAF]">{`Buy ${product?.productName}`}</p>
         </div>
       )}
-
       {loading ? (
         <Loading />
       ) : (
         <>
           <SingleMinerTop product={product} />
           <SingleMinerDetailsTabs product={product} />
+
+          {/*  FAQ Section below product tabs */}
+          <ProductFaqSection productName={product?.productName} />
         </>
       )}
 
-      {/* Uncomment if needed */}
       {/* <FeaturedSection loading={featureLoading} products={products} /> */}
     </div>
   );

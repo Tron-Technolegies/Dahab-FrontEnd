@@ -28,6 +28,15 @@ export default function Header() {
         {/* <NavLink className={"text-white"} to={"/"}>
           Home
         </NavLink> */}
+        <a
+          href="https://mining.dahabminers.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-white"
+        >
+          Cloud Mining
+        </a>
+
         <NavLink className={"text-white"} to={"/buy-bitcoin-miners-uae"}>
           Buy Miners
         </NavLink>

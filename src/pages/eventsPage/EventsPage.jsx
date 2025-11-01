@@ -44,9 +44,9 @@ Bitcoin Mining in Dubai,"
       </Helmet>
       <section className="px-5 md:px-10 lg:px-[120px] xl:px-[180px] py-10 flex lg:flex-row flex-col gap-5 justify-between items-center">
         <div className="flex flex-col gap-3">
-          <p className="gradient-heading md:text-2xl lg:text-left text-center text-xl font-semibold">
+          <h1 className="gradient-heading md:text-2xl lg:text-left text-center text-xl font-semibold">
             {event?.title}
-          </p>
+          </h1>
           <div className="flex items-center lg:justify-start justify-center gap-2 text-[#A1D3F8]">
             <CiCalendar />
             <p>{event?.date}</p>

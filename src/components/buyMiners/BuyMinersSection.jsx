@@ -10,12 +10,12 @@ import useGetFeaturedProducts from "../../hooks/userProducts/useGetFeaturedProdu
 import Pagination2 from "./Pagination2";
 
 export default function BuyMinersSection() {
-  const { manufacturerOptions, cryptoCurrencyOption, keyWord, sortby } =
-    useSelector((state) => state.userProductSearch);
+  const { manufacturerOptions, cryptoCurrencyOption, keyWord, sortby } = useSelector(
+    (state) => state.userProductSearch
+  );
   const [totalPage, setTotalPage] = useState(1);
   const [currentPage, setCurrentPage] = useState(1);
-  const { loading: featuredLoading, products: featuredProducts } =
-    useGetFeaturedProducts();
+  const { loading: featuredLoading, products: featuredProducts } = useGetFeaturedProducts();
 
   const { loading, refetch, products, pages } = useGetAllProducts({
     keyWord,
@@ -32,6 +32,15 @@ export default function BuyMinersSection() {
     refetch();
     window.scrollTo(0, 0);
   }, [currentPage]);
+  useEffect(() => {
+    if (products && products.length > 0) {
+      console.log(
+        "SLUGS →",
+        products.map((p) => p.slug)
+      );
+    }
+  }, [products]);
+
   return (
     <div className="bg-[#000618] px-5 md:px-10 lg:px-[120px] xl:px-[180px] py-10 z-[1]">
       <div className="h-24 lg:h-40 flex justify-center items-center">
@@ -43,11 +52,7 @@ export default function BuyMinersSection() {
         <div className="">
           <SearchAndFilter refetch={refetch} />
         </div>
-        {loading ? (
-          <Loading />
-        ) : (
-          <BestSellingProducts products={products} refetch={refetch} />
-        )}
+        {loading ? <Loading /> : <BestSellingProducts products={products} refetch={refetch} />}
       </div>
       {totalPage > 1 && (
         <div className="flex justify-center">

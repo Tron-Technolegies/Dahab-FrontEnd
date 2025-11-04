@@ -2,41 +2,42 @@ import { label } from "framer-motion/client";
 
 const productFullDetails = [
   {
-    slug: "MicroBT_WhatsMiner_M60_(172Th)",
-    productName: "MicroBT WhatsMiner M60 (172Th)",
+    slug: "microbt-whatsminer-m60-172th",
+    name: "MicroBT WhatsMiner M60 (172 Th/s)",
 
-    overview: `
-The MicroBT WhatsMiner M60 (172 Th/s) is a next-generation SHA-256 ASIC miner built for Bitcoin and Bitcoin Cash mining.
-
-It features 172 Th/s (±5%) hashrate with only 3,422 W (±5%) power usage, offering exceptional efficiency of 19.895 J/TH — making it one of the most efficient miners of 2024.
-
-With 5nm chip technology, stable performance, and industrial-grade cooling, the M60 is ideal for serious miners seeking long-term profitability.
-    `,
+    overview: `The MicroBT WhatsMiner M60 (172 Th/s) is a next-generation SHA-256 ASIC miner engineered for Bitcoin (BTC) and Bitcoin Cash (BCH) mining. Delivering a powerful hashrate of 172 Th/s (±5%) with a low power consumption of 3,422 W (±5%), it achieves an exceptional energy efficiency of 19.895 J/Th — making it one of the most efficient Bitcoin miners of 2024.
+Built with advanced 5 nm chip technology, the M60 ensures improved heat control, enhanced long-term reliability, and consistent mining output. Its dual-fan cooling system maintains optimal temperatures even under heavy workloads, ensuring stable performance for industrial-scale mining operations.
+Compact, durable, and optimized for maximum profitability, the WhatsMiner M60 is a reliable choice for miners seeking long-term performance, efficiency, and uptime in demanding mining environments.`,
 
     specifications: [
       { label: "Manufacturer", value: "MicroBT" },
       { label: "Model", value: "WhatsMiner M60 (172 Th/s)" },
       { label: "Algorithm", value: "SHA-256" },
-      { label: "Hashrate", value: "172 TH/s (±5%)" },
+      { label: "Hashrate", value: "172 Th/s (±5%)" },
       { label: "Power Consumption", value: "3,422 W (±5%)" },
-      { label: "Energy Efficiency", value: "19.895 J/TH" },
+      { label: "Energy Efficiency", value: "19.895 J/Th" },
+      { label: "Generation", value: "7th Generation – 2023" },
       { label: "Chip Size", value: "5 nm" },
       { label: "Cooling System", value: "Dual-fan air cooling" },
       { label: "Noise Level", value: "75 dB" },
       { label: "Network Connection", value: "Ethernet" },
       { label: "Power Supply", value: "Integrated PSU" },
-      { label: "Input Voltage", value: "200-240V AC" },
-      { label: "Dimensions", value: "430 × 155 × 226 mm" },
+      { label: "Input Voltage", value: "200 – 240 V AC" },
+      { label: "Dimensions (L × W × H)", value: "430 × 155 × 226 mm" },
       { label: "Weight", value: "13.5 kg" },
-      { label: "Operating Temperature", value: "–5°C to 35°C" },
+      { label: "Operating Temperature", value: "–5 °C – 35 °C" },
+      { label: "Humidity Range", value: "5% – 95% RH" },
       { label: "Release Date", value: "February 2024" },
     ],
   },
   {
-    slug: "ElphaPex_DG1+_(14Gh)",
-    overview: `The ElphaPex DG1+ (14 Gh/s) is a high-performance ASIC miner designed for the Scrypt algorithm, optimized for mining Litecoin (LTC) and Dogecoin (DOGE) simultaneously. Delivering a hashrate of 14 Gh/s (±3%) at a power draw of 3,920 W (±10%), it achieves a power efficiency of 0.28 J/Mh, making it one of the most efficient miners in its category.
-Built for reliability, the DG1+ features a sturdy industrial design with four high-speed fans that ensure stable cooling and consistent operation. Operating at around 75 dB, it’s best suited for professional mining setups and industrial environments.
-With its proven Scrypt mining architecture, strong build quality, and high hashrate performance, the ElphaPex DG1+ (14 Gh/s) is an excellent choice for miners looking to maximize long-term profitability and stability while mining both LTC and DOGE.`,
+    slug: "elphapex-dg1-plus-14gh",
+    name: "ElphaPex DG1+ (14 Gh/s)",
+
+    overview: `The ElphaPex DG1+ (14 Gh/s) is a high-performance Scrypt ASIC miner engineered for dual mining Litecoin (LTC) and Dogecoin (DOGE). Delivering 14 Gh/s (±3%) at a power draw of 3,920 W (±10%), it offers an impressive power efficiency of 0.28 J/Mh, making it one of the most efficient Scrypt miners in its class.
+Built with industrial-grade durability, the DG1+ features a solid metal chassis and a powerful air-cooling system with four high-speed fans, ensuring stable performance and sustained thermal control during intensive mining operations. With a 75 dB noise output, it is designed for professional or hosted mining environments.
+Thanks to its robust architecture, proven reliability, and competitive efficiency, the ElphaPex DG1+ (14 Gh/s) is an excellent choice for miners targeting long-term profitability through LTC and DOGE dual mining.`,
+
     specifications: [
       { label: "Manufacturer", value: "ElphaPex" },
       { label: "Model", value: "DG1+ (14 Gh/s)" },
@@ -50,16 +51,16 @@ With its proven Scrypt mining architecture, strong build quality, and high hashr
       { label: "Network Connection", value: "RJ45 Ethernet 10/100 M" },
       { label: "Power Supply", value: "Integrated PSU" },
       { label: "Input Voltage", value: "200 – 240 V AC" },
-      { label: "Dimensions", value: "432 × 196 × 287 mm" },
+      { label: "Dimensions (L × W × H)", value: "432 × 196 × 287 mm" },
       { label: "Weight", value: "18.3 kg" },
       { label: "Operating Temperature", value: "5 °C – 45 °C" },
-      { label: "Humidity Range", value: "5 % – 95 % RH" },
+      { label: "Humidity Range", value: "5% – 95% RH" },
       { label: "Release Date", value: "July 2024" },
     ],
   },
-
   {
-    slug: "Jingle_Miner_BTC_Solo_Lite_(1.2TH)",
+    slug: "jingle-miner-btc-solo-lite-1-2th",
+    name: "Jingle Miner BTC Solo Lite (1.2TH)",
     overview: `The Jingle Miner BTC Solo Lite (1.2TH/s) is a compact, ultra-efficient SHA-256d ASIC miner designed by JingleMining for solo or small-scale Bitcoin mining. It achieves a hashrate of 1.2 TH/s (±5%) while consuming only 23 W (±5%), delivering an exceptional energy efficiency of 19.17 J/TH making it one of the most power-efficient Bitcoin miners in its class.
 Powered by the BM1370 ASIC chip, originally developed for the Antminer S21 Pro, the BTC Solo Lite brings industrial-level performance to a small plug-and-play device ideal for desktop mining setups.`,
     specifications: [
@@ -76,7 +77,7 @@ Powered by the BM1370 ASIC chip, originally developed for the Antminer S21 Pro, 
       { label: "Dimensions (Gross)", value: "170 × 152 × 92 mm" },
       { label: "Weight (Net)", value: "0.25 kg" },
       { label: "Weight (Gross)", value: "0.65 kg" },
-      { label: "Accessory", value: "PSU (5V/5A) with adapters" },
+      { label: "Accessory", value: "PSU (5V/5A) Power Cable with US, EU, UK, AU adapters" },
       { label: "Release Date", value: "2024" },
     ],
   },
@@ -107,8 +108,13 @@ With its low power consumption and stable performance, the Goldshell XT-BOX (580
   },
 
   {
-    slug: "Canaan_Avalon_Q_(90Th)",
-    overview: `The Canaan Avalon Q (90 Th/s) is a highly efficient SHA-256 ASIC miner built with 4 nm chip technology, providing 90 Th/s at 1,674 W for outstanding power efficiency and quiet operation (45 dB).`,
+    slug: "canaan-avalon-q-90th",
+    name: "Canaan Avalon Q (90 Th/s)",
+
+    overview: `The Canaan Avalon Q (90 Th/s) is a highly efficient SHA-256 ASIC miner designed for Bitcoin (BTC) and other SHA-256 cryptocurrencies. Delivering 90 Th/s (±5%) at just 1,674 W (±5%), it achieves an impressive power efficiency of 0.019 J/Gh, making it one of the most efficient miners in its class.
+Built using advanced 4 nm chip technology, the Avalon Q offers enhanced performance, low heat output, and reliable long-term operation. Its dual-fan air-cooling system ensures stable thermal management, while maintaining a remarkably quiet 45 dB noise level — significantly quieter than traditional industrial miners.
+Compact, durable, and engineered for stability, the Avalon Q is an ideal choice for miners seeking energy-efficient Bitcoin mining hardware backed by Canaan's proven technology and engineering expertise.`,
+
     specifications: [
       { label: "Manufacturer", value: "Canaan" },
       { label: "Model", value: "Avalon Q (90 Th/s)" },
@@ -124,16 +130,22 @@ With its low power consumption and stable performance, the Goldshell XT-BOX (580
       { label: "Network Connection", value: "Ethernet / Wi-Fi" },
       { label: "Power Supply", value: "Integrated PSU" },
       { label: "Input Voltage", value: "110 – 240 V AC" },
-      { label: "Dimensions", value: "455 × 130 × 440 mm" },
+      { label: "Dimensions (L × W × H)", value: "455 × 130 × 440 mm" },
       { label: "Weight", value: "10.5 kg" },
       { label: "Operating Temperature", value: "0 °C – 35 °C" },
+      { label: "Humidity Range", value: "5% – 95% RH" },
       { label: "Release Date", value: "April 2025" },
     ],
   },
 
   {
-    slug: "Bitmain_Antminer_L9_(17Gh)",
-    overview: `The Bitmain Antminer L9 (17 Gh/s) is a next-generation Scrypt miner designed for dual mining Litecoin (LTC) and Dogecoin (DOGE), delivering 17 Gh/s with a power consumption of 3,570 W and excellent energy efficiency.`,
+    slug: "bitmain-antminer-l9-17gh",
+    name: "Bitmain Antminer L9 (17 Gh/s)",
+
+    overview: `The Bitmain Antminer L9 (17 Gh/s) is a high-efficiency Scrypt ASIC miner engineered for dual mining Litecoin (LTC) and Dogecoin (DOGE). Delivering 17 Gh/s (±5%) at only 3,570 W (±5%), it achieves an impressive energy efficiency of 0.21 J/Mh, offering an optimized balance of power and performance.
+Built with Bitmain’s advanced chip architecture, the L9 ensures reliable 24/7 operation with a dual-fan air-cooling system that maintains optimal temperatures under heavy workloads. Compact and power-efficient, it is suitable for professional and mid-scale miners aiming for long-term profitability in the LTC + DOGE ecosystem.
+With exceptional stability and efficiency, the Antminer L9 continues Bitmain’s legacy of industry-leading Scrypt mining hardware, designed for maximum returns and smooth operation in modern mining environments.`,
+
     specifications: [
       { label: "Manufacturer", value: "Bitmain" },
       { label: "Model", value: "Antminer L9 (17 Gh/s)" },
@@ -141,17 +153,21 @@ With its low power consumption and stable performance, the Goldshell XT-BOX (580
       { label: "Hashrate", value: "17 Gh/s (±5%)" },
       { label: "Power Consumption", value: "3,570 W (±5%)" },
       { label: "Energy Efficiency", value: "0.21 J/Mh" },
+      { label: "Generation", value: "7th Generation – 2024" },
       { label: "Cooling System", value: "Air-cooled with 2 fans" },
       { label: "Noise Level", value: "75 dB" },
+      { label: "Network Connection", value: "Ethernet" },
+      { label: "Power Supply", value: "Integrated PSU" },
       { label: "Input Voltage", value: "200 – 240 V AC" },
-      { label: "Dimensions", value: "195 × 290 × 379 mm" },
+      { label: "Dimensions (L × W × H)", value: "195 × 290 × 379 mm" },
       { label: "Weight", value: "13.5 kg" },
       { label: "Operating Temperature", value: "5 °C – 45 °C" },
+      { label: "Humidity Range", value: "5% – 95% RH" },
       { label: "Release Date", value: "May 2024" },
     ],
   },
   {
-    slug: "IceRiver_KAS_KS7_(30Th)",
+    slug: "iceriver-kas-ks7-30th",
     name: "IceRiver KAS KS7 (30 Th/s)",
     overview: `The IceRiver KAS KS7 (30 Th/s) is a powerful ASIC miner engineered for the kHeavyHash algorithm, purpose-built to mine Kaspa (KAS) and compatible coins. Delivering an exceptional hashrate of 30 Th/s (±5%) at a power consumption of 3,500 W (±5%), it achieves an outstanding energy efficiency of 0.117 J/Gh.
 
@@ -177,7 +193,7 @@ Designed for professional mining environments, the KS7 features robust air cooli
     ],
   },
   {
-    slug: "Bitmain_Antminer_KS7_(40Th)",
+    slug: "bitmain-antminer-ks7-40th",
     name: "Bitmain Antminer KS7 (40 Th/s)",
     overview: `The Bitmain Antminer KS7 (40 Th/s) is a high-performance ASIC miner built for the kHeavyHash algorithm, optimized for Kaspa (KAS). Delivering 40 Th/s (±5%) at 3,080 W, it achieves 0.077 J/Gh efficiency — making it one of the most power-efficient Kaspa miners available.
 
@@ -286,7 +302,7 @@ Engineered for industrial-scale mining operations, this miner combines top-tier 
     ],
   },
   {
-    slug: "bitmain-antminer-s21-plus-235th",
+    slug: "bitmain-antminer-s21-235th",
     name: "Bitmain Antminer S21+ (235 Th/s)",
 
     overview: `The Bitmain Antminer S21+ (235 Th/s) is a high-performance SHA-256 ASIC miner designed for efficient Bitcoin (BTC) and Bitcoin Cash (BCH) mining. Delivering an exceptional hashrate of 235 Th/s (±5%) at a power consumption of 3,877 W (±5%), it achieves an excellent energy efficiency of 16.498 J/Th, making it one of the most advanced air-cooled miners in its class.

@@ -1,4 +1,14 @@
-function FormSelect({ title, value, onchange, list, multi, issue, disabled }) {
+function FormSelect({
+  title,
+  value,
+  onchange,
+  list,
+  multi,
+  issue,
+  disabled,
+  name,
+  defaultValue,
+}) {
   return (
     <div className="form-row">
       <label htmlFor="status" className="form-label">
@@ -10,6 +20,8 @@ function FormSelect({ title, value, onchange, list, multi, issue, disabled }) {
           value={value}
           multiple={multi ? true : false}
           onChange={onchange}
+          defaultValue={defaultValue}
+          name={name}
           disabled={disabled ? true : false}
           className={`w-full py-1 px-3 rounded-lg bg-transparent border border-[#0B578E] outline-none ${
             multi ? "h-40" : "h-11"

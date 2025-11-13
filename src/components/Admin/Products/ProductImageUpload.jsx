@@ -8,7 +8,7 @@ export default function ProductImageUpload({
 }) {
   return (
     <div className="my-3">
-      <h1 className="mb-2">{title}</h1>
+      <h4 className="mb-2">{title}</h4>
       <label
         className={`flex flex-col gap-2 justify-center border w-fit items-center p-3 rounded-lg border-blue-500 cursor-pointer hover:bg-blue-700 nav-link hover:text-white ${
           disabled ? "opacity-50 cursor-not-allowed pointer-events-none" : ""

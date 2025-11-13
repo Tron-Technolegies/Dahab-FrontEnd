@@ -4,6 +4,7 @@ export const manufacturer = [
   "Bitfily",
   "Bitfury",
   "Bitmain",
+  "Bitdeer",
   "Bolon",
   "BW",
   "Canaan",
@@ -41,6 +42,7 @@ export const manufacturerSearch = [
   "Bitfily",
   "Bitfury",
   "Bitmain",
+  "Bitdeer",
   "Bolon",
   "BW",
   "Canaan",
@@ -92,9 +94,11 @@ export const cryptoCurrency = [
   "GLC",
   "GRS",
   "HNS",
+  "HUSH",
   "JKC",
   "KAS",
   "KDA",
+  "KMD",
   "LBC",
   "LKY",
   "LTC",
@@ -117,6 +121,7 @@ export const cryptoCurrency = [
   "XTM",
   "XVG",
   "ZEC",
+  "ZEN",
 ];
 export const cryptoCurrencySearch = [
   "ALL",
@@ -142,9 +147,11 @@ export const cryptoCurrencySearch = [
   "GLC",
   "GRS",
   "HNS",
+  "HUSH",
   "JKC",
   "KAS",
   "KDA",
+  "KMD",
   "LBC",
   "LKY",
   "LTC",
@@ -167,6 +174,7 @@ export const cryptoCurrencySearch = [
   "XTM",
   "XVG",
   "ZEC",
+  "ZEN",
 ];
 
 export const categoryDropdowns = [

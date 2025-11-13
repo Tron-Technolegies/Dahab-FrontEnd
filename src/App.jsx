@@ -42,6 +42,12 @@ import EventsPage from "./pages/eventsPage/EventsPage";
 import SingleMinerPage from "./pages/BuyMiners/SingleMinerPage";
 import MiningPage from "./pages/admin/mining/MiningPage";
 import ServicePage from "./pages/services/ServicePage";
+import AddNewMiner from "./components/Admin/mining/miners/AddNewMiner";
+import SingleMiningMiner from "./components/Admin/mining/miners/SingleMiningMiner";
+import { action as AddMiningMinerAction } from "./components/Admin/mining/miners/AddNewMiner";
+import { loader as EditMiningMinerLoader } from "./components/Admin/mining/miners/EditMiningMiner";
+import { action as EditMiningMinerAction } from "./components/Admin/mining/miners/EditMiningMiner";
+import EditMiningMiner from "./components/Admin/mining/miners/EditMiningMiner";
 
 function App() {
   const router = createBrowserRouter([
@@ -200,6 +206,21 @@ function App() {
         {
           path: "mining",
           element: <MiningPage />,
+        },
+        {
+          path: "mining/miner/new",
+          element: <AddNewMiner />,
+          action: AddMiningMinerAction,
+        },
+        {
+          path: "mining/miner/edit/:id",
+          element: <EditMiningMiner />,
+          loader: EditMiningMinerLoader,
+          action: EditMiningMinerAction,
+        },
+        {
+          path: "mining/miner/:id",
+          element: <SingleMiningMiner />,
         },
       ],
     },

@@ -221,6 +221,13 @@ export default function EditMiningMiner() {
           name={"idealFor"}
           defaultValue={data?.idealFor?.join(",")}
         />
+        <FormSelect
+          title={"3 Year Hosting"}
+          list={["No", "Yes"]}
+          issue
+          name={"bulkHosting"}
+          defaultValue={data?.isBulkHosting ? "Yes" : "No"}
+        />
         <div className="my-3">
           <h4 className="mb-2"> Image</h4>
           <label

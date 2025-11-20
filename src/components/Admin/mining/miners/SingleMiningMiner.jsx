@@ -61,6 +61,12 @@ export default function SingleMiningMiner() {
             <span className="font-bold">AED {miner?.breakEvenHash || 0} </span>
           </p>
           <p className="flex gap-2 items-center">
+            <GoDotFill /> 3 Year Hosting:{" "}
+            <span className="font-bold">
+              {miner?.isBulkHosting ? "Yes" : "No"}
+            </span>
+          </p>
+          <p className="flex gap-2 items-center">
             <GoDotFill /> Category:{" "}
             <span className="font-bold"> {miner?.category} </span>
             <span className="text-xs text-red-500">

@@ -1,53 +1,69 @@
 import "./App.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import HomeLayout from "./pages/HomeLayout";
-import HomePage from "./pages/home/HomePage";
-import BuyMinersPage from "./pages/BuyMiners/BuyMinersPage";
-import HostMiningPage from "./pages/hostMining/HostMiningPage";
-import MinerRepairPage from "./pages/MinerRepair/MinerRepairPage";
-import ErrorPage from "./pages/error/ErrorPage";
-import AdminLayout from "./pages/admin/AdminLayout";
-import DashboardPage from "./pages/admin/Dashboard/DashboardPage";
-import AdminProductPage from "./pages/admin/Products/AdminProductPage";
-import AddNewProduct from "./pages/admin/Products/AddNewProduct";
-import SingleProductPage from "./pages/admin/Products/SingleProductPage";
-import AuthLayout from "./pages/auth/AuthLayout";
-import LoginPage from "./pages/auth/LoginPage";
-import ForgotPassword from "./pages/auth/ForgotPassword";
-import EditProduct from "./pages/admin/Products/EditProduct";
-import ResetPassword from "./pages/auth/ResetPassword";
-import AdminBlogPage from "./pages/admin/blog/AdminBlogPage";
-import BlogPage from "./pages/blogs/BlogPage";
-import SingleBlogPage from "./pages/blogs/SingleBlogPage";
-import AddNewBlog from "./pages/admin/blog/AddNewBlog";
-import AdminSingleBlogPage from "./pages/admin/blog/AdminSingleBlogPage";
-import EditAdminBlog from "./pages/admin/blog/EditAdminBlog";
-import AbuDhabiHosting from "./pages/abuDhabiHosting/AbuDhabiHosting";
-import EthiopiaHosting from "./pages/EthiopiaHosting/EthiopiaHosting";
-import AboutUsPage from "./pages/about/AboutUsPage";
-import DataPage from "./pages/admin/datas/DataPage";
-import AddNewDataPage from "./pages/admin/datas/AddNewDataPage";
-import EditDataPage from "./pages/admin/datas/EditDataPage";
-import TermsAndConditions from "./pages/TermsAndConditions";
-import PrivacyPolicy from "./pages/PrivacyPolicy";
-import AdminRepairPage from "./pages/admin/repair/AdminRepairPage";
-import AdminInventoryPage from "./pages/admin/inventory/AdminInventoryPage";
-import AddRepairMiner from "./pages/admin/repair/AddRepairMiner";
-import RepairSectionsPage from "./pages/admin/repair/RepairSectionsPage";
-import RemoveMiners from "./pages/admin/repair/RemoveMiners";
-import AddInventoryItem from "./pages/admin/inventory/AddInventoryItem";
-import SingleInventoryItem from "./pages/admin/inventory/SingleInventoryItem";
-import AlertPage from "./pages/admin/inventory/AlertPage";
-import EventsPage from "./pages/eventsPage/EventsPage";
-import SingleMinerPage from "./pages/BuyMiners/SingleMinerPage";
-import MiningPage from "./pages/admin/mining/MiningPage";
-import ServicePage from "./pages/services/ServicePage";
-import AddNewMiner from "./components/Admin/mining/miners/AddNewMiner";
-import SingleMiningMiner from "./components/Admin/mining/miners/SingleMiningMiner";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 import { action as AddMiningMinerAction } from "./components/Admin/mining/miners/AddNewMiner";
 import { loader as EditMiningMinerLoader } from "./components/Admin/mining/miners/EditMiningMiner";
 import { action as EditMiningMinerAction } from "./components/Admin/mining/miners/EditMiningMiner";
-import EditMiningMiner from "./components/Admin/mining/miners/EditMiningMiner";
+import {
+  AboutUsPage,
+  AbuDhabiHosting,
+  AddInventoryItem,
+  AddNewBlog,
+  AddNewDataPage,
+  AddNewProduct,
+  AddRepairMiner,
+  AdminBlogPage,
+  AdminInventoryPage,
+  AdminLayout,
+  AdminProductPage,
+  AdminRepairPage,
+  AdminSingleBlogPage,
+  AlertPage,
+  AuthLayout,
+  BlogPage,
+  BuyMinersPage,
+  DashboardPage,
+  DataPage,
+  EditAdminBlog,
+  EditDataPage,
+  EditProduct,
+  ErrorPage,
+  EthiopiaHosting,
+  EventsPage,
+  ForgotPassword,
+  HomeLayout,
+  HomePage,
+  HostMiningPage,
+  LoginPage,
+  MinerRepairPage,
+  MiningPage,
+  PrivacyPolicy,
+  RemoveMiners,
+  RepairSectionsPage,
+  ResetPassword,
+  ServicePage,
+  SingleBlogPage,
+  SingleInventoryItem,
+  SingleMinerPage,
+  SingleProductPage,
+  TermsAndConditions,
+} from "./pages";
+import {
+  AddNewMiner,
+  AddNewVoucher,
+  EditMiningMiner,
+  EditVoucher,
+  SingleMiningMiner,
+} from "./components";
+
+const client = new QueryClient({
+  defaultOptions: {
+    queries: {
+      staleTime: 1000 * 60 * 3,
+    },
+  },
+});
 
 function App() {
   const router = createBrowserRouter([
@@ -222,6 +238,14 @@ function App() {
           path: "mining/miner/:id",
           element: <SingleMiningMiner />,
         },
+        {
+          path: "mining/voucher/new",
+          element: <AddNewVoucher />,
+        },
+        {
+          path: "mining/voucher/edit/:id",
+          element: <EditVoucher />,
+        },
       ],
     },
     {
@@ -241,7 +265,12 @@ function App() {
       ],
     },
   ]);
-  return <RouterProvider router={router} />;
+  return (
+    <QueryClientProvider client={client}>
+      <ReactQueryDevtools initialIsOpen={true} />
+      <RouterProvider router={router} />;
+    </QueryClientProvider>
+  );
 }
 
 export default App;

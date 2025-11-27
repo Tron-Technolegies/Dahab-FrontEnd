@@ -84,6 +84,14 @@ export default function MiningSections({ active, setActive }) {
       >
         Privacy
       </button>
+      <button
+        onClick={() => setActive("voucher")}
+        className={`px-4 py-2 bg-homeBg text-white hover:bg-homeBgGradient duration-300 ease-in-out rounded-md ${
+          active === "voucher" && "bg-homeBgGradient scale-105"
+        }`}
+      >
+        Vouchers
+      </button>
     </div>
   );
 }

@@ -10,9 +10,10 @@ import NotificationSection from "../../../components/Admin/mining/notifications/
 import MiningUsersSection from "../../../components/Admin/mining/users/MiningUsersSection";
 import A1246Uptime from "../../../components/Admin/mining/A1246Uptime/A1246Uptime";
 import MinersSection from "../../../components/Admin/mining/miners/MinersSection";
+import VoucherSection from "../../../components/Admin/mining/vouchers/VoucherSection";
 
 export default function MiningPage() {
-  const [active, setActive] = useState("miners");
+  const [active, setActive] = useState("voucher");
   return (
     <div>
       <MiningSections active={active} setActive={setActive} />
@@ -26,6 +27,7 @@ export default function MiningPage() {
       {active === "notifications" && <NotificationSection />}
       {active === "users" && <MiningUsersSection />}
       {active === "miners" && <MinersSection />}
+      {active === "voucher" && <VoucherSection />}
     </div>
   );
 }

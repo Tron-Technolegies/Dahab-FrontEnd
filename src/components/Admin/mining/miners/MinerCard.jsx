@@ -15,10 +15,10 @@ export default function MinerCard({
 }) {
   return (
     <div
-      className={` p-5 rounded-md flex flex-col justify-between items-center gap-1 w-[300px] min-h-[300px] text-white hover:scale-105 bg-[#0194FE] duration-300 ease-in-out`}
+      className={` p-5 rounded-md flex flex-col justify-between items-center gap-1 w-full min-h-[300px] text-black shadow-md hover:scale-105 bg-gray-300 duration-300 ease-in-out`}
     >
       <div className="flex justify-between w-full">
-        <div className={` text-sm flex flex-col gap-2 text-white`}>
+        <div className={` text-sm flex flex-col gap-2 text-black`}>
           <div className="flex gap-2 items-center">
             <p>{hashrate} TH/s</p>
           </div>
@@ -27,7 +27,7 @@ export default function MinerCard({
           </div>
         </div>
         <div className="flex flex-col gap-1 items-end">
-          <p className={`flex gap-1 items-center text-sm text-white`}>
+          <p className={`flex gap-1 items-center text-sm text-black`}>
             <span className=" p-0">
               <MdOutlineAttachMoney />
             </span>

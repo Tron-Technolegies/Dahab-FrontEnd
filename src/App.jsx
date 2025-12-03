@@ -16,6 +16,8 @@ import {
   AdminBlogPage,
   AdminInventoryPage,
   AdminLayout,
+  AdminMessages,
+  AdminNotification,
   AdminProductPage,
   AdminRepairPage,
   AdminSingleBlogPage,
@@ -245,6 +247,14 @@ function App() {
         {
           path: "mining/voucher/edit/:id",
           element: <EditVoucher />,
+        },
+        {
+          path: "notifications",
+          element: <AdminNotification />,
+        },
+        {
+          path: "messages",
+          element: <AdminMessages />,
         },
       ],
     },

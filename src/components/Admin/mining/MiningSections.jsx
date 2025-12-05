@@ -92,6 +92,14 @@ export default function MiningSections({ active, setActive }) {
       >
         Vouchers
       </button>
+      <button
+        onClick={() => setActive("owned")}
+        className={`px-4 py-2 bg-homeBg text-white hover:bg-homeBgGradient duration-300 ease-in-out rounded-md ${
+          active === "owned" && "bg-homeBgGradient scale-105"
+        }`}
+      >
+        Owned Miners
+      </button>
     </div>
   );
 }

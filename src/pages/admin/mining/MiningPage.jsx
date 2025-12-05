@@ -11,6 +11,7 @@ import MiningUsersSection from "../../../components/Admin/mining/users/MiningUse
 import A1246Uptime from "../../../components/Admin/mining/A1246Uptime/A1246Uptime";
 import MinersSection from "../../../components/Admin/mining/miners/MinersSection";
 import VoucherSection from "../../../components/Admin/mining/vouchers/VoucherSection";
+import OwnedMiners from "../../../components/Admin/mining/owned/OwnedMiners";
 
 export default function MiningPage() {
   const [active, setActive] = useState("voucher");
@@ -28,6 +29,7 @@ export default function MiningPage() {
       {active === "users" && <MiningUsersSection />}
       {active === "miners" && <MinersSection />}
       {active === "voucher" && <VoucherSection />}
+      {active === "owned" && <OwnedMiners />}
     </div>
   );
 }

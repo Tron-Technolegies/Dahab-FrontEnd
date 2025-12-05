@@ -1,11 +1,13 @@
 import React, { useState } from "react";
 import { CiUser } from "react-icons/ci";
 import { RiArrowDropDownLine } from "react-icons/ri";
-import { IoLogOutOutline } from "react-icons/io5";
+import { IoLogOutOutline, IoNotifications } from "react-icons/io5";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { useSelector } from "react-redux";
 import useLogoutUser from "../../hooks/auth/useLogoutUser";
 import Loading from "../Loading";
+import Badge from "@mui/material/Badge";
+import NotificationTab from "./NotificationTab";
 
 export default function AdminHead({ toggle, toggleFunction, small, setSmall }) {
   const { user } = useSelector((state) => state.user);
@@ -20,13 +22,15 @@ export default function AdminHead({ toggle, toggleFunction, small, setSmall }) {
         <RxHamburgerMenu />
       </div>
       <div className="text-lg md:text-2xl">DAHAB MINERS ADMIN</div>
-      <div
-        className="text-2xl xl:hidden block"
-        onClick={() => setSmall(!small)}
-      >
-        <RxHamburgerMenu />
+      <div className="xl:hidden flex gap-5 items-center">
+        <NotificationTab />
+        <div className="text-2xl" onClick={() => setSmall(!small)}>
+          <RxHamburgerMenu />
+        </div>
       </div>
-      <div className="relative hidden xl:block">
+
+      <div className="relative hidden xl:flex gap-5 items-center">
+        <NotificationTab />
         <div
           className="flex cursor-pointer gap-2 items-center border p-2 rounded-lg hover:shadow-md hover:shadow-white hover:bg-blue-500 nav-link"
           onClick={() => setShowLogout(!showLogout)}

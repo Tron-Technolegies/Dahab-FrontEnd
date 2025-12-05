@@ -5,6 +5,7 @@ import { MdCategory } from "react-icons/md";
 import { ImBlog } from "react-icons/im";
 import { MdDashboardCustomize } from "react-icons/md";
 import { SiBitcoinsv } from "react-icons/si";
+import { IoMail, IoNotifications } from "react-icons/io5";
 export const adminNavLinks = [
   {
     id: 1,
@@ -54,5 +55,19 @@ export const adminNavLinks = [
     path: "/admin/mining",
     urlword: "mining",
     icon: <SiBitcoinsv />,
+  },
+  {
+    id: 8,
+    name: "Notifications",
+    path: "/admin/notifications",
+    urlword: "notifications",
+    icon: <IoNotifications />,
+  },
+  {
+    id: 9,
+    name: "Messages",
+    path: "/admin/messages",
+    urlword: "messages",
+    icon: <IoMail />,
   },
 ];

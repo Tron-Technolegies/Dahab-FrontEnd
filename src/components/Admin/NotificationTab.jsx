@@ -3,12 +3,16 @@ import Badge from "@mui/material/Badge";
 import { IoNotifications } from "react-icons/io5";
 import Menu from "@mui/material/Menu";
 import { AnimatePresence, motion } from "framer-motion";
-import { useGetUnreadNotifications } from "../../hooks/adminNotifications/useNotifications";
+import {
+  useGetUnreadNotifications,
+  useReadNotification,
+} from "../../hooks/adminNotifications/useNotifications";
 import Loading from "../Loading";
 
 export default function () {
   const [anchorEl, setAnchorEl] = React.useState(null);
   const { isLoading, data, error } = useGetUnreadNotifications();
+  const { isPending, readNotification } = useReadNotification();
 
   const options = {
     hour: "2-digit",
@@ -75,7 +79,12 @@ export default function () {
                       </p>
                     </div>
 
-                    <button className="font-semibold">X</button>
+                    <button
+                      onClick={() => readNotification(item._id)}
+                      className="font-semibold"
+                    >
+                      X
+                    </button>
                   </motion.div>
                 ))}
             </AnimatePresence>

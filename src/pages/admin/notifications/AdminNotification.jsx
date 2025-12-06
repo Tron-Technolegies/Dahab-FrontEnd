@@ -1,8 +1,9 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import PaginationComponent from "../../../components/Admin/mining/PaginationComponent";
 import NotificationContainer from "../../../components/Admin/notifications/NotificationContainer";
 import FormSelect from "../../../components/FormSelect";
 import { useGetAllNotifications } from "../../../hooks/adminNotifications/useNotifications";
+import { toast } from "react-toastify";
 
 export default function AdminNotification() {
   const [page, setPage] = useState(1);
@@ -11,6 +12,7 @@ export default function AdminNotification() {
     currentPage: page,
     status,
   });
+
   return (
     <div className="flex flex-col gap-2 w-full">
       <h4 className="text-xl font-semibold">All Notifications</h4>

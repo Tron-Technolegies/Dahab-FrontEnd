@@ -46,6 +46,7 @@ import {
   ResetPassword,
   ServicePage,
   SingleBlogPage,
+  SingleError,
   SingleInventoryItem,
   SingleMinerPage,
   SingleProductPage,
@@ -255,6 +256,7 @@ function App() {
         {
           path: "messages",
           element: <AdminMessages />,
+          errorElement: <SingleError />,
         },
       ],
     },
@@ -278,7 +280,7 @@ function App() {
   return (
     <QueryClientProvider client={client}>
       <ReactQueryDevtools initialIsOpen={true} />
-      <RouterProvider router={router} />;
+      <RouterProvider router={router} />
     </QueryClientProvider>
   );
 }

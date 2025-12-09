@@ -42,3 +42,4 @@ export { default as AbuDhabiHosting } from "./abuDhabiHosting/AbuDhabiHosting";
 export { default as AboutUsPage } from "./about/AboutUsPage";
 export { default as AdminNotification } from "./admin/notifications/AdminNotification";
 export { default as AdminMessages } from "./admin/messages/AdminMessages";
+export { default as SingleError } from "./error/SingleError";

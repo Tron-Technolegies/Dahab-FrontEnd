@@ -7,7 +7,9 @@ import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
 import Loading from "../../Loading";
+import { useReadNotification } from "../../../hooks/adminNotifications/useNotifications";
 export default function NotificationContainer({ data, isLoading }) {
+  const { isPending, readNotification } = useReadNotification();
   const options = {
     hour: "2-digit",
     minute: "2-digit",
@@ -43,7 +45,7 @@ export default function NotificationContainer({ data, isLoading }) {
                 fontWeight: "bold",
               }}
             >
-              Action
+              Read
             </TableCell>
           </TableRow>
         </TableHead>
@@ -81,10 +83,14 @@ export default function NotificationContainer({ data, isLoading }) {
                 {x.isRead ? (
                   <p> ✅</p>
                 ) : (
-                  <button className="bg-blue-500 p-2 rounded-md text-white">
+                  <button
+                    onClick={() => readNotification(x._id)}
+                    className="bg-blue-500 p-2 rounded-md text-white"
+                  >
                     Mark Read
                   </button>
                 )}
+                {isPending && <Loading />}
               </TableCell>
             </TableRow>
           ))}

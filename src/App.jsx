@@ -280,7 +280,7 @@ function App() {
   return (
     <QueryClientProvider client={client}>
       <ReactQueryDevtools initialIsOpen={true} />
-      <RouterProvider router={router} />;
+      <RouterProvider router={router} />
     </QueryClientProvider>
   );
 }

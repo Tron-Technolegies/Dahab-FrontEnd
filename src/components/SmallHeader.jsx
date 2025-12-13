@@ -15,6 +15,14 @@ export default function SmallHeader({ setSmallBar }) {
         >
           Home
         </NavLink>
+        <a
+          href="https://mining.dahabminers.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-white border-b w-full py-2 border-[#9eede0]"
+        >
+          Cloud Mining
+        </a>
         <NavLink
           to={"/buy-bitcoin-miners-uae"}
           className={"border-b w-full py-2 border-[#9eede0]"}

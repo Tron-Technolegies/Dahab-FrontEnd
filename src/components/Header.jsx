@@ -11,10 +11,11 @@ export default function Header() {
   const [isHover, setisHover] = useState(false);
 
   return (
-    <header
-      className="md:h-20 h-16 px-5 md:px-10 lg:px-[120px] xl:px-[180px] cursor-pointer md:py-5 py-2 flex justify-between items-center bg-[#01081c] relative z-50 bg-bottom bg-cover"
-      // style={{ backgroundImage: `url("/home/headerbg.jpg")` }}
-    >
+    // <header
+    //   className="md:h-20 h-16 px-5 md:px-10 lg:px-[120px] xl:px-[180px] cursor-pointer md:py-5 py-2 flex justify-between items-center bg-[#01081c] relative z-50 bg-bottom bg-cover"
+    //   // style={{ backgroundImage: `url("/home/headerbg.jpg")` }}
+    // >
+    <header className="h-16 md:h-20 px-5 md:px-8 lg:px-12 xl:px-16 2xl:px-[120px] flex justify-between items-center bg-[#01081c] relative z-50 ">
       <Link to={"/"} className="w-36 h-14 mt-5" onClick={() => window.scrollTo(0, 0)}>
         <img
           src="/home/logo.webp"

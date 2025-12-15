@@ -1,0 +1,85 @@
+import { useEffect } from "react";
+import LandingSection from "../../components/Home/LandingSection/LandingSection";
+import Miners from "../../components/Home/MinersSection/Miners";
+import MiningFacilitiesSection from "../../components/Home/MiningFacilities/MiningFacilitiesSection";
+import HardwareReviewSection from "../../components/Home/HardwareReviews/HardwareReviewSection";
+import PerformanceMetrics from "../../components/Home/performanceMetrics/PerformanceMetrics";
+import Testimonials from "../../components/Home/Testimonials/Testimonials";
+import CryptoCurrencySection from "../../components/Home/Cryptocurrency/CryptoCurrencySection";
+import { Helmet } from "react-helmet-async";
+import SecondSection from "../../components/Home/secondsection/SecondSection";
+import ThirdSection from "../../components/Home/thirdsection/ThirdSection";
+import Calculator from "../../components/Home/calculator/Calculator";
+import WhyChooseUs from "../../components/Home/WhyChooseUs/WhyChooseUs";
+import FAQSection from "../../components/Home/Faq/FAQSection";
+import DiscussSection from "../../components/Home/Discuss/DiscussSection";
+import useGetBitCoinData from "../../hooks/coins/useGetBitCoinData";
+import { useDispatch } from "react-redux";
+import { setBlockReward, setDifficulty } from "../../slices/userSlice";
+import MapComparison from "../../components/HostMining/MapComparison";
+import { useLocation } from "react-router-dom";
+import ProductCategorySection from "../../components/Home/productCategories/ProductCategorySection";
+import ServiceSection from "../../components/Home/servicesSection/ServiceSection";
+import FoundersSection from "../../components/Home/founders/FoundersSection";
+import EventSection from "../../components/Home/eventsSection/EventSection";
+
+export default function HomePage() {
+  const { loading, btcData } = useGetBitCoinData();
+  const dispatch = useDispatch();
+  const location = useLocation();
+  const fullUrl = window.location.origin + location.pathname + location.search;
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
+  useEffect(() => {
+    if (btcData) {
+      dispatch(setDifficulty(btcData[0]?.difficulty));
+      dispatch(setBlockReward(btcData[0]?.reward_block));
+    }
+  }, [loading]);
+  return (
+    <div className="">
+      <Helmet>
+        <link rel="canonical" href={fullUrl || "https://dahabminers.com/"} />
+        <title>
+          Crypto Mining in UAE-Bitcoin Machines Abu Dhabi-Dahab Miners
+        </title>
+        <meta
+          name="description"
+          content="Dahab Miners Retail is one of the leading bitcoin mining companies in Dubai. We offer
+cost-effective crypto mining and hosting solutions for your miners in UAE."
+        />
+        <meta
+          name="keywords"
+          content="Bitcoin Mining in Dubai, Bitcoin Mining Machines in Dubai, Bitcoin mining agency in uae, crypto mining company in uae"
+        />
+      </Helmet>
+      <LandingSection />
+      <Miners />
+      <ProductCategorySection />
+      {/* <ProfitSection /> */}
+
+      <MapComparison />
+      <ThirdSection btcData={btcData} />
+      <Calculator />
+      <ServiceSection />
+      <MiningFacilitiesSection />
+      <SecondSection />
+      <EventSection />
+      <HardwareReviewSection />
+      <PerformanceMetrics />
+
+      <WhyChooseUs />
+      <FoundersSection />
+      <CryptoCurrencySection />
+
+      {/* <BlogSection /> */}
+      <Testimonials />
+      <FAQSection full={false} />
+      <DiscussSection />
+      {/* {<ContactForm />} */}
+    </div>
+  );
+}
